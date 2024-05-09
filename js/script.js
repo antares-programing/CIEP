@@ -1,7 +1,5 @@
-// Modificamos las funciones para que se ajusten a los identificadores y eventos del HTML
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Agregar eventos de clic a los botones del menú
+    // Agregar eventos de clic a los botones del menú //
     document.getElementById('menu_btn_inicio').addEventListener('click', function () {
         cargarContenido('inicio');
     });
@@ -33,18 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Agregar eventos de clic a los botones del menú
     menuBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            // Remover la clase de selección de todos los botones
+            // esto es lo que borra//
             menuBtns.forEach(function (btn) {
                 btn.classList.remove('selected');
             });
 
-            // Agregar la clase de selección al botón clicado
+            // esto es lo que muestra //
             this.classList.add('selected');
 
-            // Obtener el valor del botón clicado
             const seccion = this.getAttribute('data-seccion');
 
-            // Llamar a la función correspondiente con la sección
+            
             cargarContenido(seccion);
         });
     });
@@ -57,7 +54,33 @@ function cargarContenido(seccion) {
             contenido = '<h2>Bienvenidos al Centro Académico</h2><p>Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p><p>Nuestra misión es proporcionar una educación de calidad que promueva el aprendizaje significativo y la formación de ciudadanos responsables.</p><p>Visión: Ser líderes en la innovación educativa y contribuir al progreso de nuestra sociedad.</p>';
             break;
         case 'cursos':
-            contenido = '<h2>Nuestros Cursos</h2>';
+            case 'cursos':
+                contenido = '<h2>Nuestros Cursos</h2>';
+                contenido += '<div class="card-group">';
+                contenido += '<div class="card">';
+                contenido += '<img src="imagen_curso_1.jpg" class="card-img-top" alt="Curso 1">';
+                contenido += '<div class="card-body">';
+                contenido += '<h5 class="card-title">Auxiliar en administracion</h5>';
+                contenido += '<p class="card-text">realiza tareas administrativas básicas como archivar documentos, contestar llamadas telefónicas, manejar correos electrónicos, mantener registros de información y realizar actividades de entrada de datos.</p>';
+                contenido += '</div>';
+                contenido += '</div>';
+                contenido += '<div class="card">';
+                contenido += '<img src="imagen_curso_2.jpg" class="card-img-top" alt="Curso 2">';
+                contenido += '<div class="card-body">';
+                contenido += '<h5 class="card-title">Analista administrativo</h5>';
+                contenido += '<p class="card-text">implica analizar datos, elaborar informes, desarrollar y mejorar procedimientos administrativos, realizar estudios de viabilidad y eficiencia, identificar áreas de mejora en los procesos administrativos, y a menudo involucra toma de decisiones más estratégicas.</p>';
+                contenido += '</div>';
+                contenido += '</div>';
+                contenido += '<div class="card">';
+                contenido += '<img src="imagen_curso_3.jpg" class="card-img-top" alt="Curso 3">';
+                contenido += '<div class="card-body">';
+                contenido += '<h5 class="card-title">Administragod</h5>';
+                contenido += '<p class="card-text">Es a quien le reza los administradores</p>';
+                contenido += '</div>';
+                contenido += '</div>';
+                contenido += '</div>';
+                break;
+            
             break;
         case 'institucion':
             contenido = '<h2>Nuestra Institución</h2><p>Somos un centro académico con más de 20 años de experiencia en el campo de la educación.</p><p>Nuestra institución cuenta con un equipo de profesionales altamente calificados y un ambiente de aprendizaje propicio para el desarrollo académico y personal de nuestros estudiantes.</p>';
@@ -75,22 +98,3 @@ function cargarContenido(seccion) {
     document.getElementById('dinamic_content').innerHTML = contenido;
 }
 
-
-function mostrarCurso(curso) {
-    let contenido = '';
-    switch (curso) {
-        case 'matematicas':
-            contenido = '<h2>Curso de Matemáticas Avanzadas</h2><p>Descripción del curso de Matemáticas Avanzadas.</p>';
-            break;
-        case 'ciencias':
-            contenido = '<h2>Curso de Ciencias Naturales</h2><p>Descripción del curso de Ciencias Naturales.</p>';
-            break;
-        case 'idiomas':
-            contenido = '<h2>Curso de Idiomas</h2><p>Descripción del curso de Idiomas.</p>';
-            break;
-        case 'informatica':
-            contenido = '<h2>Curso de Informática</h2><p>Descripción del curso de Informática.</p>';
-            break;
-    }
-    document.getElementById('dinamic_content').innerHTML = contenido;
-}
