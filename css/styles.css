@@ -10,11 +10,11 @@ body{
     position: fixed;
     display: flex;
     justify-content: center;
-    height: 95px;
+    height: 250px;
     top: 0px;
     width: 100%;
     background: #3330c5;
-    z-index: 1000
+    z-index: 1
 }
 #ciep_logo{
     position: relative;
@@ -44,7 +44,7 @@ body{
 }
 #floating_body {
     background: #d6d6d6;
-    position: relative;
+    position: fixed;
     width: 80%;
     height: 85%;
     top: 15%;
@@ -73,5 +73,5 @@ body{
     height: 100%;
     width: 100%;
     flex-direction: column;
-
+    overflow-y: auto;
 }
