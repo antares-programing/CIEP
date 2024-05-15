@@ -13,21 +13,29 @@
         <img id="ciep_logo" src="./images/LogoWeb.png" alt="">
     </div>
     <!-- =========== [Contenido de la página] =========== -->
-    <div id="floating_body">
-        <div id="menu">
-            <div id="menu_btn_container">
-                <input type="button" id="Inicio_BTN" class="ciep_BTN_unselected" name="" value="Inicio" data-seccion="inicio" id="menu_btn_inicio">
-                <input type="button" id="Cursos_BTN" class="ciep_BTN_unselected" name="" value="Cursos" data-seccion="cursos" id="menu_btn_cursos">
-                <input type="button" id="Servicios_BTN" class="ciep_BTN_unselected" name="" value="Servicios" data-seccion="servicios" id="menu_btn_servicios">
-                <input type="button" id="Institucion_BTN" class="ciep_BTN_unselected" name="" value="Institucion" data-seccion="institucion" id="menu_btn_institucion">
-                <input type="button" id="Colaboradores_BTN" class="ciep_BTN_unselected" name="" value="Asociaciones" data-seccion="asociados" id="menu_btn_asociaciones">
-                <input type="button" id="Contacto_BTN" class="ciep_BTN_unselected" name="" value="Contacto" data-seccion="contacto" id="menu_btn_contacto">                
+    <div id="dinamic_content_container">
+        <img id="shadow_left" src="./images/Left_Body_Shadow.png" alt="">
+
+        <div id="floating_body">
+            <div id="menu">
+                <div id="menu_btn_container">
+                    <input type="button" id="Inicio_BTN" class="ciep_BTN_unactive menu_BTN" name="" value="Inicio" data-seccion="inicio" id="menu_btn_inicio">
+                    <input type="button" id="Cursos_BTN" class="ciep_BTN_unactive menu_BTN" name="" value="Cursos" data-seccion="cursos" id="menu_btn_cursos">
+                    <input type="button" id="Servicios_BTN" class="ciep_BTN_unactive menu_BTN" name="" value="Servicios" data-seccion="servicios" id="menu_btn_servicios">
+                    <input type="button" id="Institucion_BTN" class="ciep_BTN_unactive menu_BTN" name="" value="Institucion" data-seccion="institucion" id="menu_btn_institucion">
+                    <input type="button" id="Colaboradores_BTN" class="ciep_BTN_unactive menu_BTN" name="" value="Asociaciones" data-seccion="asociados" id="menu_btn_asociaciones">
+                    <input type="button" id="Contacto_BTN" class="ciep_BTN_unactive menu_BTN" name="" value="Contacto" data-seccion="contacto" id="menu_btn_contacto">                
+                </div>
+            </div>
+            
+            <div id="dinamic_content">
+                <!-- Aquí se cargará el contenido dinámico -->
             </div>
         </div>
-        <div id="dinamic_content">
-            <!-- Aquí se cargará el contenido dinámico -->
-        </div>
+
+        <img id="shadow_right"  src="./images/Right_Body_Shadow.png" alt="">
     </div>
+    
 
     <!-- =========== [Scripts] =========== -->
     <script src="./js/script.js"></script>

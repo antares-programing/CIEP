@@ -1,3 +1,5 @@
+
+
 const INICIOBTN = document.getElementById("Inicio_BTN")
 const CURSOSBTN = document.getElementById("Cursos_BTN")
 const SERVICIOSBTN = document.getElementById("Servicios_BTN")
@@ -5,10 +7,23 @@ const INSTITUCIONBTN = document.getElementById("Institucion_BTN")
 const COLABORADORESBTN = document.getElementById("Colaboradores_BTN")
 const CONTACTOBTN = document.getElementById("Contacto_BTN")
 
+const MENUBTNS = document.getElementsByClassName("menu_BTN")
+
 const DINAMICCONTENT = document.getElementById("dinamic_content")
 
+function activebtn(btn){
+    for (x of MENUBTNS){
+        if(x.classList.contains("ciep_BTN_active")){
+            x.classList.remove("ciep_BTN_active")
+            x.classList.add("ciep_BTN_unactive")
+        }
+    }
+    btn.classList.remove("ciep_BTN_unactive")
+    btn.classList.add("ciep_BTN_active")
+}
 
 INICIOBTN.addEventListener("click", ()=>{
+    activebtn(INICIOBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2>Bienvenidos al Centro Académico</h2>
@@ -18,7 +33,9 @@ INICIOBTN.addEventListener("click", ()=>{
     `;
 
 })
+
 CURSOSBTN.addEventListener("click", ()=>{
+    activebtn(CURSOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2>Categorias</h2>
@@ -47,7 +64,9 @@ CURSOSBTN.addEventListener("click", ()=>{
     </div>
 `;
 })
+
 SERVICIOSBTN.addEventListener("click", ()=>{
+    activebtn(SERVICIOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2>Bienvenidos al Centro Académico</h2>
@@ -56,7 +75,9 @@ SERVICIOSBTN.addEventListener("click", ()=>{
     <p>Visión: Ser líderes en la innovación educativa y contribuir al progreso de nuestra sociedad.</p>
     `;
 })
+
 INSTITUCIONBTN.addEventListener("click", ()=>{
+    activebtn(INSTITUCIONBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2 class="titulo">Nuestra Institución</h2>
@@ -64,7 +85,9 @@ INSTITUCIONBTN.addEventListener("click", ()=>{
         <p>Nuestra institución cuenta con un equipo de profesionales altamente calificados y un ambiente de aprendizaje propicio para el desarrollo académico y personal de nuestros estudiantes.</p>
     `;
 })
+
 COLABORADORESBTN.addEventListener("click", ()=>{
+    activebtn(COLABORADORESBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2>Nuestros Asociados</h2>
@@ -76,7 +99,9 @@ COLABORADORESBTN.addEventListener("click", ()=>{
     </ul>
 `;
 })
+
 CONTACTOBTN.addEventListener("click", ()=>{
+    activebtn(CONTACTOBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2>Contáctanos</h2>
