@@ -106,3 +106,10 @@ body{
     height: 500px;
     z-index: 2;
 }
+.titulos{
+    text-align: center;
+}
+
+.infos{
+    text-align: center;
+}

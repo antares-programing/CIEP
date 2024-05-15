@@ -26,10 +26,10 @@ INICIOBTN.addEventListener("click", ()=>{
     activebtn(INICIOBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2>Bienvenidos al Centro Académico</h2>
-    <p>Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p>
-    <p>Nuestra misión es proporcionar una educación de calidad que promueva el aprendizaje significativo y la formación de ciudadanos responsables.</p>
-    <p>Visión: Ser líderes en la innovación educativa y contribuir al progreso de nuestra sociedad.</p>
+    <h2 class="titulos">Bienvenidos al Centro Académico</h2>
+    <p class="infos">Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p>
+    <p class="infos">Nuestra misión es proporcionar una educación de calidad que promueva el aprendizaje significativo y la formación de ciudadanos responsables.</p>
+    <p class="infos">Visión: Ser líderes en la innovación educativa y contribuir al progreso de nuestra sociedad.</p>
     `;
 
 })
@@ -38,7 +38,7 @@ CURSOSBTN.addEventListener("click", ()=>{
     activebtn(CURSOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2>Categorias</h2>
+    <h2 class="titulos">Categorias</h2>
     <div class="card-group">
         <div class="card">
             <img src="images/auxiliaradministrativo.jpg" class="card-img-top" alt="Curso 1">
@@ -48,17 +48,20 @@ CURSOSBTN.addEventListener("click", ()=>{
             </div>
         </div>
         <div class="card">
-            <img src="imagen_2" class="card-img-top" alt="Curso 2">
+            <img src="./images/marketing-1.jpg" class="card-img-top" alt="Curso 2">
             <div class="card-body">
                 <h5 class="card-title">Marketing</h5>
-                <p class="card-text">implica analizar datos, elaborar informes, desarrollar y mejorar procedimientos administrativos, realizar estudios de viabilidad y eficiencia, identificar áreas de mejora en los procesos administrativos, y a menudo involucra toma de decisiones más estratégicas.</p>
+                <p class="card-text">El marketing busca entender, comunicar y 
+                satisfacer las necesidades del cliente para construir relaciones y 
+                lograr objetivos comerciales.</p>
             </div>
         </div>
         <div class="card">
-            <img src="imagen_3" class="card-img-top" alt="Curso 3">
+            <img src="./images/Recursoshumanos.jpg" class="card-img-top" alt="Curso 3">
             <div class="card-body">
                 <h5 class="card-title">Recursos Humanos</h5>
-                <p class="card-text">Es a quien le reza los administradores</p>
+                <p class="card-text">Encargados de reclutar, seleccionar, capacitar y 
+                gestionar empleados para promover el bienestar y el rendimiento organizacional.</p>
             </div>
         </div>
     </div>
@@ -69,10 +72,10 @@ SERVICIOSBTN.addEventListener("click", ()=>{
     activebtn(SERVICIOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2>Bienvenidos al Centro Académico</h2>
-    <p>Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p>
-    <p>Nuestra misión es proporcionar una educación de calidad que promueva el aprendizaje significativo y la formación de ciudadanos responsables.</p>
-    <p>Visión: Ser líderes en la innovación educativa y contribuir al progreso de nuestra sociedad.</p>
+    <h2 class="titulos">Bienvenidos al Centro Académico</h2>
+    <p class="infos"> "Nos comprometemos a proporcionar un programa
+    integral de capacitación que abarque tanto habilidades blandas como conocimientos técnicos, 
+    adaptado a cada puesto y perspectivas de crecimiento."</p>
     `;
 })
 
@@ -80,9 +83,9 @@ INSTITUCIONBTN.addEventListener("click", ()=>{
     activebtn(INSTITUCIONBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2 class="titulo">Nuestra Institución</h2>
-        <p>Somos un centro académico con más de 20 años de experiencia en el campo de la educación.</p>
-        <p>Nuestra institución cuenta con un equipo de profesionales altamente calificados y un ambiente de aprendizaje propicio para el desarrollo académico y personal de nuestros estudiantes.</p>
+    <h2 class="titulos">Nuestra Institución</h2>
+    <p class="infos">Somos un centro académico con más de 20 años de experiencia en el campo de la educación.</p>
+    <p class="infos">Nuestra institución cuenta con un equipo de profesionales altamente calificados y un ambiente de aprendizaje propicio para el desarrollo académico y personal de nuestros estudiantes.</p>
     `;
 })
 
@@ -90,8 +93,8 @@ COLABORADORESBTN.addEventListener("click", ()=>{
     activebtn(COLABORADORESBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2>Nuestros Asociados</h2>
-    <p>Trabajamos en colaboración con diversas instituciones y organizaciones para enriquecer la experiencia educativa de nuestros estudiantes.</p>
+    <h2 class="titulos">Nuestros Asociados</h2>
+    <p class="infos">Trabajamos en colaboración con diversas instituciones y organizaciones para enriquecer la experiencia educativa de nuestros estudiantes.</p>
     <ul>
         <li>Asociación de Padres de Familia</li>
         <li>Universidad Nacional</li>
@@ -104,10 +107,10 @@ CONTACTOBTN.addEventListener("click", ()=>{
     activebtn(CONTACTOBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2>Contáctanos</h2>
-    <p>Estamos ubicados en: el centro de tu corazon</p>
-    <p>Dirección: calle falsa 123, Ciudad, Uruguay</p>
-    <p>Teléfono: uno negrito asi de pequeño</p>
-    <p>Correo electrónico: info@centroacademico.com</p>
+    <h2 class="titulos">Contáctanos</h2>
+    <p class="infos">Estamos ubicados en: el centro de tu corazon</p>
+    <p class="infos">Dirección: calle falsa 123, Ciudad, Uruguay</p>
+    <p class="infos">Teléfono: uno negrito asi de pequeño</p>
+    <p class="infos">Correo electrónico: info@centroacademico.com</p>
     `;
 })
