@@ -75,3 +75,10 @@ body{
     flex-direction: column;
     overflow-y: auto;
 }
+.titulos{
+    text-align: center;
+}
+
+.infos{
+    text-align: center;
+}
