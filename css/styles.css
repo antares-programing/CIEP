@@ -17,6 +17,11 @@ body{
     background-size: cover;
     z-index: 1
 }
+.little_div{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}   
 #ciep_logo{
     position: relative;
     margin-top: 5px;
@@ -44,7 +49,6 @@ body{
     background: #00000000;
     color: white;
     border-style: none;
-
 }
 
 #menu{
@@ -67,14 +71,7 @@ body{
     column-gap: 10px;
     
 }
-#dinamic_content{
-    top: 100px;
-    display: flex;
-    height: 100%;
-    width: 90%;
-    flex-direction: column;
-    overflow-y: auto;
-}
+
 #dinamic_content_container{
     position: relative;
     display: flex;
@@ -112,4 +109,117 @@ body{
 
 .infos{
     text-align: center;
+}
+
+/*------[estilos dentro del dinamic content]------*/
+
+#dinamic_content{
+    top: 100px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.content_title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background: #e7e7e7;
+    width: 100%;
+    height: 60px;
+}
+
+.left_img_container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    background: #ffffff9a;
+}
+.left_content_img{
+    position: relative;
+    height: 250px;
+}
+.left_content_p{
+    margin: 20px;
+    position: relative;
+}
+
+/*------[estilos de Mision Vision y Valores]------*/
+
+#MVV_container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff9a;
+    width: 100%;
+}
+
+.card_group_container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.5s all;
+
+}
+
+.MVV_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s all;
+    margin: 0 -60px;  /* aumenta o disminuye el espaciado cuando no esta activo */
+}
+
+.MVV_card.active {
+    margin: 0 50px;  /* aumenta o disminuye el espaciado cuando está activo */
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 8px, transparent 8px) 0% 0%/30px 30px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 8px, transparent 8px) 100% 0%/ 30px 30px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 8px, transparent 8px) 0% 100%/30px 30px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 8px, transparent 8px) 100% 100%/30px 30px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 44px) calc(100% - 0px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 60px) calc(100% - 44px) no-repeat,
+            linear-gradient(90deg, rgba(26,26,26,0) 0%, #464646 12%, #313131 88%, rgba(253,253,253,0) 100%);
+    border-radius: 30px;
+    padding: 34px;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.MVV-body {
+    width: auto;
+}
+
+.MVV_title {
+    color: rgb(104, 104, 104);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.MVV_content {
+    opacity: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    width: 400px;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.MVV_content.active {
+    opacity: 1;
+    max-height: 500px;  /* ajusta este valor según el contenido del texto */
+}
+
+.MVV_img {
+    position: relative;
+    width: 100px;
 }
