@@ -111,6 +111,25 @@ body{
     text-align: center;
 }
 
+
+@media (max-width: 650px) {
+    #menu{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    #floating_body {
+        width: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    #shadow_right{
+        display: none;
+    }
+    #shadow_left{
+        display: none;
+    }
+}
+
 /*------[estilos dentro del dinamic content]------*/
 
 #dinamic_content{
@@ -120,6 +139,16 @@ body{
     width: 100%;
     flex-direction: column;
     overflow-y: auto;
+
+}
+
+#dinamic_content::-webkit-scrollbar {
+    display: none;  /* Safari y Chrome */
+}
+  
+#dinamic_content {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 .content_title_container{
     display: flex;
@@ -138,13 +167,41 @@ body{
     flex-direction: row;
     background: #ffffff9a;
 }
+
 .left_content_img{
     position: relative;
-    height: 250px;
+    width: 70%;
+    background-image: url("../images/Welcome_img.jpeg");
+    background-size: cover;
+    background-position: center;
 }
+
 .left_content_p{
     margin: 20px;
     position: relative;
+    width: 30%;
+}
+@media (max-width: 1200px) {
+    .left_img_container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff9a;
+    }
+    .left_content_img{
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-image: url("../images/Welcome_img.jpeg");
+        background-size: cover;
+        background-position: center;
+    }
+    .left_content_p{
+        margin: 20px;
+        position: relative;
+        width: 90%;
+    }
 }
 
 /*------[estilos de Mision Vision y Valores]------*/
@@ -224,66 +281,47 @@ body{
     width: 100px;
 }
 
-/*  Estilos de SERVICIOS  */
+@media (max-width: 1400px) {
 
-/* grupo de cards */
-.custom-card-group {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    .MVV_card {
+        width: 100%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
+        margin: 10px -60px; /* Reduce el margen para pantallas pequeñas */
+    }
+
+    .MVV_img {
+        width: 80px; /* Ajusta el tamaño de las imágenes en pantallas pequeñas */
+    }
+
+    .MVV_title {
+        font-size: 24px; /* Reduce el tamaño de la fuente del título en pantallas pequeñas */
+    }
+
+    .MVV_content {
+        width: 100%; /* Ajusta el ancho del contenido en pantallas pequeñas */
+    }
 }
 
-/* Custom card styles */
-.custom-card {
-    background-color: #fff;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s, filter 0.2s;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space */
-    max-width: calc(33.333% - 20px);
-}
 
-.custom-card:hover {
-    transform: translateY(-10px);
-}
+@media (max-width: 1000px) {
+    .card_group_container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.custom-card-img-top {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
+    .MVV_card {
+        width: 90%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
+        margin: 10px 0; /* Reduce el margen para pantallas pequeñas */
+    }
 
-.custom-card-body {
-    padding: 20px;
-    text-align: center;
-}
+    .MVV_img {
+        width: 80px; /* Ajusta el tamaño de las imágenes en pantallas pequeñas */
+    }
 
-.custom-card-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #007bff;
-}
+    .MVV_title {
+        font-size: 24px; /* Reduce el tamaño de la fuente del título en pantallas pequeñas */
+    }
 
-.custom-card-text {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #555;
-}
-
-/* Title styles */
-.titulos {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
-    color: #333;
-}
-
-/* Darken effect on non-hovered cards */
-.custom-card-group.darken .custom-card:not(.hovered) {
-    filter: brightness(0.5);
+    .MVV_content {
+        width: 100%; /* Ajusta el ancho del contenido en pantallas pequeñas */
+    }
 }
