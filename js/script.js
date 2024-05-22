@@ -134,7 +134,6 @@ CURSOSBTN.addEventListener("click", ()=>{
     activebtn(CURSOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2 class="titulos">Categorias</h2>
     <div class="card-group">
         <div class="card">
             <img src="images/auxiliaradministrativo.jpg" class="card-img-top" alt="Curso 1">
@@ -169,10 +168,30 @@ SERVICIOSBTN.addEventListener("click", ()=>{
     activebtn(SERVICIOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2 class="titulos">Bienvenidos al Centro Académico</h2>
-    <p class="infos"> "Nos comprometemos a proporcionar un programa
-    integral de capacitación que abarque tanto habilidades blandas como conocimientos técnicos, 
-    adaptado a cada puesto y perspectivas de crecimiento."</p>
+    <div class="card-group">
+    <div class="card" id="card-servicios">
+        <img src="images/empresa-2.webp" class="card-img-top" alt="Empresa">
+        <div class="card-body">
+            <h5 class="card-title">Empresa</h5>
+            <p class="card-text"> Capacita a tus empleados en las habilidades blandas y tecnias necesarias para 
+            lograr un mejor desarollo de su labor </div>
+    </div>
+    <div class="card" id="card-servicios">
+        <img src="images/emprendimiento.jpg" class="card-img-top" alt="Emprendedor">
+        <div class="card-body">
+            <h5 class="card-title">Emprendedor</h5>
+            <p class="card-text">Encuentra lo que te hace falta para que tu proyecto 
+            compita en el mercado.</p>
+        </div>
+    </div>
+    <div class="card" id="card-servicios">
+        <img src="images/institucion.jpg" class="card-img-top" alt="Instintucion">
+        <div class="card-body">
+            <h5 class="card-title">Instintucion</h5>
+            <p class="card-text">Incluye tus cursos o carreras dentro de nuestros cupos becarios.</p>
+        </div>
+    </div>
+</div>
     `;
 })
 
