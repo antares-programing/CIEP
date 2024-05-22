@@ -150,33 +150,37 @@ CURSOSBTN.addEventListener("click", ()=>{
     activebtn(CURSOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <div class="card-group">
-        <div class="card">
-            <img src="images/auxiliaradministrativo.jpg" class="card-img-top" alt="Curso 1">
-            <div class="card-body">
-                <h5 class="card-title">Administracion</h5>
-                <p class="card-text">realiza tareas administrativas básicas como archivar documentos, contestar llamadas telefónicas, manejar correos electrónicos, mantener registros de información y realizar actividades de entrada de datos.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./images/marketing-1.jpg" class="card-img-top" alt="Curso 2">
-            <div class="card-body">
-                <h5 class="card-title">Marketing</h5>
-                <p class="card-text">El marketing busca entender, comunicar y 
-                satisfacer las necesidades del cliente para construir relaciones y 
-                lograr objetivos comerciales.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./images/Recursoshumanos.jpg" class="card-img-top" alt="Curso 3">
-            <div class="card-body">
-                <h5 class="card-title">Recursos Humanos</h5>
-                <p class="card-text">Encargados de reclutar, seleccionar, capacitar y 
-                gestionar empleados para promover el bienestar y el rendimiento organizacional.</p>
-            </div>
+    <div class="custom-card-group-cursos">
+    <div class="custom-card-cursos" id="Administracion-card">
+        <img src="images/Administracion.jpg" class="custom-card-img-top-cursos" alt="Administracion">
+        <div class="custom-card-body-cursos">
+            <h5 class="custom-card-title-cursos">Administracion</h5>
+            <p class="custom-card-text-cursos">realiza tareas administrativas básicas como archivar documentos, 
+            contestar llamadas telefónicas, manejar correos electrónicos, 
+            mantener registros de información y realizar actividades de entrada de datos.</p>
         </div>
     </div>
-`;
+    <div class="custom-card-cursos" id="Marketing-card">
+        <img src="images/Marketing.jpg" class="custom-card-img-top-cursos" alt="Marketing">
+        <div class="custom-card-body-cursos">
+            <h5 class="custom-card-title-cursos">Marketing</h5>
+            <p class="custom-card-text-cursos">El marketing busca entender, comunicar y 
+            satisfacer las necesidades del cliente para construir relaciones y 
+            lograr objetivos comerciales.</p>
+        </div>
+    </div>
+    <div class="custom-card-cursos" id="Recursoshumanos-card">
+        <img src="images/Recursoshumanos.jpg" class="custom-card-img-top-cursos" alt="RecursosHumanos">
+        <div class="custom-card-body-cursos">
+            <h5 class="custom-card-title-cursos">Recursos Humanos</h5>
+            <p class="custom-card-text-cursos">Encargados de reclutar, seleccionar, capacitar y 
+            gestionar empleados para promover el bienestar y el rendimiento organizacional.</p>
+        </div>
+    </div>
+</div>
+
+    `
+;
 })
 
 //boton de Servicios, lo que muestra en el contenido dinamico al presionar el boton de servicios
