@@ -225,7 +225,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     transition: 0.5s all;
-
 }
 
 .MVV_card {
@@ -282,7 +281,6 @@ body{
 }
 
 @media (max-width: 1400px) {
-
     .MVV_card {
         width: 100%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
         margin: 10px -60px; /* Reduce el margen para pantallas pequeñas */
