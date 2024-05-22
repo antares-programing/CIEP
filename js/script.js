@@ -72,59 +72,75 @@ document.addEventListener("DOMContentLoaded", (event) => {
 INICIOBTN.addEventListener("click", ()=>{
     activebtn(INICIOBTN)
     DINAMICCONTENT.innerHTML = ``;
-    DINAMICCONTENT.innerHTML = `
+    DINAMICCONTENT.innerHTML = `    
     <div id="inicio_content">
 
-                    <div class="content_title_container">
-                        <h2 class="titulos">Bienvenidos al Centro Académico CIEP.</h2>
-                    </div>
+    <div class="content_title_container">
+        <h2 class="titulos">Bienvenidos al Centro Académico CIEP.</h2>
+    </div>
 
-                    <div class="left_img_container">
-                        <img class="left_content_img" src="./images/Welcome_img.jpeg" alt="">
-                        <p class="infos left_content_p">Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes. Creemos firmemente en la importancia de proporcionar una educación de calidad que no solo transmita conocimientos académicos, sino que también fomente habilidades críticas, creatividad y valores éticos. Nuestro enfoque se centra en el estudiante, promoviendo un ambiente de aprendizaje inclusivo y estimulante que permite a cada individuo alcanzar su máximo potencial. Además, nos esforzamos por desarrollar en nuestros alumnos una conciencia global y un compromiso social, preparándolos para enfrentar los desafíos del mundo moderno con responsabilidad y proactividad.</p>    
-                    </div>
-                    
-                    <div id="MVV_container">
-                        <div class="card_group_container">
-
-                            <div class="MVV_card" id="mision_card">
-                                <img src="images/Mision_icon.png" class="MVV_img" alt="Curso 1">
-                                <div class="MVV-body">
-                                    <p class="MVV_title">Misión</p>
-                                    <p class="MVV_content" id="mision_content">Proporcionar una educación de calidad que promueva el aprendizaje significativo y la formación de ciudadanos responsables. Nos dedicamos a crear un entorno educativo donde cada estudiante pueda explorar su potencial y desarrollar habilidades críticas, analíticas y creativas. Valoramos la importancia de un currículo integral que no solo aborde las áreas académicas tradicionales, sino que también incluya la educación en competencias transversales. Creemos que un aprendizaje significativo va más allá de la adquisición de conocimientos; implica la capacidad de aplicar lo aprendido en contextos reales, fomentando la resolución de problemas, la innovación y el pensamiento independiente.</p>
-                                </div>
-                            </div>
+    <div class="left_img_container">
+        <div class="left_content_img">
+        </div>
+        <p class="infos left_content_p">Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes. Creemos firmemente en la importancia de proporcionar una educación de calidad que no solo transmita conocimientos académicos, sino que también fomente habilidades críticas, creatividad y valores éticos. Nuestro enfoque se centra en el estudiante, promoviendo un ambiente de aprendizaje inclusivo y estimulante que permite a cada individuo alcanzar su máximo potencial. Además, nos esforzamos por desarrollar en nuestros alumnos una conciencia global y un compromiso social, preparándolos para enfrentar los desafíos del mundo moderno con responsabilidad y proactividad.</p>    
+    </div>
     
-                            <div class="MVV_card" id="vision_card">
-                                <img src="./images/Vision_icon.png" class="MVV_img" alt="Curso 2">
-                                <div class="MVV-body">
-                                    <p class="MVV_title">vision</p>
-                                    <p class="MVV_content" id="vision_content">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam felis, viverra quisque nascetur malesuada at ad lectus tortorfermentum torquent per non aliquet nullam eu, fusce justo etiam purus hac at rutrum scelerisque iaculis imperdiet pharetra. Lacus justo bibendum senectus porta commodo lobortis nulla mattis habitasse sodales, dui habitant pharetra non primis fringilla netus ultrices mus, parturient aliquam curae magnis torquent dignissim potenti dis augue.</p>
-                                </div>
-                            </div>
-    
-                            <div class="MVV_card" id="valores_card">
-                                <img src="./images/Valores_icon.png" class="MVV_img" alt="Curso 3">
-                                <div class="MVV-body">
-                                    <p class="MVV_title">Valores<p>
-                                    <p class="MVV_content" id="valores_content">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam felis, viverra quisque nascetur malesuada at ad lectus tortor ligula suscipit, ridiculus ac faucibus vel risus vehicula metus fusce justo etiam purus hac at rutrum scelerisque iaculis imperdiet pharetra. Lacus justo bibendum senectus porta commodo lobortis nulla mattis habitasse sodales, dui habitant pharetra non primis fringilla netus ultrices mus, parturient aliquam curae magnis torquent dignissim potenti dis augue.</p>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
+    <div id="MVV_container">
+        <div class="card_group_container">
 
-                    <div class="left_img_container">
-                        <p class="infos left_content_p">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam felis, viverra quisque nascetur malesuada at ad lectus tortor ligula suscipit, ridiculus ac faucibus vel risus vehicula metus dictumst. Massa tincidunt enim proin eleifend malesuada fermentum torquent per non aliquet nullam eu, fusce justo etiam purus hac at rutrum scelerisque iaculis imperdiet pharetra. Lacus justo bibendum senectus porta commodo lobortis nulla mattis habitasse sodales, dui habitant pharetra non primis fringilla netus ultrices mus, parturient aliquam curae magnis torquent dignissim potenti dis augue.</p>    
-                    
-                        <img class="left_content_img" src="./images/right_img.png" alt="">
-                    </div>
+            <div class="MVV_card" id="mision_card">
+                <img src="images/Mision_icon.png" class="MVV_img" alt="Curso 1">
+                <div class="MVV-body">
+                    <p class="MVV_title">Misión</p>
+                    <p class="MVV_content" id="mision_content">Nuestro compromiso es democratizar el conocimiento a través de programas de Responsabilidad Social Empresarial, permitiendo que toda la población activa acceda a nuestro Plan Permanente de Becas y a una amplia gama de recursos en línea, disponibles de forma gratuita o a bajo costo. Este enfoque busca cubrir las necesidades educativas no atendidas, proporcionando oportunidades de aprendizaje a quienes más lo necesitan.
 
-                    <div class="little_div">
-
-                    </div>
-
+                    Además, nos dedicamos a concientizar sobre la importancia de estar capacitado en el mundo actual. Promovemos la capacitación abierta a la comunidad para dotar a nuestros estudiantes de las herramientas necesarias para alcanzar sus metas y objetivos, así como para enfrentar los complejos desafíos de la vida moderna en todos sus ámbitos.</p>
                 </div>
+            </div>
+
+            <div class="MVV_card" id="vision_card">
+                <img src="./images/Vision_icon.png" class="MVV_img" alt="Curso 2">
+                <div class="MVV-body">
+                    <p class="MVV_title">vision</p>
+                    <p class="MVV_content" id="vision_content">Nuestro objetivo es ser el primer instituto en abarcar tanto a adultos como a adolescentes en su crecimiento profesional y personal, poniendo un fuerte énfasis en el desarrollo de habilidades blandas y la capacitación empresarial. Fomentamos el emprendimiento y la búsqueda constante de la felicidad y la autorrealización.
+
+                    Aspiramos a ser una referencia nacional en la formación y capacitación del talento humano, ofreciendo una educación integral y de alto nivel en todas las áreas clave de las organizaciones. Brindamos carreras cortas, cursos y talleres, tanto presenciales como a distancia, utilizando tecnología de punta para llegar a todos los rincones del país. Gracias a nuestras alianzas con las principales empresas públicas y privadas, garantizamos que nuestros egresados se incorporen con éxito al mercado laboral.</p>
+                </div>
+            </div>
+
+            <div class="MVV_card" id="valores_card">
+                <img src="./images/Valores_icon.png" class="MVV_img" alt="Curso 3">
+                <div class="MVV-body">
+                    <p class="MVV_title">Valores</p>
+                    <ul class="MVV_content" id="valores_content">
+                        <li>TRABAJO EN EQUIPO</li>
+                        <li>CONFIANZA</li>
+                        <li>COMPROMISO</li>
+                        <li>SERIEDAD</li>
+                        <li>HONESTIDAD</li>
+                        <li>PERSEVERANCIA</li>
+                        <li>RESPETO</li>
+                        <li>IGUALDAD</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="left_img_container">
+        <p class="infos left_content_p">En CIEP, enseñamos a través de líderes y académicos que transmiten conocimientos de manera inspiradora. Entendemos que los docentes de hoy deben ser más que simples instructores; deben ser guías y mentores capaces de conectar con los estudiantes no solo en el ámbito académico, sino también en el emocional. Esto permite inspirar un aprendizaje enriquecido con experiencias y retroalimentación constante.
+
+        Nuestro equipo está compuesto por profesionales con una amplia trayectoria, quienes reconocen la singularidad de cada individuo. Nuestro desafío es educar sin imponer moldes, abrazando la diversidad y facilitando un proceso de aprendizaje personalizado para cada alumno. De este modo, les brindamos la oportunidad de construir su propio camino hacia el perfil de egresado que el mercado laboral actual demanda.</p>    
+    
+        <img class="left_content_img" src="./images/right_img.png" alt="">
+    </div>
+
+    <div class="little_div">
+
+    </div>
+
+    </div>
     `;
     addMVVEventListeners()
 })
