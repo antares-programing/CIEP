@@ -135,14 +135,14 @@ CURSOSBTN.addEventListener("click", ()=>{
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <div class="card-group">
-        <div class="card">
+        <div class="custom-card">
             <img src="images/auxiliaradministrativo.jpg" class="card-img-top" alt="Curso 1">
             <div class="card-body">
                 <h5 class="card-title">Administracion</h5>
                 <p class="card-text">realiza tareas administrativas básicas como archivar documentos, contestar llamadas telefónicas, manejar correos electrónicos, mantener registros de información y realizar actividades de entrada de datos.</p>
             </div>
         </div>
-        <div class="card">
+        <div class="custom-card">
             <img src="./images/marketing-1.jpg" class="card-img-top" alt="Curso 2">
             <div class="card-body">
                 <h5 class="card-title">Marketing</h5>
@@ -151,7 +151,7 @@ CURSOSBTN.addEventListener("click", ()=>{
                 lograr objetivos comerciales.</p>
             </div>
         </div>
-        <div class="card">
+        <div class="custom-card">
             <img src="./images/Recursoshumanos.jpg" class="card-img-top" alt="Curso 3">
             <div class="card-body">
                 <h5 class="card-title">Recursos Humanos</h5>
