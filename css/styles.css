@@ -387,3 +387,60 @@ body{
 .custom-card-group.darken .custom-card:not(.hovered) {
     filter: brightness(0.5);
 }
+
+
+/*  Estilos de Cursos  */
+
+/* grupo de cards */
+.custom-card-group-cursos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Custom card styles */
+.custom-card-cursos {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, filter 0.2s;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space */
+    max-width: calc(33.333% - 20px);
+}
+
+.custom-card-cursos:hover {
+    transform: translateY(-10px);
+}
+
+.custom-card-img-top-cursos {
+    width: 100%;
+    height: auto;
+}
+
+.custom-card-body-cursos {
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-card-title-cursos {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.custom-card-text-cursos {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Title styles */
+.titulos {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #333;
+}
