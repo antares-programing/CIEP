@@ -226,48 +226,50 @@ body{
 
 /*  Estilos de SERVICIOS  */
 
-/* Container for the cards */
-.card-group {
+/* grupo de cards */
+.custom-card-group {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px 0;
 }
 
-/* Card styles */
-.card {
+/* Custom card styles */
+.custom-card {
     background-color: #fff;
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.2s, filter 0.2s;
     margin: 10px;
     flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space */
     max-width: calc(33.333% - 20px);
 }
 
-.card:hover {
-    transform:scale(1.05);
+.custom-card:hover {
+    transform: translateY(-10px);
 }
 
-.card img {
+.custom-card-img-top {
     width: 100%;
     height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
-.card-body {
+.custom-card-body {
     padding: 20px;
     text-align: center;
 }
 
-.card-title {
+.custom-card-title {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #007bff;
 }
 
-.card-text {
+.custom-card-text {
     font-size: 1em;
     line-height: 1.5;
     color: #555;
@@ -279,4 +281,9 @@ body{
     font-size: 2em;
     margin-top: 20px;
     color: #333;
+}
+
+/* Darken effect on non-hovered cards */
+.custom-card-group.darken .custom-card:not(.hovered) {
+    filter: brightness(0.5);
 }

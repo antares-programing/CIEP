@@ -164,36 +164,81 @@ CURSOSBTN.addEventListener("click", ()=>{
 })
 
 //boton de Servicios, lo que muestra en el contenido dinamico al presionar el boton de servicios
-SERVICIOSBTN.addEventListener("click", ()=>{
-    activebtn(SERVICIOSBTN)
+SERVICIOSBTN.addEventListener("click", () => {
+    activebtn(SERVICIOSBTN);
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <div class="card-group">
-    <div class="card" id="card-servicios">
-        <img src="images/empresa-2.webp" class="card-img-top" alt="Empresa">
-        <div class="card-body">
-            <h5 class="card-title">Empresa</h5>
-            <p class="card-text"> Capacita a tus empleados en las habilidades blandas y tecnias necesarias para 
-            lograr un mejor desarollo de su labor </div>
-    </div>
-    <div class="card" id="card-servicios">
-        <img src="images/emprendimiento.jpg" class="card-img-top" alt="Emprendedor">
-        <div class="card-body">
-            <h5 class="card-title">Emprendedor</h5>
-            <p class="card-text">Encuentra lo que te hace falta para que tu proyecto 
-            compita en el mercado.</p>
+    <div class="custom-card-group">
+    <div class="custom-card" id="empresa-card">
+        <img src="images/empresa-2.webp" class="custom-card-img-top" alt="Empresa">
+        <div class="custom-card-body">
+            <h5 class="custom-card-title">Empresa</h5>
+            <p class="custom-card-text">Capacita a tus empleados en las habilidades blandas y técnicas necesarias para lograr un mejor desarrollo de su labor.</p>
         </div>
     </div>
-    <div class="card" id="card-servicios">
-        <img src="images/institucion.jpg" class="card-img-top" alt="Instintucion">
-        <div class="card-body">
-            <h5 class="card-title">Instintucion</h5>
-            <p class="card-text">Incluye tus cursos o carreras dentro de nuestros cupos becarios.</p>
+    <div class="custom-card" id="emprendedor-card">
+        <img src="images/emprendimiento.jpg" class="custom-card-img-top" alt="Emprendedor">
+        <div class="custom-card-body">
+            <h5 class="custom-card-title">Emprendedor</h5>
+            <p class="custom-card-text">Encuentra lo que te hace falta para que tu proyecto compita en el mercado.</p>
+        </div>
+    </div>
+    <div class="custom-card" id="institucion-card">
+        <img src="images/institucion.jpg" class="custom-card-img-top" alt="Institución">
+        <div class="custom-card-body">
+            <h5 class="custom-card-title">Institución</h5>
+            <p class="custom-card-text">Incluye tus cursos o carreras dentro de nuestros cupos becarios.</p>
         </div>
     </div>
 </div>
+
     `;
-})
+
+    // Añadir event listeners a las tarjetas
+    document.getElementById("empresa-card").addEventListener("click", () => {
+        DINAMICCONTENT.innerHTML = `
+            <h2 class="titulos">Capacitación Empresarial</h2>
+            <p class="infos">En esta sección, proporcionamos información detallada sobre los programas de capacitación diseñados para mejorar las habilidades blandas y técnicas de los empleados. Nuestros cursos están diseñados para abordar las necesidades específicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad.</p>
+        `;
+    });
+
+    document.getElementById("emprendedor-card").addEventListener("click", () => {
+        DINAMICCONTENT.innerHTML = `
+            <h2 class="titulos">Soporte a Emprendedores</h2>
+            <p class="infos">Aquí ofrecemos recursos y asesoramiento para emprendedores que buscan llevar sus proyectos al siguiente nivel. Nuestros programas incluyen talleres sobre desarrollo de negocios, acceso a redes de contactos y oportunidades de financiamiento, todo diseñado para ayudar a los emprendedores a competir eficazmente en el mercado.</p>
+        `;
+    });
+
+    document.getElementById("institucion-card").addEventListener("click", () => {
+        DINAMICCONTENT.innerHTML = `
+            <h2 class="titulos">Colaboración con Instituciones</h2>
+            <p class="infos">Esta sección está dedicada a las instituciones educativas que desean incluir sus cursos o carreras dentro de nuestros programas de becas. Proveemos información sobre cómo las instituciones pueden colaborar con nosotros para ofrecer oportunidades educativas a un mayor número de estudiantes.</p>
+        `;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.custom-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            cards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.add('darken');
+                } else {
+                    otherCard.classList.add('hovered');
+                }
+            });
+        });
+
+        card.addEventListener('mouseout', () => {
+            cards.forEach(otherCard => {
+                otherCard.classList.remove('darken');
+                otherCard.classList.remove('hovered');
+            });
+        });
+    });
+});
 
 
 //boton de instituciones, lo que muestra en el contenido dinamico al presionar el boton de instituciones
