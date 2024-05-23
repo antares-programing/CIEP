@@ -9,9 +9,9 @@ const MENUBTNS = document.getElementsByClassName("menu_BTN")
 
 const DINAMICCONTENT = document.getElementById("dinamic_content")
 
-function activebtn(btn){
-    for (x of MENUBTNS){
-        if(x.classList.contains("ciep_BTN_active")){
+function activebtn(btn) {
+    for (x of MENUBTNS) {
+        if (x.classList.contains("ciep_BTN_active")) {
             x.classList.remove("ciep_BTN_active")
             x.classList.add("ciep_BTN_unactive")
         }
@@ -35,7 +35,7 @@ function addMVVEventListeners() {
         MISIONCONTENT.classList.add("active");
         VISIONCONTENT.classList.remove("active");
         VALORESCONTENT.classList.remove("active");
-        
+
         MISIONCARD.classList.add("active");
         VISIONCARD.classList.remove("active");
         VALORESCARD.classList.remove("active");
@@ -45,7 +45,7 @@ function addMVVEventListeners() {
         VISIONCONTENT.classList.add("active");
         MISIONCONTENT.classList.remove("active");
         VALORESCONTENT.classList.remove("active");
-        
+
         VISIONCARD.classList.add("active");
         MISIONCARD.classList.remove("active");
         VALORESCARD.classList.remove("active");
@@ -55,7 +55,7 @@ function addMVVEventListeners() {
         VALORESCONTENT.classList.add("active");
         MISIONCONTENT.classList.remove("active");
         VISIONCONTENT.classList.remove("active");
-        
+
         VALORESCARD.classList.add("active");
         MISIONCARD.classList.remove("active");
         VISIONCARD.classList.remove("active");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 //boton de inicio, lo que muestra en el contenido dinamico al presionar el boton de inicio
-INICIOBTN.addEventListener("click", ()=>{
+INICIOBTN.addEventListener("click", () => {
     activebtn(INICIOBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `    
@@ -146,7 +146,7 @@ INICIOBTN.addEventListener("click", ()=>{
 })
 
 //boton de cursos, lo que muestra en el contenido dinamico al presionar el boton de cursos
-CURSOSBTN.addEventListener("click", ()=>{
+CURSOSBTN.addEventListener("click", () => {
     activebtn(CURSOSBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
@@ -180,7 +180,7 @@ CURSOSBTN.addEventListener("click", ()=>{
 </div>
 
     `
-;
+        ;
 })
 
 //boton de Servicios, lo que muestra en el contenido dinamico al presionar el boton de servicios
@@ -217,9 +217,29 @@ SERVICIOSBTN.addEventListener("click", () => {
     // Añadir event listeners a las tarjetas
     document.getElementById("empresa-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
+        <div class="capacitacion">
             <h2 class="titulos">Capacitación Empresarial</h2>
-            <p class="infos">En esta sección, proporcionamos información detallada sobre los programas de capacitación diseñados para mejorar las habilidades blandas y técnicas de los empleados. Nuestros cursos están diseñados para abordar las necesidades específicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad.</p>
-        `;
+            <p class="capacitacion_info">Los programas de capacitación estan diseñados para mejorar tanto las habilidades blandas como las habilidades técnicas de los empleados. Nuestros cursos se diseñan espeficicamente para abordar las necesidades únicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad. </p>
+            <div class="container">
+                <div class="habilidadesB">
+                    <p class="info_habilidades">Las habilidades blandas son esenciales para la colaboración efectiva y el liderazgo dentro de cualquier organización. Nuestros programas de capacitación en habilidades blandas incluyen cursos como:</p>
+                    <ul>
+                        <li>Comunicación Efectiva</li>
+                        <li>Liderazgo y Gestión de Equipos</li>
+                        <li>Inteligencia Emocional</li>
+                    </ul>
+                </div>
+                <div class="habilidadesD">
+                    <p class="info_habilidades">Las habilidades técnicas son fundamentales para el desempeño específico de tareas laborales y para la adaptación a nuevas tecnologías y metodologías. Nuestros programas incluyen:</p>
+                    <ul>
+                        <li>Operador de maquinaria</li>
+                        <li>Herramientas informáticas</li>
+                        <li>Control de Calidad</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+            `;
     });
 
     document.getElementById("emprendedor-card").addEventListener("click", () => {
@@ -262,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //boton de instituciones, lo que muestra en el contenido dinamico al presionar el boton de instituciones
-INSTITUCIONBTN.addEventListener("click", ()=>{
+INSTITUCIONBTN.addEventListener("click", () => {
     activebtn(INSTITUCIONBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
@@ -273,7 +293,7 @@ INSTITUCIONBTN.addEventListener("click", ()=>{
 })
 
 //boton de colaboradores, lo que muestra en el contenido dinamico al presionar el boton de colaboradores
-COLABORADORESBTN.addEventListener("click", ()=>{
+COLABORADORESBTN.addEventListener("click", () => {
     activebtn(COLABORADORESBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
@@ -289,7 +309,7 @@ COLABORADORESBTN.addEventListener("click", ()=>{
 
 
 //boton de contacto, lo que muestra en el contenido dinamico al presionar el boton de contacto
-CONTACTOBTN.addEventListener("click", ()=>{
+CONTACTOBTN.addEventListener("click", () => {
     activebtn(CONTACTOBTN)
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
