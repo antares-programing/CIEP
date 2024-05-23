@@ -20,7 +20,15 @@ function activebtn(btn){
     btn.classList.add("ciep_BTN_active")
 }
 
-
+function fadeout(){
+    return new Promise(resolve => {
+        DINAMICCONTENT.style.opacity = 0;
+        setTimeout(resolve, 400);  // Espera 1 segundo para que la transición termine
+    });
+}
+function fadein(){
+    DINAMICCONTENT.style.opacity = 1;
+}
 
 //funcion que agrega los event listeners a los botones de Mision Vision y valores en el inicio.
 function addMVVEventListeners() {
@@ -65,7 +73,7 @@ function addMVVEventListeners() {
 
 //aqui agregamos un event listener al doc para que haga click en el boton de inicio al iniciar la pagina.
 document.addEventListener("DOMContentLoaded", (event) => {
-    INICIOBTN.click();
+    
 });
 
 //boton de inicio, lo que muestra en el contenido dinamico al presionar el boton de inicio
@@ -146,8 +154,9 @@ INICIOBTN.addEventListener("click", ()=>{
 })
 
 //boton de cursos, lo que muestra en el contenido dinamico al presionar el boton de cursos
-CURSOSBTN.addEventListener("click", ()=>{
+CURSOSBTN.addEventListener("click", async ()=>{
     activebtn(CURSOSBTN)
+    await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <div class="custom-card-group-cursos">
@@ -178,14 +187,64 @@ CURSOSBTN.addEventListener("click", ()=>{
         </div>
     </div>
 </div>
-
     `
-;
+    //boton de Curso de Administracion, lo que muestra en el contenido dinamico al presionar el boton de Administracion.
+    const ADMINISTRACION = document.getElementById("Administracion-card");
+    ADMINISTRACION.addEventListener("click", async ()=>{
+        await fadeout();
+        DINAMICCONTENT.innerHTML = ``;
+        DINAMICCONTENT.innerHTML = `
+                <div class="curso_container">
+                    <div class="curso_content_container">
+                        <h2 class="curso_content_title">Administración</h2>
+                    </div>
+                    <div class="curso_content_container">
+                        <div class="curso_content_p">
+                            <p>El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.
+                                Incluye la formación administrativa y contable propiamente dicha, junto con el entrenamiento en el manejo de los sistemas informáticos que dan soporte a la gestión de las organizaciones empresariales, así como también aspectos de índole comercial, legal o de correcto procedimiento para el procesamiento, registro y control del conjunto de las operaciones administrativas que una empresa debe realizar
+                                </p>
+                        </div>
+                    </div>
+                    <div class="curso_content_details">
+                        <ul>
+                            <li><h4 class="curso_content_title">Duracion - [8 meses]</h4></li>
+                            <li><h4 class="curso_content_title">Objetivos</h4>
+                                <ul>
+                                    <li>Formar al estudiante en las diferentes vertientes de la disciplina contable</li>
+                                    <li>Brindar los conocimientos adecuados que acompañen los avances tecnológicos y los nuevos instrumentos de gestión aplicados a la empresa.</li>
+                                    <li>Potenciar las condiciones de competitividad del estudiante.</li>
+                                </ul>
+                            </li>
+                            <li><h4 class="curso_content_title">Sistema de Enseñanza</h4>
+                                <p>La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.</p>
+                            </li>
+                            <li><h4 class="curso_content_title">Perfil del egresado</h4>
+                                <p>El egresado de la carrera de Auxiliar en Administración Contable será capaz de ejecutar funciones clave como planificación, organización, dirección, coordinación y control para tomar decisiones eficientes. Además, podrá manejar la comunicación interna y externa de la organización, desarrollar capacidades de gestión administrativa, y adaptarse proactivamente a la cultura organizacional. Estará capacitado para aplicar técnicas contables adecuadas, procesar y registrar información contable, y utilizar eficazmente programas informáticos de contabilidad. Finalmente, será capaz de analizar la información contable y tomar decisiones fundamentadas en ella.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pdf_container">
+                        <div class="pdf_container_title">
+                            <h2>Documentacion del curso</h2>
+                        </div>
+                        <div class="download_button_container">
+                            <img src="./images/PDF_file_icon.png" class="pdf_img" alt="">
+                            <a href="./documents/Aux adm contable CEIP.pdf" download="Aux adm contable CEIP.pdf" class="download_button">Aux adm contable CEIP.pdf</a>
+                        </div>
+                    </div>
+                    <div class="little_div"></div>
+                </div>  
+                `
+                fadein()
+    });
+    fadein()
 })
 
+
 //boton de Servicios, lo que muestra en el contenido dinamico al presionar el boton de servicios
-SERVICIOSBTN.addEventListener("click", () => {
+SERVICIOSBTN.addEventListener("click", async() => {
     activebtn(SERVICIOSBTN);
+    await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <div class="custom-card-group">
@@ -235,6 +294,7 @@ SERVICIOSBTN.addEventListener("click", () => {
             <p class="infos">Esta sección está dedicada a las instituciones educativas que desean incluir sus cursos o carreras dentro de nuestros programas de becas. Proveemos información sobre cómo las instituciones pueden colaborar con nosotros para ofrecer oportunidades educativas a un mayor número de estudiantes.</p>
         `;
     });
+    fadein()
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -262,19 +322,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //boton de instituciones, lo que muestra en el contenido dinamico al presionar el boton de instituciones
-INSTITUCIONBTN.addEventListener("click", ()=>{
+INSTITUCIONBTN.addEventListener("click", async()=>{
     activebtn(INSTITUCIONBTN)
+    await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2 class="titulos">Nuestra Institución</h2>
     <p class="infos">Somos un centro académico con más de 20 años de experiencia en el campo de la educación.</p>
     <p class="infos">Nuestra institución cuenta con un equipo de profesionales altamente calificados y un ambiente de aprendizaje propicio para el desarrollo académico y personal de nuestros estudiantes.</p>
     `;
+    fadein()
 })
 
 //boton de colaboradores, lo que muestra en el contenido dinamico al presionar el boton de colaboradores
-COLABORADORESBTN.addEventListener("click", ()=>{
+COLABORADORESBTN.addEventListener("click", async()=>{
     activebtn(COLABORADORESBTN)
+    await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2 class="titulos">Nuestros Asociados</h2>
@@ -285,12 +348,14 @@ COLABORADORESBTN.addEventListener("click", ()=>{
         <li>Organización de Profesionales</li>
     </ul>
 `;
+    fadein()
 })
 
 
 //boton de contacto, lo que muestra en el contenido dinamico al presionar el boton de contacto
-CONTACTOBTN.addEventListener("click", ()=>{
+CONTACTOBTN.addEventListener("click", async ()=>{
     activebtn(CONTACTOBTN)
+    await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <h2 class="titulos">Contáctanos</h2>
@@ -299,4 +364,5 @@ CONTACTOBTN.addEventListener("click", ()=>{
     <p class="infos">Teléfono: uno negrito asi de pequeño</p>
     <p class="infos">Correo electrónico: info@centroacademico.com</p>
     `;
+    fadein()
 })
