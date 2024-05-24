@@ -139,7 +139,6 @@ body{
     width: 100%;
     flex-direction: column;
     overflow-y: auto;
-
 }
 
 #dinamic_content::-webkit-scrollbar {
@@ -450,6 +449,14 @@ body{
 
 /* estilos seccion de cursos */
 
+
+#goback_BTN {
+    position: absolute;
+    left: 5%; 
+    height: 40px;
+    width: 40px;
+}
+
 .curso_container{
     background-image: url("../images/Administracion.jpg");
         background-size: cover;
@@ -477,6 +484,11 @@ body{
     color: #002752;
 }
 .curso_content_container:has(h2){
+    height: 70px;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
     text-align: center;
     padding: 0px;
 }

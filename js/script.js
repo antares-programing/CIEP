@@ -1,13 +1,19 @@
 const INICIOBTN = document.getElementById("Inicio_BTN")
 const CURSOSBTN = document.getElementById("Cursos_BTN")
 const SERVICIOSBTN = document.getElementById("Servicios_BTN")
-const INSTITUCIONBTN = document.getElementById("Institucion_BTN")
 const COLABORADORESBTN = document.getElementById("Colaboradores_BTN")
 const CONTACTOBTN = document.getElementById("Contacto_BTN")
 
 const MENUBTNS = document.getElementsByClassName("menu_BTN")
 
 const DINAMICCONTENT = document.getElementById("dinamic_content")
+
+function goback(instance1){
+    const GOBACKBTN = document.getElementById("goback_BTN");
+    GOBACKBTN.addEventListener("click", ()=>{
+        instance1.click();
+    });
+}
 
 function activebtn(btn){
     for (x of MENUBTNS){
@@ -73,7 +79,7 @@ function addMVVEventListeners() {
 
 //aqui agregamos un event listener al doc para que haga click en el boton de inicio al iniciar la pagina.
 document.addEventListener("DOMContentLoaded", (event) => {
-    
+    INICIOBTN.click();
 });
 
 //boton de inicio, lo que muestra en el contenido dinamico al presionar el boton de inicio
@@ -196,6 +202,7 @@ CURSOSBTN.addEventListener("click", async ()=>{
         DINAMICCONTENT.innerHTML = `
                 <div class="curso_container">
                     <div class="curso_content_container">
+                        <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
                         <h2 class="curso_content_title">Administración</h2>
                     </div>
                     <div class="curso_content_container">
@@ -207,7 +214,7 @@ CURSOSBTN.addEventListener("click", async ()=>{
                     </div>
                     <div class="curso_content_details">
                         <ul>
-                            <li><h4 class="curso_content_title">Duracion - [8 meses]</h4></li>
+                            <li><h4 class="curso_content_title">Duracion - [144 horas]</h4></li>
                             <li><h4 class="curso_content_title">Objetivos</h4>
                                 <ul>
                                     <li>Formar al estudiante en las diferentes vertientes de la disciplina contable</li>
@@ -236,9 +243,115 @@ CURSOSBTN.addEventListener("click", async ()=>{
                 </div>  
                 `
                 fadein()
+                goback(CURSOSBTN)
+    });
+
+    //boton de Curso de Marketing, lo que muestra en el contenido dinamico al presionar el boton de Marketing.
+    const MARKETING = document.getElementById("Marketing-card");
+    MARKETING.addEventListener("click", async ()=>{
+    await fadeout();
+    DINAMICCONTENT.innerHTML = ``;
+    DINAMICCONTENT.innerHTML = `
+            <div class="curso_container">
+                <div class="curso_content_container">
+                    <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+                    <h2 class="curso_content_title">Marketing</h2>
+                </div>
+                <div class="curso_content_container">
+                    <div class="curso_content_p">
+                        <p>La carrera de Analista en Marketing que ofrece CEIP, procura brindar al estudiante una formación que combine el análisis de los conceptos del Marketing, con lo que constituyen sus técnicas de aplicación concreta en base al marco teórico, casos prácticos y work shop. En este vasto escenario se estudia el Marketing Operacional, Estratégico, Digital, las Ventas y la Publicidad entre otras. </p>
+                    </div>
+                </div>
+                <div class="curso_content_details">
+                    <ul>
+                        <li><h4 class="curso_content_title">Duracion - [128 horas]</h4></li>
+                        <li><h4 class="curso_content_title">Objetivos</h4>
+                            <ul>
+                                <li>Facilitar los conocimientos básicos del marketing. Adentrarse en la investigación de mercados. Decidir sobre el diseño del producto en función de las necesidades del mercado y la fijación de precios. Conocer los elementos y variables de las transacciones comerciales. Gestionar la organización del departamento comercial. </li>
+                                <li>Capacitar al alumno en la realización de un Plan de Marketing, que se efectuará como Trabajo Final de Curso.</li>
+                                <li>Ofrecer las herramientas y la estrategia necesaria para diseñar y ejecutar una estrategia de contenidos que aporte un valor relevante a la consecución del desempeño profesional. </li>\
+                                <li>Fortalecer las condiciones de gerenciamiento, a la vez que complementar el perfil profesional, con una sólida formación en el plano comercial y apto para un mercado dinámico y competitivo. </li>
+                                <li>Capacitar al estudiante para que logre comprender y utilizar las herramientas del mundo online al servicio de los objetivos de Marketing, fortaleciendo sus competencias digitales. </li>
+                            </ul>
+                        </li>
+                        <li><h4 class="curso_content_title">Sistema de Enseñanza</h4>
+                            <p>La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.</p>
+                        </li>
+                        <li><h4 class="curso_content_title">Perfil del egresado</h4>
+                            <p>El Analista en Marketing es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de asistencia y asesoramiento de empresas en lo relativo a la planificación, organización, ejecución y control del departamento o área comercial (comunicación, ventas, publicidad, etc.). Puede desarrollar su tarea a nivel empresarial, gerencial o de consultoría. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión, así como tiene conocimientos suficientes para diseñar planes estratégicos, referidos a diversas temáticas que componen el quehacer de esta disciplina.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pdf_container">
+                    <div class="pdf_container_title">
+                        <h2>Documentacion del curso</h2>
+                    </div>
+                    <div class="download_button_container">
+                        <img src="./images/PDF_file_icon.png" class="pdf_img" alt="">
+                        <a href="./documents/Aux adm contable CEIP.pdf" download="Aux adm contable CEIP.pdf" class="download_button">Aux adm contable CEIP.pdf</a>
+                    </div>
+                </div>
+                <div class="little_div"></div>
+            </div>  
+            `
+            fadein()
+            goback(CURSOSBTN)
+    });
+    //boton de Curso de Marketing, lo que muestra en el contenido dinamico al presionar el boton de Marketing.
+    const RECURSOSHUMANOS = document.getElementById("Recursoshumanos-card");
+    RECURSOSHUMANOS.addEventListener("click", async ()=>{
+    await fadeout();
+    DINAMICCONTENT.innerHTML = ``;
+    DINAMICCONTENT.innerHTML = `
+            <div class="curso_container">
+                <div class="curso_content_container">
+                    <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+                    <h2 class="curso_content_title">Recursos Humanos</h2>
+                </div>
+                <div class="curso_content_container">
+                    <div class="curso_content_p">
+                        <p>El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.
+                            Incluye la formación administrativa y contable propiamente dicha, junto con el entrenamiento en el manejo de los sistemas informáticos que dan soporte a la gestión de las organizaciones empresariales, así como también aspectos de índole comercial, legal o de correcto procedimiento para el procesamiento, registro y control del conjunto de las operaciones administrativas que una empresa debe realizar
+                            </p>
+                    </div>
+                </div>
+                <div class="curso_content_details">
+                    <ul>
+                        <li><h4 class="curso_content_title">Duracion - [8 meses]</h4></li>
+                        <li><h4 class="curso_content_title">Objetivos</h4>
+                            <ul>
+                                <li>Formar al estudiante en las diferentes vertientes de la disciplina contable</li>
+                                <li>Brindar los conocimientos adecuados que acompañen los avances tecnológicos y los nuevos instrumentos de gestión aplicados a la empresa.</li>
+                                <li>Potenciar las condiciones de competitividad del estudiante.</li>
+                            </ul>
+                        </li>
+                        <li><h4 class="curso_content_title">Sistema de Enseñanza</h4>
+                            <p>La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.</p>
+                        </li>
+                        <li><h4 class="curso_content_title">Perfil del egresado</h4>
+                            <p>El egresado de la carrera de Auxiliar en Administración Contable será capaz de ejecutar funciones clave como planificación, organización, dirección, coordinación y control para tomar decisiones eficientes. Además, podrá manejar la comunicación interna y externa de la organización, desarrollar capacidades de gestión administrativa, y adaptarse proactivamente a la cultura organizacional. Estará capacitado para aplicar técnicas contables adecuadas, procesar y registrar información contable, y utilizar eficazmente programas informáticos de contabilidad. Finalmente, será capaz de analizar la información contable y tomar decisiones fundamentadas en ella.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pdf_container">
+                    <div class="pdf_container_title">
+                        <h2>Documentacion del curso</h2>
+                    </div>
+                    <div class="download_button_container">
+                        <img src="./images/PDF_file_icon.png" class="pdf_img" alt="">
+                        <a href="./documents/Aux adm contable CEIP.pdf" download="Aux adm contable CEIP.pdf" class="download_button">Aux adm contable CEIP.pdf</a>
+                    </div>
+                </div>
+                <div class="little_div"></div>
+            </div>  
+            `
+            fadein()
+            goback(CURSOSBTN)
     });
     fadein()
 })
+
+
 
 
 //boton de Servicios, lo que muestra en el contenido dinamico al presionar el boton de servicios
@@ -319,20 +432,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
-//boton de instituciones, lo que muestra en el contenido dinamico al presionar el boton de instituciones
-INSTITUCIONBTN.addEventListener("click", async()=>{
-    activebtn(INSTITUCIONBTN)
-    await fadeout();
-    DINAMICCONTENT.innerHTML = ``;
-    DINAMICCONTENT.innerHTML = `
-    <h2 class="titulos">Nuestra Institución</h2>
-    <p class="infos">Somos un centro académico con más de 20 años de experiencia en el campo de la educación.</p>
-    <p class="infos">Nuestra institución cuenta con un equipo de profesionales altamente calificados y un ambiente de aprendizaje propicio para el desarrollo académico y personal de nuestros estudiantes.</p>
-    `;
-    fadein()
-})
 
 //boton de colaboradores, lo que muestra en el contenido dinamico al presionar el boton de colaboradores
 COLABORADORESBTN.addEventListener("click", async()=>{
