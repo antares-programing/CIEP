@@ -1,0 +1,44 @@
+[
+    {
+        "titulo": "Curso de Marketing",
+        "descripcion": "La carrera de Analista en Marketing que ofrece CEIP, procura brindar al estudiante una formación que combine el análisis de los conceptos del Marketing, con lo que constituyen sus técnicas de aplicación concreta en base al marco teórico, casos prácticos y work shop. En este vasto escenario se estudia el Marketing Operacional, Estratégico, Digital, las Ventas y la Publicidad entre otras.",
+        "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
+        "duracion": "128 horas",
+        "relatedcategory": "marketing",
+        "objetivos": [
+        "Facilitar los conocimientos básicos del marketing.",
+        "Adentrarse en la investigación de mercados.",
+        "Decidir sobre el diseño del producto en función de las necesidades del mercado y la fijación de precios."
+        ],
+        "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
+        "perfilEgresado": "El Analista en Marketing es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos."
+    },
+    {
+      "titulo": "Otro curso de Marketing",
+      "descripcion": "Descripción del otro curso de Marketing.",
+      "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
+      "duracion": "Duración del curso",
+      "relatedcategory": "marketing",
+      "objetivos": [
+        "Objetivo 1",
+        "Objetivo 2",
+        "Objetivo 3"
+      ],
+      "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
+      "perfilEgresado": "Perfil del egresado."
+    },
+    {
+      "titulo": "Otro curso de Marketing2",
+      "descripcion": "Descripción del otro curso de Marketing.",
+      "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
+      "duracion": "Duración del curso",
+      "relatedcategory": "marketing",
+      "objetivos": [
+        "Objetivo 1",
+        "Objetivo 2",
+        "Objetivo 3"
+      ],
+      "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
+      "perfilEgresado": "Perfil del egresado."
+    }
+  ]

@@ -390,10 +390,10 @@ body{
 }
 
 
-/*  Estilos de Cursos  */
+/* ===================================== [Estilos de Categorias] ===================================== */
 
 /* grupo de cards */
-.custom-card-group-cursos {
+.custom-card-group-categoria {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -401,7 +401,7 @@ body{
 }
 
 /* Custom card styles */
-.custom-card-cursos {
+.custom-card-categoria {
     background-color: #fff;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -412,27 +412,27 @@ body{
     max-width: calc(33.333% - 20px);
 }
 
-.custom-card-cursos:hover {
+.custom-card-categoria:hover {
     transform: translateY(-10px);
 }
 
-.custom-card-img-top-cursos {
+.custom-card-img-top-categoria {
     width: 100%;
     height: auto;
 }
 
-.custom-card-body-cursos {
+.custom-card-body-categoria {
     padding: 20px;
     text-align: center;
 }
 
-.custom-card-title-cursos {
+.custom-card-title-categoria {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #007bff;
 }
 
-.custom-card-text-cursos {
+.custom-card-text-categoria {
     font-size: 1em;
     line-height: 1.5;
     color: #555;
@@ -446,9 +446,76 @@ body{
     color: #333;
 }
 
+/* ===================================== [estilos seccion de tarjetas de los cursos] ===================================== */
 
-/* estilos seccion de cursos */
+.custom-card-group-cursos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    align-self: center;
+}
 
+/* Custom card styles */
+.custom-card-cursos {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, filter 0.2s;
+    margin: 10px;
+    flex: 1 1 250px; /* Fijo en 100px */
+    max-width: 250px; /* Fijo en 100px */
+    height: 500px;
+    background-color: white;
+}
+.custom-card-cursos:hover {
+    transform: translateY(-10px);
+}
+
+.custom-card-img-top-cursos {
+    width: 100%;
+    height: auto;
+}
+
+.custom-card-body-cursos {
+    padding: 5px;
+    text-align: center;
+}
+.custom-card-body-cursos {
+    padding: 5px;
+    text-align: center;
+}
+.custom-card-body-cursos > p {
+    padding: 20px;
+}
+.custom-card-title-container {
+    height: fit-content;
+    text-align: center;
+    padding-bottom: 50px; /* Espacio adicional para la imagen */
+    background-image: url("../images/course_card_header.png");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    background-position: top; /* Posiciona la imagen en la parte superior */
+}
+
+.custom-card-title-cursos {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: 30px;
+    color: #012b58;
+    overflow: hidden; /* Evita que el texto sobrepase el contenedor */
+    display: inline-block; /* Permite calcular el ancho del texto */
+    text-align: center; /* Centra el texto en el contenedor, opcional */
+}
+
+.custom-card-text-cursos {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* ===================================== [estilos seccion de cada curso] ===================================== */
 
 #goback_BTN {
     position: absolute;
@@ -495,11 +562,6 @@ body{
 .curso_content_container > h2{
     font-size: 40px;
 }
-
-.curso_content_p{
-
-}
-
 .download_button_container{
     display: flex;
     flex-direction: column;
@@ -517,11 +579,6 @@ body{
     background: #ffffffbe;
     padding: 20px;
 }
-
-.pdf_container_title{
-    
-}
-
 .pdf_img{
     position: relative;
     height: 50px;

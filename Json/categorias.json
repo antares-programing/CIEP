@@ -1,0 +1,20 @@
+[
+    {
+      "id": "administracion",
+      "nombre": "Administración",
+      "imagen": "images/Administracion.jpg",
+      "descripcion": "Realiza tareas administrativas básicas como archivar documentos, contestar llamadas telefónicas, manejar correos electrónicos, mantener registros de información y realizar actividades de entrada de datos."
+    },
+    {
+      "id": "marketing",
+      "nombre": "Marketing",
+      "imagen": "images/Marketing.jpg",
+      "descripcion": "El marketing busca entender, comunicar y satisfacer las necesidades del cliente para construir relaciones y lograr objetivos comerciales."
+    },
+    {
+      "id": "recursoshumanos",
+      "nombre": "Recursos Humanos",
+      "imagen": "images/Recursoshumanos.jpg",
+      "descripcion": "Encargados de reclutar, seleccionar, capacitar y gestionar empleados para promover el bienestar y el rendimiento organizacional."
+    }
+  ]
