@@ -484,7 +484,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
     document.getElementById("empresa-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
         <div class="capacitacion">
-            <h2 class="titulos">Capacitación Empresarial</h2>
+            <h2 class="titulos_capacitacion">Capacitación Empresarial</h2>
             <p class="capacitacion_info">Los programas de capacitación estan diseñados para mejorar tanto las habilidades blandas como las habilidades técnicas de los empleados. Nuestros cursos se diseñan espeficicamente para abordar las necesidades únicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad. </p>
             <div class="container">
                 <div class="habilidadesB">
@@ -510,14 +510,14 @@ SERVICIOSBTN.addEventListener("click", async() => {
 
     document.getElementById("emprendedor-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
-            <h2 class="titulos">Soporte a Emprendedores</h2>
+            <h2 class="titulos_capacitacion">Soporte a Emprendedores</h2>
             <p class="infos">Aquí ofrecemos recursos y asesoramiento para emprendedores que buscan llevar sus proyectos al siguiente nivel. Nuestros programas incluyen talleres sobre desarrollo de negocios, acceso a redes de contactos y oportunidades de financiamiento, todo diseñado para ayudar a los emprendedores a competir eficazmente en el mercado.</p>
         `;
     });
 
     document.getElementById("institucion-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
-            <h2 class="titulos">Colaboración con Instituciones</h2>
+            <h2 class="titulos_capacitacion">Colaboración con Instituciones</h2>
             <p class="infos">Esta sección está dedicada a las instituciones educativas que desean incluir sus cursos o carreras dentro de nuestros programas de becas. Proveemos información sobre cómo las instituciones pueden colaborar con nosotros para ofrecer oportunidades educativas a un mayor número de estudiantes.</p>
         `;
     });

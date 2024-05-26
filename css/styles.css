@@ -103,9 +103,7 @@ body{
     height: 500px;
     z-index: 2;
 }
-.titulos{
-    text-align: center;
-}
+
 
 .infos,.capacitacion_info{
     text-align: center;
@@ -447,7 +445,7 @@ body{
 }
 
 /* Title styles */
-.titulos {
+.titulos,.titulos_capacitacion {
     text-align: center;
     font-size: 2em;
     margin-top: 20px;
@@ -646,7 +644,7 @@ body{
     gap: 20px; /* Espacio entre los divs */
 }
 
-.titulos, .capacitacion_info {
+.titulos_capacitacion, .capacitacion_info {
     background-color: #ffffffbe;
 }
 .habilidadesB, .habilidadesD {
