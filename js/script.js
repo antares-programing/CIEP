@@ -262,6 +262,8 @@ async function mostrarCursos(categoria) {
     goback(CURSOSBTN);
 }
 
+
+
 CURSOSBTN.addEventListener("click", async () => {
     activebtn(CURSOSBTN);
     await fadeout();
@@ -290,10 +292,121 @@ CURSOSBTN.addEventListener("click", async () => {
             <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
             <h2 class="curso_content_title">Becas</h2>
         </div>
+        <div class="curso_content_container">
+                        <div class="curso_content_p">
+                        <form id="contact-form">
+                            <label for="name">Nombre Completo:</label>
+                            <input type="text" id="name" name="name" required>
+                            <br>
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                            <br>
+                            <label for="phone">Número de Teléfono:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <br>
+                            <label for="department">Departamento:</label>
+                            <input type="text" id="department" name="department" required>
+                            <br>
+                            <label for="location">Localidad:</label>
+                            <input type="text" id="location" name="location" required>
+                            <br>
+                            <label for="work_status">Situación Laboral:</label>
+                            <br>
+                            <input type="radio" id="unemployed" name="work_status" value="Desempleado" required>
+                            <label for="unemployed">Desempleado</label>
+                            <br>
+                            <input type="radio" id="employed" name="work_status" value="Trabajador dependiente" required>
+                            <label for="employed">Trabajador dependiente</label>
+                            <br>
+                            <input type="radio" id="independent" name="work_status" value="Trabajador independiente" required>
+                            <label for="independent">Trabajador independiente</label>
+                            <br>
+                            <input type="radio" id="entrepreneur" name="work_status" value="Empresario" required>
+                            <label for="entrepreneur">Empresario</label>
+                            <br>
+                            <label for="family">¿Cómo se compone su núcleo familiar? Detalle si es pareja o su parentesco, nombre, edad y actividad:</label>
+                            <textarea id="family" name="family" required></textarea>
+                            <br>
+                            <label for="education_level">Nivel Educativo:</label>
+                            <br>
+                            <input type="radio" id="primary_incomplete" name="education_level" value="Primaria incompleta" required>
+                            <label for="primary_incomplete">Primaria incompleta</label>
+                            <br>
+                            <input type="radio" id="primary_complete" name="education_level" value="Primaria completa" required>
+                            <label for="primary_complete">Primaria completa</label>
+                            <br>
+                            <input type="radio" id="basic_cycle" name="education_level" value="Ciclo básico culminado" required>
+                            <label for="basic_cycle">Ciclo básico culminado</label>
+                            <br>
+                            <input type="radio" id="high_school" name="education_level" value="Bachillerato culminado" required>
+                            <label for="high_school">Bachillerato culminado</label>
+                            <br>
+                            <input type="radio" id="tertiary_incomplete" name="education_level" value="Terciario incompleto" required>
+                            <label for="tertiary_incomplete">Terciario incompleto</label>
+                            <br>
+                            <input type="radio" id="tertiary_complete" name="education_level" value="Terciario culminado" required>
+                            <label for="tertiary_complete">Terciario culminado</label>
+                            <br>
+                            <label for="availability">Disponibilidad Horaria:</label>
+                            <textarea id="availability" name="availability" required></textarea>
+                            <br>
+                            <label for="goals">¿Cuáles son sus principales metas y objetivos? ¿Cómo se ve de aquí a 5 años? ¿Cómo se ve de aquí a 10 años? ¿Qué cosas le gustaría hacer o tener?:</label>
+                            <textarea id="goals" name="goals" required></textarea>
+                            <br>
+                            <label for="discount">Descuento para el que quiere aplicar:</label>
+                            <br>
+                            <input type="radio" id="discount_10" name="discount" value="10%" required>
+                            <label for="discount_10">10%</label>
+                            <br>
+                            <input type="radio" id="discount_20" name="discount" value="20%" required>
+                            <label for="discount_20">20%</label>
+                            <br>
+                            <input type="radio" id="discount_30" name="discount" value="30%" required>
+                            <label for="discount_30">30%</label>
+                            <br>
+                            <label for="course">Curso al que quiere aplicar:</label>
+                            <input type="text" id="course" name="course" required>
+                            <br>
+                            <button type="submit" id="send_email_BTN">Enviar</button>
+                        </form>
+                        </div>
+                    </div>
         <div class="custom-card-group-cursos" id="cursos-container"></div>
         `;
         fadein();
         goback(CURSOSBTN);
+        // ======================================= [Enviar correo formulario] ======================================
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const serviceID = 'service_zpo793f'; // Reemplaza con tu Service ID de EmailJS
+            const templateID = 'template_yvmend4'; // Reemplaza con tu Template ID de EmailJS
+            var templateParams = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                department: document.getElementById('department').value,
+                location: document.getElementById('location').value,
+                work_status: document.querySelector('input[name="work_status"]:checked').value,
+                family: document.getElementById('family').value,
+                education_level: document.querySelector('input[name="education_level"]:checked').value,
+                availability: document.getElementById('availability').value,
+                goals: document.getElementById('goals').value,
+                discount: document.querySelector('input[name="discount"]:checked').value,
+                course: document.getElementById('course').value
+            };
+            emailjs.init('YwXhxnIo10hShizFM');
+            emailjs.send(serviceID, templateID, templateParams)
+                .then((response) => {
+                    console.log('Correo enviado con éxito!', response.status, response.text);
+                    alert('Correo enviado con éxito!');
+                }, (error) => {
+                    console.log('Error al enviar el correo:', error);
+                    alert('Error al enviar el correo.');
+                });
+        });
+        // ======================================= [Enviar correo formulario] ======================================
     })
     fetch('Json/categorias.json')
         .then(response => {
