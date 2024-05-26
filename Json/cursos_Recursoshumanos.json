@@ -11,7 +11,9 @@
         "Decidir sobre el diseño del producto en función de las necesidades del mercado y la fijación de precios."
         ],
         "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-        "perfilEgresado": "El Analista en Marketing es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos."
+        "perfilEgresado": "El Analista en Marketing es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos.",
+        "pdfNombre": "Aux adm Contable.pdf",
+        "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     },
     {
       "titulo": "Otro curso de Recursos Humanos2",
@@ -25,6 +27,8 @@
         "Objetivo 3"
       ],
       "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado."
+      "perfilEgresado": "Perfil del egresado.",
+      "pdfNombre": "Aux adm Contable.pdf",
+      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     }
   ]

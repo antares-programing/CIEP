@@ -273,8 +273,28 @@ CURSOSBTN.addEventListener("click", async () => {
         <div class="custom-card-group-categoria" id="categorias-container">
             <!-- Aquí se agregarán las tarjetas de categoría -->
         </div>
+        <div id="becas_container">
+            <div id="becas_BTN">
+                <h1>Becas</h1>
+            </div>
+        </div>
+        <div class="little_div">
+        </div>
     `;
-
+    const BECASBTN = document.getElementById("becas_BTN");
+    BECASBTN.addEventListener("click", async ()=>{
+        await fadeout();
+        DINAMICCONTENT.innerHTML = ``;
+        DINAMICCONTENT.innerHTML = ` 
+        <div class="curso_content_container">
+            <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+            <h2 class="curso_content_title">Becas</h2>
+        </div>
+        <div class="custom-card-group-cursos" id="cursos-container"></div>
+        `;
+        fadein();
+        goback(CURSOSBTN);
+    })
     fetch('Json/categorias.json')
         .then(response => {
             if (!response.ok) {

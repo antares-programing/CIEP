@@ -4,41 +4,47 @@
       "descripcion": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
       "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
       "duracion": "144 horas",
-      "relatedcategory": "administracion-card",
+      "relatedcategory": "administracion",
       "objetivos": [
         "Formar al estudiante en las diferentes vertientes de la disciplina contable",
         "Brindar los conocimientos adecuados que acompañen los avances tecnológicos y los nuevos instrumentos de gestión aplicados a la empresa.",
         "Potenciar las condiciones de competitividad del estudiante."
       ],
       "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-      "perfilEgresado": "El egresado de la carrera de Auxiliar en Administración Contable será capaz de ejecutar funciones clave como planificación, organización, dirección, coordinación y control para tomar decisiones eficientes. Además, podrá manejar la comunicación interna y externa de la organización, desarrollar capacidades de gestión administrativa, y adaptarse proactivamente a la cultura organizacional."
+      "perfilEgresado": "El egresado de la carrera de Auxiliar en Administración Contable será capaz de ejecutar funciones clave como planificación, organización, dirección, coordinación y control para tomar decisiones eficientes. Además, podrá manejar la comunicación interna y externa de la organización, desarrollar capacidades de gestión administrativa, y adaptarse proactivamente a la cultura organizacional.",
+      "pdfNombre": "Aux adm Contable.pdf",
+      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     },
     {
       "titulo": "Otro curso de Administración",
       "descripcion": "Descripción del otro curso de administración.",
       "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
       "duracion": "Duración del curso",
-      "relatedcategory": "administracion-card",
+      "relatedcategory": "administracion",
       "objetivos": [
         "Objetivo 1",
         "Objetivo 2",
         "Objetivo 3"
       ],
       "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado."
+      "perfilEgresado": "Perfil del egresado.",
+      "pdfNombre": "Aux adm Contable.pdf",
+      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     },
     {
       "titulo": "Otro curso de Administración",
       "descripcion": "Descripción del otro curso de administración.",
       "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
       "duracion": "Duración del curso",
-      "relatedcategory": "administracion-card",
+      "relatedcategory": "administracion",
       "objetivos": [
         "Objetivo 1",
         "Objetivo 2",
         "Objetivo 3"
       ],
       "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado."
+      "perfilEgresado": "Perfil del egresado.",
+      "pdfNombre": "Aux adm Contable.pdf",
+      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     }
   ]
