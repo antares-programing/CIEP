@@ -64,7 +64,7 @@ function addMVVEventListeners() {
         MISIONCONTENT.classList.add("active");
         VISIONCONTENT.classList.remove("active");
         VALORESCONTENT.classList.remove("active");
-        
+
         MISIONCARD.classList.add("active");
         VISIONCARD.classList.remove("active");
         VALORESCARD.classList.remove("active");
@@ -74,7 +74,7 @@ function addMVVEventListeners() {
         VISIONCONTENT.classList.add("active");
         MISIONCONTENT.classList.remove("active");
         VALORESCONTENT.classList.remove("active");
-        
+
         VISIONCARD.classList.add("active");
         MISIONCARD.classList.remove("active");
         VALORESCARD.classList.remove("active");
@@ -84,7 +84,7 @@ function addMVVEventListeners() {
         VALORESCONTENT.classList.add("active");
         MISIONCONTENT.classList.remove("active");
         VISIONCONTENT.classList.remove("active");
-        
+
         VALORESCARD.classList.add("active");
         MISIONCARD.classList.remove("active");
         VISIONCARD.classList.remove("active");
@@ -483,9 +483,29 @@ SERVICIOSBTN.addEventListener("click", async() => {
     // Añadir event listeners a las tarjetas
     document.getElementById("empresa-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
+        <div class="capacitacion">
             <h2 class="titulos">Capacitación Empresarial</h2>
-            <p class="infos">En esta sección, proporcionamos información detallada sobre los programas de capacitación diseñados para mejorar las habilidades blandas y técnicas de los empleados. Nuestros cursos están diseñados para abordar las necesidades específicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad.</p>
-        `;
+            <p class="capacitacion_info">Los programas de capacitación estan diseñados para mejorar tanto las habilidades blandas como las habilidades técnicas de los empleados. Nuestros cursos se diseñan espeficicamente para abordar las necesidades únicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad. </p>
+            <div class="container">
+                <div class="habilidadesB">
+                    <p class="info_habilidades">Las habilidades blandas son esenciales para la colaboración efectiva y el liderazgo dentro de cualquier organización. Nuestros programas de capacitación en habilidades blandas incluyen cursos como:</p>
+                    <ul>
+                        <li>Comunicación Efectiva</li>
+                        <li>Liderazgo y Gestión de Equipos</li>
+                        <li>Inteligencia Emocional</li>
+                    </ul>
+                </div>
+                <div class="habilidadesD">
+                    <p class="info_habilidades">Las habilidades técnicas son fundamentales para el desempeño específico de tareas laborales y para la adaptación a nuevas tecnologías y metodologías. Nuestros programas incluyen:</p>
+                    <ul>
+                        <li>Operador de maquinaria</li>
+                        <li>Herramientas informáticas</li>
+                        <li>Control de Calidad</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+            `;
     });
 
     document.getElementById("emprendedor-card").addEventListener("click", () => {
