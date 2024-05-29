@@ -478,7 +478,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
     DINAMICCONTENT.innerHTML = `
     <div class="custom-card-group">
     <div class="custom-card" id="empresa-card">
-        <img src="images/empresa-2.webp" class="custom-card-img-top" alt="Empresa">
+        <img src="images/empresarial.jpg" class="custom-card-img-top" alt="Empresa">
         <div class="custom-card-body">
             <h5 class="custom-card-title">Empresa</h5>
             <p class="custom-card-text">Capacita a tus empleados en las habilidades blandas y técnicas necesarias para lograr un mejor desarrollo de su labor.</p>
