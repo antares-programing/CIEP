@@ -105,14 +105,14 @@ body{
 }
 
 
-.infos,.capacitacion_info,.emprendedor_info{
+.info_habilidades,.infos,.capacitacion_info,.emprendedor_info,.emprendedor_info2, .institucion_info{
     text-align: center;
      margin-bottom: 20px;
 }
-.capacitacion_info,.capacitacion_info{
+.info_habilidades,.capacitacion_info,.emprendedor_info,.emprendedor_info2,.institucion_info{
     padding: 20px;
 }
-.info_habilidades,.capacitacion_info{
+.info_habilidades,.capacitacion_info,.emprendedor_info,.emprendedor_info2,.institucion_info{
     text-align: center;
      margin-bottom: 20px;
 }

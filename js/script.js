@@ -473,19 +473,19 @@ CURSOSBTN.addEventListener("click", async () => {
 //boton de Servicios, lo que muestra en el contenido dinamico al presionar el boton de servicios
 SERVICIOSBTN.addEventListener("click", async() => {
     activebtn(SERVICIOSBTN);
-    await fadeout();
+    await fadeout();  
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
     <div class="custom-card-group">
     <div class="custom-card" id="empresa-card">
-        <img src="images/empresarial.jpg" class="custom-card-img-top" alt="Empresa">
+        <img src="images/empresarial.png" class="custom-card-img-top" alt="Empresarial">
         <div class="custom-card-body">
             <h5 class="custom-card-title">Empresa</h5>
             <p class="custom-card-text">Capacita a tus empleados en las habilidades blandas y técnicas necesarias para lograr un mejor desarrollo de su labor.</p>
         </div>
     </div>
     <div class="custom-card" id="emprendedor-card">
-        <img src="images/emprendimiento.jpg" class="custom-card-img-top" alt="Emprendedor">
+        <img src="images/emprendimiento.jpg" class="custom-card-img-top" alt="Emprendedores">
         <div class="custom-card-body">
             <h5 class="custom-card-title">Emprendedor</h5>
             <p class="custom-card-text">Encuentra lo que te hace falta para que tu proyecto compita en el mercado.</p>
@@ -503,10 +503,16 @@ SERVICIOSBTN.addEventListener("click", async() => {
     `;
 
     // Añadir event listeners a las tarjetas
-    document.getElementById("empresa-card").addEventListener("click", () => {
+    document.getElementById("empresa-card").addEventListener("click", async() => {
+        await fadeout();
+        DINAMICCONTENT.innerHTML = ``;
         DINAMICCONTENT.innerHTML = `
         <div class="capacitacion">
-            <h2 class="titulos_capacitacion">Capacitación Empresarial</h2>
+        <div class="curso_content_container">
+        <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+        <h2 class="curso_content_title">Capacitación Empresarial</h2>
+    </div>
+    <div class="custom-card-group-cursos" id="cursos-container"></div>
             <p class="capacitacion_info">Los programas de capacitación estan diseñados para mejorar tanto las habilidades blandas como las habilidades técnicas de los empleados. Nuestros cursos se diseñan espeficicamente para abordar las necesidades únicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad. </p>
             <div class="container">
                 <div class="habilidadesB">
@@ -530,39 +536,52 @@ SERVICIOSBTN.addEventListener("click", async() => {
             </div>
           </div>
             `;
+            fadein()
+            goback(SERVICIOSBTN)
     });
-
-    document.getElementById("emprendedor-card").addEventListener("click", () => {
+    document.getElementById("emprendedor-card").addEventListener("click", async () => {
+        await fadeout();
+        DINAMICCONTENT.innerHTML = ``;
         DINAMICCONTENT.innerHTML = `
         <div class="emprendedor">
-            <h2 class="emprendedor_titulo">Soporte a Emprendedores</h2>
-            <p class="emprendedor_info">Aquí ofrecemos recursos para emprendedores que buscan llevar sus proyectos al siguiente nivel.
-             Nuestros programas se enfocan en ayudar a los emprendedores a competir eficazmente en el mercado.</p>
+        <div class="curso_content_container">
+        <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+        <h2 class="curso_content_title">Soporte a Emprendedores</h2>
+    </div>
+    <div class="custom-card-group-cursos" id="cursos-container"></div>
+            <p class="emprendedor_info">Aquí en nuestra academia ofrecemos asistencia integral para emprendedores que buscan llevar sus proyectos al siguiente nivel.
+             Entendemos que el camino del emprendimiento puede ser desafiante, 
+            por lo que nos comprometemos a proporcionar el soporte necesario para que los emprendedores puedan desarrollar y consolidar sus ideas con éxito.</p>
             <div class="emprendedor_lista">
+            <p class="emprendedor_info2">  Nuestra academia se dedica a proporcionar un soporte integral y asistencia personalizada para proyectos emergentes, ayudando a los emprendedores a transformar sus ideas en planes exitosos. Ofrecemos un entorno de aprendizaje dinámico y recursos esenciales que facilitan el crecimiento y desarrollo de nuevos negocios.</p>
                 <ul>
-                <li>Asesoramiento y acompañamiento en gestion de tu negocio</li>
-                <li>Talleres sobre desarrollo de negocios</li>
+                <li>Asesoramiento y acompañamiento en la gestion de tu proyecto</li>
+                <li>Talleres sobre desarrollo de estrategias</li>
                 <li>Acceso a redes de contactos</li>               
             </ul>
         </div>
         </div>
             `;
+            fadein()
+            goback(SERVICIOSBTN)
     });
 
-    document.getElementById("institucion-card").addEventListener("click", () => {
+    document.getElementById("institucion-card").addEventListener("click", async() => {
+        await fadeout();
+        DINAMICCONTENT.innerHTML = ``;
         DINAMICCONTENT.innerHTML = `
-          
-          
-        
             <div class="institucion">
-            <h2 class="institucion_titulo">Colaboración con Instituciones</h2>
-            <p class="institucion_info">Esta sección está dedicada a las instituciones educativas que desean incluir sus cursos o 
-            carreras dentro de nuestros programas de becas. 
-            Proveemos información sobre cómo las instituciones pueden colaborar con nosotros para ofrecer oportunidades 
-            educativas a un mayor número de estudiantes. </p>
+            <div class="curso_content_container">
+            <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+            <h2 class="curso_content_title">Colaboración con Instituciones</h2>
+        </div>
+        <div class="custom-card-group-cursos" id="cursos-container"></div>
+            <p class="institucion_info">Esta sección está dedicada a las instituciones educativas y profesionales que desean incluir sus cursos o 
+            carreras dentro de nuestros programas de becas.
+            Proveemos información sobre algunas de las ventajas de ser parte de nuestra comunidad </p>
             <div class="container">
                 <div class="institucion_lista1">
-                    <p class="institucion_habilidades">Establecer una colaboración con un ente becario 
+                    <p class="info_habilidades">Establecer una colaboración con un ente becario 
                     representa una oportunidad significativa para las instituciones educativas. 
                     Estas asociaciones no solo facilitan el acceso a recursos financieros cruciales para los estudiantes, 
                     sino que también mejoran el prestigio institucional </p>
@@ -584,12 +603,10 @@ SERVICIOSBTN.addEventListener("click", async() => {
                     </ul>
                 </div>
             </div>
-          </div>
-        
-        
-        
-        
+          </div>        
             `;
+            fadein()
+            goback(SERVICIOSBTN)
     });
     fadein()
 });
