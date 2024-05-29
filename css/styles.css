@@ -145,6 +145,9 @@ body{
     width: 100%;
     flex-direction: column;
     overflow-y: auto;
+    background-image: url("../images/Dinamic_Content_BG.png");
+    background-size: cover;
+    background-position: right;
 }
 
 #dinamic_content::-webkit-scrollbar {
@@ -174,6 +177,13 @@ body{
     flex-direction: row;
     background: #ffffff9a;
 }
+.left_img_container_becas{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    background: #ffffff;
+}
 
 .left_content_img{
     position: relative;
@@ -182,31 +192,44 @@ body{
     background-size: cover;
     background-position: center;
 }
-
+.left_content_img_becas{
+    position: relative;
+    width: 50%;
+    background-image: url("../images/Welcome_img.png");
+    background-size: cover;
+    background-position: right;
+}
 .left_content_p{
     margin: 20px;
     position: relative;
     width: 30%;
 }
+.left_content_p_becas{
+    margin: 20px;
+    position: relative;
+    width: 50%;
+}
 @media (max-width: 1200px) {
     .left_img_container{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        display: flex;
         flex-direction: column;
-        background: #ffffff9a;
+    }
+    .left_img_container_becas{
+        flex-direction: column;
     }
     .left_content_img{
-        position: relative;
         width: 100%;
         height: 250px;
-        background-image: url("../images/Welcome_img.jpeg");
-        background-size: cover;
         background-position: center;
     }
     .left_content_p{
-        margin: 20px;
-        position: relative;
+        width: 90%;
+    }
+    .left_content_img_becas{
+        width: 100%;
+        height: 250px;
+        background-position: right;
+    }
+    .left_content_p_becas{
         width: 90%;
     }
 }
@@ -489,7 +512,54 @@ body{
     text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
 }
 
+#contact-form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 40px;
+    margin: 20px;
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 8px, transparent 8px) 0% 0%/30px 30px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 8px, transparent 8px) 100% 0%/ 30px 30px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 8px, transparent 8px) 0% 100%/30px 30px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 8px, transparent 8px) 100% 100%/30px 30px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 44px) calc(100% - 0px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 60px) calc(100% - 44px) no-repeat,
+    linear-gradient(90deg, rgba(26,26,26,0) 0%, #464646 12%, #313131 88%, rgba(253,253,253,0) 100%);
+    border-top: #6B84A8 10px solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: #6B84A8 10px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#contact-form > span{
+    display: block;
 
+}
+.contact_form_container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+#contact-form > {
+    display: block;
+
+}
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4c8baf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: #394683;
+}
 /* ===================================== [estilos seccion de tarjetas de los cursos] ===================================== */
 
 .custom-card-group-cursos {
@@ -562,14 +632,14 @@ body{
 /* ===================================== [estilos seccion de cada curso] ===================================== */
 
 #goback_BTN {
-    position: absolute;
+    position: relative;
     left: 5%; 
     height: 40px;
     width: 40px;
 }
 
 .curso_container{
-    background-image: url("../images/Administracion.jpg");
+    background-image: url("../images/Dinamic_Content_BG.png");
         background-size: cover;
         background-position: center;
     display: flex;
@@ -593,6 +663,7 @@ body{
 }
 .curso_content_title{
     color: #002752;
+    flex: 1;
 }
 .curso_content_container:has(h2){
     height: 70px;
@@ -667,6 +738,59 @@ ul {
         flex-direction: column;
     }
     .habilidadesB, .habilidadesD {
+        width: 100%;
+    }
+}
+
+
+.contact_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contact_info_container{
+    align-items: center;
+    position: relative;
+    display: flex;
+    width: 50%;
+    padding: 5%;
+}
+
+#contact-form-contacto{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 40px;
+    margin: 20px;
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 8px, transparent 8px) 0% 0%/30px 30px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 8px, transparent 8px) 100% 0%/ 30px 30px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 8px, transparent 8px) 0% 100%/30px 30px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 8px, transparent 8px) 100% 100%/30px 30px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 44px) calc(100% - 0px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 60px) calc(100% - 44px) no-repeat,
+    linear-gradient(90deg, rgba(26,26,26,0) 0%, #464646 12%, #313131 88%, rgba(253,253,253,0) 100%);
+    border-top: #6B84A8 10px solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: #6B84A8 10px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+}
+.contact_form_container_contacto{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 50%;
+}
+@media (max-width: 1200px) {
+    .contact_container{
+        flex-direction: column;
+    }
+    .contact_form_container_contacto{
+        width: 100%;
+    }
+    .contact_info_container{
         width: 100%;
     }
 }
