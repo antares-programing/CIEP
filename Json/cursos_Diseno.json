@@ -1,0 +1,38 @@
+[
+    {
+        "titulo": "Diseño Web",
+        "descripcion": "El curso de Diseño Web en el CIEP está diseñado para proporcionar a los estudiantes las habilidades necesarias para crear sitios web atractivos y funcionales. Abarca desde los fundamentos del diseño hasta técnicas avanzadas de desarrollo web.",
+        "descripcion2": "A lo largo del curso, los participantes aprenderán a utilizar herramientas y tecnologías modernas, como HTML5, CSS3, JavaScript y frameworks populares, para construir y mantener sitios web responsivos y de alto rendimiento.",
+        "duracion": "128 horas",
+        "relatedcategory": "diseno",
+        "objetivos": [
+        "Dominar los principios básicos y avanzados del diseño web.",
+        "Aprender a crear interfaces de usuario intuitivas y atractivas.",
+        "Integrar tecnologías modernas y frameworks en proyectos web.",
+        "Crear sitios web responsivos que funcionen en múltiples dispositivos.",
+        "Desarrollar habilidades en HTML, CSS y JavaScript."
+        ],
+        "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
+        "perfilEgresado": "Al finalizar el curso, los egresados estarán capacitados para diseñar y desarrollar sitios web profesionales. Podrán trabajar como diseñadores web, desarrolladores front-end o consultores independientes, con un portafolio sólido que demuestre sus competencias y creatividad en el ámbito digital.",
+        "pdfNombre": "Aux adm Contable.pdf",
+        "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
+    },
+    {
+      "titulo": "Diseño Grafico",
+      "descripcion": "El curso de Diseño Gráfico en el CIEP está orientado a formar profesionales creativos capaces de comunicar visualmente de manera efectiva a través de diversos medios. Incluye desde los principios del diseño hasta el uso avanzado de software especializado.",
+      "duracion": "155 horas",
+      "descripcion2": "Los estudiantes explorarán conceptos de tipografía, teoría del color, composición y branding, utilizando herramientas como Adobe Photoshop, Illustrator e InDesign para crear proyectos gráficos impactantes.",
+      "relatedcategory": "diseno",
+      "objetivos": [
+        "Comprender los principios y teorías del diseño gráfico.",
+        "Dominar el uso de software de diseño profesional.",
+        "Desarrollar habilidades en la creación de logotipos, carteles y otros materiales gráficos.",
+        "Aplicar técnicas de branding y comunicación visual efectiva.",
+        "Preparar proyectos gráficos para impresión y medios digitales."
+        ],
+      "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
+      "perfilEgresado": "Los egresados del curso de Diseño Gráfico estarán preparados para trabajar en agencias de publicidad, estudios de diseño, editoriales y departamentos de marketing. Serán capaces de crear soluciones gráficas innovadoras y profesionales, adaptándose a las necesidades del mercado y destacándose por su creatividad y precisión técnica.",
+      "pdfNombre": "Aux adm Contable.pdf",
+      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
+    }
+  ]

@@ -1,6 +1,6 @@
 [
     {
-      "titulo": "Curso de Administración",
+      "titulo": "Auxiliar Administrativo",
       "descripcion": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
       "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
       "duracion": "144 horas",
@@ -16,35 +16,51 @@
       "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     },
     {
-      "titulo": "Otro curso de Administración",
-      "descripcion": "Descripción del otro curso de administración.",
-      "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
-      "duracion": "Duración del curso",
+      "titulo": "Asistente Administrativo",
+      "descripcion": "El curso de Asistente Administrativo de CIEP está diseñado para brindar una formación básica y práctica en tareas administrativas esenciales para el apoyo a las operaciones de una empresa o entidad económica.",
+      "descripcion2": "El curso de Asistente Administrativo de CIEP está diseñado para brindar una formación básica y práctica en tareas administrativas esenciales para el apoyo a las operaciones de una empresa o entidad económica.",
+      "duracion": "100 horas",
       "relatedcategory": "administracion",
       "objetivos": [
-        "Objetivo 1",
-        "Objetivo 2",
-        "Objetivo 3"
+          "Formar al estudiante en tareas administrativas básicas y cotidianas.",
+          "Proveer conocimientos en el manejo de herramientas ofimáticas y de comunicación.",
+          "Desarrollar habilidades organizativas y de gestión del tiempo."
       ],
-      "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado.",
-      "pdfNombre": "Aux adm Contable.pdf",
-      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
+      "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
+      "perfilEgresado": "El egresado del curso de Asistente Administrativo será capaz de realizar funciones básicas de apoyo en oficinas, manejar documentación, organizar archivos, gestionar correspondencia y asistir en tareas administrativas generales.",
+      "pdfNombre": "Asistente Administrativo.pdf",
+      "pdfUrl": "./documents/Asistente_Administrativo_CIEP.pdf"
     },
     {
-      "titulo": "Otro curso de Administración",
-      "descripcion": "Descripción del otro curso de administración.",
-      "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
-      "duracion": "Duración del curso",
+      "titulo": "Aux Administrativo \n[Esp Contable]",
+      "descripcion": "La Especialización Contable de CIEP ofrece una formación avanzada en contabilidad y el uso de software contable, preparando al estudiante para manejar eficientemente la contabilidad de una empresa.",
+      "descripcion2": "La Especialización Contable de CIEP ofrece una formación avanzada en contabilidad y el uso de software contable, preparando al estudiante para manejar eficientemente la contabilidad de una empresa.",
+      "duracion": "72 horas",
       "relatedcategory": "administracion",
       "objetivos": [
-        "Objetivo 1",
-        "Objetivo 2",
-        "Objetivo 3"
+        "Formar al estudiante en el manejo de software contable como Memory.",
+        "Proveer conocimientos avanzados en técnicas contables y financieras.",
+        "Desarrollar habilidades para la gestión contable y la toma de decisiones financieras."
       ],
-      "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado.",
-      "pdfNombre": "Aux adm Contable.pdf",
-      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
-    }
+      "sistemaEnsenanza": "La especialización se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
+      "perfilEgresado": "El egresado de la Especialización Contable será capaz de utilizar software contable como Memory, realizar análisis financieros, gestionar la contabilidad de una empresa y asesorar en temas contables y fiscales.",
+      "pdfNombre": "Especializacion Contable.pdf",
+      "pdfUrl": "./documents/Especializacion_Contable_CIEP.pdf"
+    },
+    {
+      "titulo": "Aux Administrativo \n[Esp RRHH]",
+      "descripcion": "La Especialización en Recursos Humanos de CIEP proporciona una formación integral en gestión de personal, enfocándose en técnicas avanzadas de administración y desarrollo del capital humano.",
+      "descripcion2": "La Especialización en Recursos Humanos de CIEP proporciona una formación integral en gestión de personal, enfocándose en técnicas avanzadas de administración y desarrollo del capital humano.",
+      "duracion": "120 horas (incluye una tecnicatura de 4 meses)",
+      "relatedcategory": "administracion",
+      "objetivos": [
+        "Formar al estudiante en técnicas avanzadas de gestión de recursos humanos.",
+        "Proveer conocimientos en legislación laboral, selección de personal y desarrollo organizacional.",
+        "Desarrollar habilidades para la planificación estratégica y la gestión del talento."
+      ],
+      "sistemaEnsenanza": "La especialización se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
+      "perfilEgresado": "El egresado de la Especialización en Recursos Humanos será capaz de gestionar procesos de selección, administración de personal, desarrollo organizacional y planificación estratégica del capital humano.",
+      "pdfNombre": "Especializacion RRHH.pdf",
+      "pdfUrl": "./documents/Especializacion_RRHH_CIEP.pdf"
+  }
   ]

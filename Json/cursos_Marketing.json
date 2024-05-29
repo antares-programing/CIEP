@@ -1,50 +1,50 @@
 [
-    {
-        "titulo": "Curso de Marketing",
-        "descripcion": "La carrera de Analista en Marketing que ofrece CEIP, procura brindar al estudiante una formación que combine el análisis de los conceptos del Marketing, con lo que constituyen sus técnicas de aplicación concreta en base al marco teórico, casos prácticos y work shop. En este vasto escenario se estudia el Marketing Operacional, Estratégico, Digital, las Ventas y la Publicidad entre otras.",
-        "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
-        "duracion": "128 horas",
-        "relatedcategory": "marketing",
-        "objetivos": [
-        "Facilitar los conocimientos básicos del marketing.",
-        "Adentrarse en la investigación de mercados.",
-        "Decidir sobre el diseño del producto en función de las necesidades del mercado y la fijación de precios."
-        ],
-        "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-        "perfilEgresado": "El Analista en Marketing es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos.",
-        "pdfNombre": "Aux adm Contable.pdf",
-        "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
-    },
-    {
-      "titulo": "Otro curso de Marketing",
-      "descripcion": "Descripción del otro curso de Marketing.",
-      "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
-      "duracion": "Duración del curso",
-      "relatedcategory": "marketing",
-      "objetivos": [
-        "Objetivo 1",
-        "Objetivo 2",
-        "Objetivo 3"
-      ],
-      "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado.",
-      "pdfNombre": "Aux adm Contable.pdf",
-      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
-    },
-    {
-      "titulo": "Otro curso de Marketing2",
-      "descripcion": "Descripción del otro curso de Marketing.",
-      "descripcion2": "El curso de Auxiliar en Administración Contable de CIEP brinda una capacitación integral y actualizada para desempeñarse con eficiencia en una empresa o entidad económica.",
-      "duracion": "Duración del curso",
-      "relatedcategory": "marketing",
-      "objetivos": [
-        "Objetivo 1",
-        "Objetivo 2",
-        "Objetivo 3"
-      ],
-      "sistemaEnsenanza": "Descripción del sistema de enseñanza.",
-      "perfilEgresado": "Perfil del egresado.",
-      "pdfNombre": "Aux adm Contable.pdf",
-      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
-    }
+  {
+    "titulo": "Asesor Comercial",
+    "descripcion": "El curso de Asesor Comercial de CIEP está diseñado para formar profesionales en técnicas de venta y estrategias comerciales, preparando al estudiante para desempeñarse eficientemente en el ámbito comercial.",
+    "descripcion2": "El curso de Asesor Comercial de CIEP está diseñado para formar profesionales en técnicas de venta y estrategias comerciales, preparando al estudiante para desempeñarse eficientemente en el ámbito comercial.",
+    "duracion": "120 horas",
+    "relatedcategory": "marketing",
+    "objetivos": [
+        "Desarrollar habilidades de comunicación y negociación.",
+        "Proveer conocimientos en técnicas de venta y estrategias comerciales.",
+        "Formar al estudiante en el análisis de mercados y gestión de clientes."
+    ],
+    "sistemaEnsenanza": "El curso se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
+    "perfilEgresado": "El egresado del curso de Asesor Comercial será capaz de realizar ventas efectivas, gestionar relaciones con clientes, analizar mercados y diseñar estrategias comerciales para incrementar las ventas.",
+    "pdfNombre": "Asesor Comercial.pdf",
+    "pdfUrl": "./documents/Asesor_Comercial_CIEP.pdf"
+  },
+  {
+    "titulo": "Marketing Digital",
+    "descripcion": "El curso de Marketing Digital de CIEP proporciona una formación completa en estrategias digitales, manejo de redes sociales y publicidad online, preparando al estudiante para desarrollar campañas de marketing efectivas.",
+    "descripcion2": "El curso de Marketing Digital de CIEP proporciona una formación completa en estrategias digitales, manejo de redes sociales y publicidad online, preparando al estudiante para desarrollar campañas de marketing efectivas.",
+    "duracion": "100 horas",
+    "relatedcategory": "marketing",
+    "objetivos": [
+        "Formar al estudiante en estrategias y herramientas de marketing digital.",
+        "Desarrollar habilidades para la gestión de redes sociales y publicidad online.",
+        "Proveer conocimientos en análisis de métricas y optimización de campañas."
+    ],
+    "sistemaEnsenanza": "El curso se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
+    "perfilEgresado": "El egresado del curso de Marketing Digital será capaz de crear y gestionar campañas de marketing digital, analizar métricas de rendimiento, manejar redes sociales y utilizar herramientas de publicidad online para maximizar los resultados.",
+    "pdfNombre": "Marketing Digital.pdf",
+    "pdfUrl": "./documents/Marketing_Digital_CIEP.pdf"
+  },
+  {
+    "titulo": "Secretariado Comercial",
+    "descripcion": "El curso de Secretariado Comercial de CIEP está diseñado para formar profesionales en tareas administrativas y comerciales, proporcionando una formación integral en gestión de oficina y apoyo a las operaciones comerciales.",
+    "descripcion2": "El curso de Secretariado Comercial de CIEP está diseñado para formar profesionales en tareas administrativas y comerciales, proporcionando una formación integral en gestión de oficina y apoyo a las operaciones comerciales.",
+    "duracion": "90 horas",
+    "relatedcategory": "marketing",
+    "objetivos": [
+        "Formar al estudiante en técnicas de gestión administrativa y comercial.",
+        "Desarrollar habilidades en el manejo de herramientas ofimáticas y de comunicación.",
+        "Proveer conocimientos en gestión de documentación y atención al cliente."
+    ],
+    "sistemaEnsenanza": "El curso se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
+    "perfilEgresado": "El egresado del curso de Secretariado Comercial será capaz de realizar tareas administrativas y comerciales, gestionar documentación, manejar herramientas ofimáticas, y asistir en la atención al cliente y la organización de la oficina.",
+    "pdfNombre": "Secretariado Comercial.pdf",
+    "pdfUrl": "./documents/Secretariado_Comercial_CIEP.pdf"
+  }
   ]

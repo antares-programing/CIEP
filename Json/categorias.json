@@ -12,9 +12,9 @@
       "descripcion": "El marketing busca entender, comunicar y satisfacer las necesidades del cliente para construir relaciones y lograr objetivos comerciales."
     },
     {
-      "id": "recursoshumanos",
-      "nombre": "Recursos Humanos",
-      "imagen": "images/Recursoshumanos.jpg",
-      "descripcion": "Encargados de reclutar, seleccionar, capacitar y gestionar empleados para promover el bienestar y el rendimiento organizacional."
+      "id": "diseno",
+      "nombre": "Diseño",
+      "imagen": "images/Diseno.jpg",
+      "descripcion": "Los cursos de diseño en el CIEP están dirigidos a estudiantes y profesionales que buscan desarrollar sus habilidades creativas y técnicas. Cubren áreas como diseño gráfico, diseño web y UX/UI, ofreciendo herramientas modernas y prácticas. Con un enfoque en la innovación y la estética."
     }
   ]
