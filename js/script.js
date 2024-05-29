@@ -478,7 +478,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
     DINAMICCONTENT.innerHTML = `
     <div class="custom-card-group">
     <div class="custom-card" id="empresa-card">
-        <img src="images/empresa-2.webp" class="custom-card-img-top" alt="Empresa">
+        <img src="images/empresarial.jpg" class="custom-card-img-top" alt="Empresa">
         <div class="custom-card-body">
             <h5 class="custom-card-title">Empresa</h5>
             <p class="custom-card-text">Capacita a tus empleados en las habilidades blandas y técnicas necesarias para lograr un mejor desarrollo de su labor.</p>
@@ -510,6 +510,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
             <p class="capacitacion_info">Los programas de capacitación estan diseñados para mejorar tanto las habilidades blandas como las habilidades técnicas de los empleados. Nuestros cursos se diseñan espeficicamente para abordar las necesidades únicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad. </p>
             <div class="container">
                 <div class="habilidadesB">
+                    <h2 class="titulos_habilidad">Habilidades Blandas</h2>
                     <p class="info_habilidades">Las habilidades blandas son esenciales para la colaboración efectiva y el liderazgo dentro de cualquier organización. Nuestros programas de capacitación en habilidades blandas incluyen cursos como:</p>
                     <ul>
                         <li>Comunicación Efectiva</li>
@@ -518,6 +519,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
                     </ul>
                 </div>
                 <div class="habilidadesD">
+                    <h2 class="titulos_habilidad">Habilidades Tecnicas</h2>
                     <p class="info_habilidades">Las habilidades técnicas son fundamentales para el desempeño específico de tareas laborales y para la adaptación a nuevas tecnologías y metodologías. Nuestros programas incluyen:</p>
                     <ul>
                         <li>Operador de maquinaria</li>
@@ -532,16 +534,62 @@ SERVICIOSBTN.addEventListener("click", async() => {
 
     document.getElementById("emprendedor-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
-            <h2 class="titulos_capacitacion">Soporte a Emprendedores</h2>
-            <p class="infos">Aquí ofrecemos recursos y asesoramiento para emprendedores que buscan llevar sus proyectos al siguiente nivel. Nuestros programas incluyen talleres sobre desarrollo de negocios, acceso a redes de contactos y oportunidades de financiamiento, todo diseñado para ayudar a los emprendedores a competir eficazmente en el mercado.</p>
-        `;
+        <div class="emprendedor">
+            <h2 class="emprendedor_titulo">Soporte a Emprendedores</h2>
+            <p class="emprendedor_info">Aquí ofrecemos recursos para emprendedores que buscan llevar sus proyectos al siguiente nivel.
+             Nuestros programas se enfocan en ayudar a los emprendedores a competir eficazmente en el mercado.</p>
+            <div class="emprendedor_lista">
+                <ul>
+                <li>Asesoramiento y acompañamiento en gestion de tu negocio</li>
+                <li>Talleres sobre desarrollo de negocios</li>
+                <li>Acceso a redes de contactos</li>               
+            </ul>
+        </div>
+        </div>
+            `;
     });
 
     document.getElementById("institucion-card").addEventListener("click", () => {
         DINAMICCONTENT.innerHTML = `
-            <h2 class="titulos_capacitacion">Colaboración con Instituciones</h2>
-            <p class="infos">Esta sección está dedicada a las instituciones educativas que desean incluir sus cursos o carreras dentro de nuestros programas de becas. Proveemos información sobre cómo las instituciones pueden colaborar con nosotros para ofrecer oportunidades educativas a un mayor número de estudiantes.</p>
-        `;
+          
+          
+        
+            <div class="institucion">
+            <h2 class="institucion_titulo">Colaboración con Instituciones</h2>
+            <p class="institucion_info">Esta sección está dedicada a las instituciones educativas que desean incluir sus cursos o 
+            carreras dentro de nuestros programas de becas. 
+            Proveemos información sobre cómo las instituciones pueden colaborar con nosotros para ofrecer oportunidades 
+            educativas a un mayor número de estudiantes. </p>
+            <div class="container">
+                <div class="institucion_lista1">
+                    <p class="institucion_habilidades">Establecer una colaboración con un ente becario 
+                    representa una oportunidad significativa para las instituciones educativas. 
+                    Estas asociaciones no solo facilitan el acceso a recursos financieros cruciales para los estudiantes, 
+                    sino que también mejoran el prestigio institucional </p>
+                    <ul>
+                        <li>Incremento en el acceso y flujo de estudiantes</li>
+                        <li>Mejora en la reputación y competitividad del instituto</li>
+                        <li>Fomento de la inclusión y la equidad</li>
+                    </ul>
+                </div>
+                <div class="institucion_lista2">
+                    <p class="info_habilidades">Involucrarse como mentor en un ente becario ofrece a los profesores numerosas oportunidades
+                     para enriquecer su carrera profesional y académica. Esta colaboración no solo permite a los docentes acceder a valiosos recursos
+                      y ampliar su red de contactos,
+                     sino que también les brinda la oportunidad de hacer un impacto significat</p>
+                    <ul>
+                        <li>Enriquecimiento del currículo académico</li>
+                        <li>Acceso a recursos y financiamiento para proyectos</li>
+                        <li>Impacto positivo en la comunidad educativa</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        
+        
+        
+        
+            `;
     });
     fadein()
 });
