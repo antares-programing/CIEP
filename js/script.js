@@ -512,12 +512,11 @@ SERVICIOSBTN.addEventListener("click", async() => {
         <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
         <h2 class="curso_content_title">Capacitación Empresarial</h2>
     </div>
-    <div class="custom-card-group-cursos" id="cursos-container"></div>
             <p class="capacitacion_info">Los programas de capacitación estan diseñados para mejorar tanto las habilidades blandas como las habilidades técnicas de los empleados. Nuestros cursos se diseñan espeficicamente para abordar las necesidades únicas de cada empresa, asegurando que sus empleados estén equipados con las herramientas necesarias para mejorar su rendimiento y productividad. </p>
             <div class="container">
                 <div class="habilidadesB">
                     <h2 class="titulos_habilidad">Habilidades Blandas</h2>
-                    <p class="info_habilidades">Las habilidades blandas son esenciales para la colaboración efectiva y el liderazgo dentro de cualquier organización. Nuestros programas de capacitación en habilidades blandas incluyen cursos como:</p>
+                    <p class="info_habilidades">Son esenciales para la colaboración efectiva y el liderazgo dentro de cualquier organización. Nuestros programas de capacitación en habilidades blandas incluyen cursos como:</p>
                     <ul>
                         <li>Comunicación Efectiva</li>
                         <li>Liderazgo y Gestión de Equipos</li>
@@ -526,7 +525,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
                 </div>
                 <div class="habilidadesD">
                     <h2 class="titulos_habilidad">Habilidades Tecnicas</h2>
-                    <p class="info_habilidades">Las habilidades técnicas son fundamentales para el desempeño específico de tareas laborales y para la adaptación a nuevas tecnologías y metodologías. Nuestros programas incluyen:</p>
+                    <p class="info_habilidades">Son fundamentales para el desempeño específico de tareas laborales y para la adaptación a nuevas tecnologías y metodologías. Nuestros programas incluyen:</p>
                     <ul>
                         <li>Operador de maquinaria</li>
                         <li>Herramientas informáticas</li>
@@ -548,7 +547,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
         <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
         <h2 class="curso_content_title">Soporte a Emprendedores</h2>
     </div>
-    <div class="custom-card-group-cursos" id="cursos-container"></div>
+  
             <p class="emprendedor_info">Aquí en nuestra academia ofrecemos asistencia integral para emprendedores que buscan llevar sus proyectos al siguiente nivel.
              Entendemos que el camino del emprendimiento puede ser desafiante, 
             por lo que nos comprometemos a proporcionar el soporte necesario para que los emprendedores puedan desarrollar y consolidar sus ideas con éxito.</p>
@@ -575,7 +574,7 @@ SERVICIOSBTN.addEventListener("click", async() => {
             <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
             <h2 class="curso_content_title">Colaboración con Instituciones</h2>
         </div>
-        <div class="custom-card-group-cursos" id="cursos-container"></div>
+
             <p class="institucion_info">Esta sección está dedicada a las instituciones educativas y profesionales que desean incluir sus cursos o 
             carreras dentro de nuestros programas de becas.
             Proveemos información sobre algunas de las ventajas de ser parte de nuestra comunidad </p>
@@ -640,13 +639,15 @@ COLABORADORESBTN.addEventListener("click", async()=>{
     await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-    <h2 class="titulos">Nuestros Asociados</h2>
-    <p class="infos">Trabajamos en colaboración con diversas instituciones y organizaciones para enriquecer la experiencia educativa de nuestros estudiantes.</p>
+    <h2 class="asociados_titulo">Nuestros Asociados</h2>
+    <p class="asociados_infos">Trabajamos en colaboración con diversas instituciones y organizaciones para enriquecer la experiencia educativa de nuestros estudiantes.</p>
+    <div class="asociados_lista">
     <ul>
         <li>Asociación de Padres de Familia</li>
         <li>Universidad Nacional</li>
         <li>Organización de Profesionales</li>
     </ul>
+    </div>
 `;
     fadein()
 })

@@ -59,6 +59,7 @@ body{
     background: linear-gradient(0deg, rgb(83, 83, 83) 0%, rgb(43, 43, 43) 100%);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    display: flex;
 }
 #menu_btn_container{
     position: relative;
@@ -71,6 +72,7 @@ body{
     column-gap: 10px;
     
 }
+
 
 #dinamic_content_container{
     position: relative;
@@ -105,16 +107,12 @@ body{
 }
 
 
-.info_habilidades,.infos,.capacitacion_info,.emprendedor_info,.emprendedor_info2, .institucion_info{
+.info_habilidades,.infos,.capacitacion_info,.emprendedor_info,.emprendedor_info2, .institucion_info,.asociados_infos{
     text-align: center;
      margin-bottom: 20px;
 }
-.info_habilidades,.capacitacion_info,.emprendedor_info,.emprendedor_info2,.institucion_info{
+.info_habilidades,.capacitacion_info,.emprendedor_info,.emprendedor_info2,.institucion_info,.asociados_infos{
     padding: 20px;
-}
-.info_habilidades,.capacitacion_info,.emprendedor_info,.emprendedor_info2,.institucion_info{
-    text-align: center;
-     margin-bottom: 20px;
 }
 
 
@@ -372,9 +370,10 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s, filter 0.2s;
+    margin-bottom: 20px;
     margin: 10px;
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space */
-    max-width: calc(33.333% - 20px);
+    width: calc(33.33% - 20px); /* Tamaño de la tarjeta con margen */
+    position: relative; 
 }
 
 .custom-card:hover {
@@ -403,14 +402,6 @@ body{
     font-size: 1em;
     line-height: 1.5;
     color: #555;
-}
-
-/* Title styles */
-.titulos,.emprendedor_titulo,.institucion_titulo {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
-    color: #333;
 }
 
 /* Darken effect on non-hovered cards */
@@ -468,7 +459,7 @@ body{
 }
 
 /* Title styles */
-.titulos,.titulos_capacitacion,.emprendedor_titulo,.institucion_titulo,.titulos_habilidad {
+.titulos,.titulos_capacitacion,.emprendedor_titulo,.institucion_titulo,.titulos_habilidad,.asociados_titulo {
     text-align: center;
     font-size: 2em;
     margin-top: 20px;
@@ -664,6 +655,7 @@ body{
 .curso_content_title{
     color: #002752;
     flex: 1;
+
 }
 .curso_content_container:has(h2){
     height: 70px;
@@ -713,7 +705,7 @@ body{
 }
 
 
-.titulos_capacitacion, .capacitacion_info,.emprendedor_titulo,.emprendedor_info,.institucion_info,.institucion_titulo {
+.titulos_capacitacion, .capacitacion_info,.emprendedor_titulo,.emprendedor_info,.institucion_info,.institucion_titulo,.asociados_titulo,.asociados_infos {
     background-color: #ffffffbe;
 }
 
@@ -727,7 +719,7 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.emprendedor_lista{
+.emprendedor_lista,.asociados_lista{
     background-color: #ffffffbe;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -803,4 +795,34 @@ ul {
     .contact_info_container{
         width: 100%;
     }
+}
+/* Estilos para dispositivos grandes */
+@media screen and (min-width: 768px) {
+  .custom-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .custom-card {
+    width: calc(33.33% - 20px); /* Tamaño de tarjeta, con margen */
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+/* Estilos para dispositivos medianos */
+@media screen and (max-width: 767px) {
+  .custom-card {
+    width: calc(50% - 20px); /* Dos tarjetas por fila en dispositivos medianos */
+  }
+}
+
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 480px) {
+  .custom-card {
+    width: 100%; /* Una tarjeta por fila en dispositivos pequeños */
+  }
 }
