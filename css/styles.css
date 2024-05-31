@@ -28,6 +28,18 @@ body{
     width: 220px;
     height: 100px; 
 }
+.CIEP_GenericBTN{
+    height: 40px;
+    background-color: #394683;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+.CIEP_GenericBTN:hover {
+    background-color: #21284b;
+}
 .ciep_BTN_active{
     font-family: cursive;
     font-size: 20px;
@@ -133,7 +145,60 @@ body{
         display: none;
     }
 }
+/*------[estilos dentro del Menu]------*/
+#menu_container{
+    position: relative;
+    width: 100%;
+}   
 
+#burguer_menu_container {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#burguer_menu {
+    position: absolute;
+    background: #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    top: 40px;
+    width: 200px;
+    border-bottom-right-radius: 20px;
+    row-gap: 10px;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#burguer_menu .ciep_BTN_active {
+    font-size: 15px!important; 
+    font-family: cursive;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px;
+    border: none!important;
+    border-radius: 20px!important;
+}
+
+#burguer_menu .ciep_BTN_unactive {
+    font-size: 15px!important; 
+}
+
+#burguer_menu .menu_BTN:last-child {
+    margin-bottom: 20px;
+}
+
+#img_bm {
+    margin: 8px;
+    width: 40px;
+}
+
+#img_bm_container {
+    display: block;
+}
 /*------[estilos dentro del dinamic content]------*/
 
 #dinamic_content{
@@ -509,6 +574,7 @@ body{
     flex-direction: column;
     padding: 40px;
     margin: 20px;
+    width: 90%;
     background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 8px, transparent 8px) 0% 0%/30px 30px no-repeat,
     radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 8px, transparent 8px) 100% 0%/ 30px 30px no-repeat,
     radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 8px, transparent 8px) 0% 100%/30px 30px no-repeat,
@@ -551,6 +617,9 @@ body{
 #contact-form button:hover {
     background-color: #394683;
 }
+#contact-form button:disabled {
+    background-color: #727272;
+}
 /* ===================================== [estilos seccion de tarjetas de los cursos] ===================================== */
 
 .custom-card-group-cursos {
@@ -572,6 +641,31 @@ body{
     max-width: 250px; /* Fijo en 100px */
     height: 500px;
     background-color: white;
+    position: relative;
+}
+.price-card-text {
+    position: absolute;
+    bottom: 10px; /* Ajusta según sea necesario */
+    right: 0px; /* Ajusta según sea necesario */
+    align-self: flex-end;
+    font-size: 1.2em;
+    color: #012b58; /* Puedes ajustar el estilo según sea necesario */
+    background: #9AC8F3;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    border-left: 20px double white;
+}
+.duration-card-text {
+    position: relative;
+    top: -10px; /* Ajusta según sea necesario */
+    right: 0px; /* Ajusta según sea necesario */
+    align-self: center;
+    font-size: 1.2em;
+    color: #6286ad; /* Puedes ajustar el estilo según sea necesario */
+    width: 100%;
+    text-align: center;
+    margin: 0!important;
 }
 .custom-card-cursos:hover {
     transform: translateY(-10px);
@@ -591,7 +685,7 @@ body{
     text-align: center;
 }
 .custom-card-body-cursos > p {
-    padding: 20px;
+    padding: 10px;
 }
 .custom-card-title-container {
     height: fit-content;
@@ -784,6 +878,24 @@ ul {
     justify-content: center;
     padding-top: 20px;
     width: 50%;
+}
+#contact-form-contacto button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4c8baf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contact-form-contacto button:hover {
+    background-color: #394683;
+}
+#contact-form-contacto button:disabled {
+    background-color: #727272;
 }
 @media (max-width: 1200px) {
     .contact_container{

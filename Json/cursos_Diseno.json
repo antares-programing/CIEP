@@ -14,6 +14,7 @@
         ],
         "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
         "perfilEgresado": "Al finalizar el curso, los egresados estarán capacitados para diseñar y desarrollar sitios web profesionales. Podrán trabajar como diseñadores web, desarrolladores front-end o consultores independientes, con un portafolio sólido que demuestre sus competencias y creatividad en el ámbito digital.",
+        "precio": "$U 8000",
         "pdfNombre": "Aux adm Contable.pdf",
         "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     },
@@ -32,6 +33,7 @@
         ],
       "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
       "perfilEgresado": "Los egresados del curso de Diseño Gráfico estarán preparados para trabajar en agencias de publicidad, estudios de diseño, editoriales y departamentos de marketing. Serán capaces de crear soluciones gráficas innovadoras y profesionales, adaptándose a las necesidades del mercado y destacándose por su creatividad y precisión técnica.",
+      "precio": "$U 8000",
       "pdfNombre": "Aux adm Contable.pdf",
       "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     }

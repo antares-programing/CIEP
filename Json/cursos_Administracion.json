@@ -12,6 +12,7 @@
       ],
       "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
       "perfilEgresado": "El egresado de la carrera de Auxiliar en Administración Contable será capaz de ejecutar funciones clave como planificación, organización, dirección, coordinación y control para tomar decisiones eficientes. Además, podrá manejar la comunicación interna y externa de la organización, desarrollar capacidades de gestión administrativa, y adaptarse proactivamente a la cultura organizacional.",
+      "precio": "$U 8000",
       "pdfNombre": "Aux adm Contable.pdf",
       "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
     },
@@ -28,6 +29,7 @@
       ],
       "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
       "perfilEgresado": "El egresado del curso de Asistente Administrativo será capaz de realizar funciones básicas de apoyo en oficinas, manejar documentación, organizar archivos, gestionar correspondencia y asistir en tareas administrativas generales.",
+      "precio": "$U 8000",
       "pdfNombre": "Asistente Administrativo.pdf",
       "pdfUrl": "./documents/Asistente_Administrativo_CIEP.pdf"
     },
@@ -44,6 +46,7 @@
       ],
       "sistemaEnsenanza": "La especialización se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
       "perfilEgresado": "El egresado de la Especialización Contable será capaz de utilizar software contable como Memory, realizar análisis financieros, gestionar la contabilidad de una empresa y asesorar en temas contables y fiscales.",
+      "precio": "$U 8000",
       "pdfNombre": "Especializacion Contable.pdf",
       "pdfUrl": "./documents/Especializacion_Contable_CIEP.pdf"
     },
@@ -51,7 +54,7 @@
       "titulo": "Aux Administrativo \n[Esp RRHH]",
       "descripcion": "La Especialización en Recursos Humanos de CIEP proporciona una formación integral en gestión de personal, enfocándose en técnicas avanzadas de administración y desarrollo del capital humano.",
       "descripcion2": "La Especialización en Recursos Humanos de CIEP proporciona una formación integral en gestión de personal, enfocándose en técnicas avanzadas de administración y desarrollo del capital humano.",
-      "duracion": "120 horas (incluye una tecnicatura de 4 meses)",
+      "duracion": "120 horas",
       "relatedcategory": "administracion",
       "objetivos": [
         "Formar al estudiante en técnicas avanzadas de gestión de recursos humanos.",
@@ -60,6 +63,7 @@
       ],
       "sistemaEnsenanza": "La especialización se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
       "perfilEgresado": "El egresado de la Especialización en Recursos Humanos será capaz de gestionar procesos de selección, administración de personal, desarrollo organizacional y planificación estratégica del capital humano.",
+      "precio": "$U 8000",
       "pdfNombre": "Especializacion RRHH.pdf",
       "pdfUrl": "./documents/Especializacion_RRHH_CIEP.pdf"
   }

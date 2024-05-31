@@ -1,5 +1,39 @@
 [
   {
+    "titulo": "Asesor Comercial [Intensivo]",
+    "descripcion": "La capacitación de Asesor Comercial procura brindar al estudiante una formación en comunicación, atención al cliente, relaciones humanas y públicas, y principios de negociación.",
+    "descripcion2": "La capacitación de Asesor Comercial procura brindar al estudiante una formación en comunicación, atención al cliente, relaciones humanas y públicas, y principios de negociación.",
+    "duracion": "16 horas",
+    "relatedcategory": "administracion",
+    "objetivos": [
+      "Dominar todas las técnicas y funciones del vendedor esenciales para concretar ventas.",
+      "Planear y ejecutar un plan de ventas, consiguiendo sus propios 'prospectos'.",
+      "Conocer las principales estrategias de negociación dentro del proceso de comunicación para influir en el comportamiento de los demás y alcanzar acuerdos favorables."
+    ],
+    "sistemaEnsenanza": "La carrera se desarrolla a través de clases online en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
+    "perfilEgresado": "El egresado del curso de Asesor Comercial estará capacitado tanto en conocimientos teóricos como en habilidades prácticas para desempeñarse de manera exitosa en diversos ámbitos relacionados con las ventas y la atención al cliente. Estará preparado para trabajar en diferentes áreas y sectores empresariales, manejar procesos de ventas, desarrollar estrategias comerciales, y atender personalizadamente a los clientes. Además, conocerá herramientas y tecnologías utilizadas en el ámbito comercial, incluyendo medios digitales y plataformas de marketing digital.",
+    "precio": "Gratuito",
+    "pdfNombre": "Asesor Comercial.pdf",
+    "pdfUrl": "./documents/Asesor Comercial CEIP.pdf"
+  },
+  {
+    "titulo": "Asesor Comercial [Profundización]",
+    "descripcion": "La capacitación de Asesor Comercial ofrece formación en técnicas de ventas, comunicación, atención al cliente, relaciones públicas, negociación, PNL y marketing digital. Incluye teoría, casos prácticos y workshops.",
+    "descripcion2": "La capacitación de Asesor Comercial procura brindar al estudiante una formación que combina las principales y más efectivas técnicas de ventas, la comunicación, atención al cliente, relaciones humanas y públicas, principios de negociación, de programación neuro-lingüística y de marketing digital. Incluye un marco teórico conceptual, casos prácticos y workshops.",
+    "duracion": "28 horas",
+    "relatedcategory": "comercial",
+    "objetivos": [
+      "Dominar todas las técnicas y funciones del vendedor que se han identificado como esenciales para concretar ventas.",
+      "Planear y ejecutar un plan de ventas, consiguiendo sus propios 'prospectos'.",
+      "Conocer las principales estrategias de negociación dentro del proceso de comunicación para influir en el comportamiento de los demás y alcanzar acuerdos favorables."
+    ],
+    "sistemaEnsenanza": "La carrera se desarrolla a través de clases online en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
+    "perfilEgresado": "El egresado del curso de Asesor Comercial estará capacitado tanto en conocimientos teóricos como en habilidades prácticas para desempeñarse de manera exitosa en diversos ámbitos relacionados con las ventas y la atención al cliente. Estará preparado para trabajar en diferentes áreas y sectores empresariales, manejar procesos de ventas, desarrollar estrategias comerciales, y atender personalizadamente a los clientes. Además, conocerá herramientas y tecnologías utilizadas en el ámbito comercial, incluyendo medios digitales y plataformas de marketing digital.",
+    "precio": "Gratuito",
+    "pdfNombre": "Asesor Comercial Profundización.pdf",
+    "pdfUrl": "./documents/Asesor Comercial Profundización CEIP.pdf"
+  },
+  {
     "titulo": "Asesor Comercial",
     "descripcion": "El curso de Asesor Comercial de CIEP está diseñado para formar profesionales en técnicas de venta y estrategias comerciales, preparando al estudiante para desempeñarse eficientemente en el ámbito comercial.",
     "descripcion2": "El curso de Asesor Comercial de CIEP está diseñado para formar profesionales en técnicas de venta y estrategias comerciales, preparando al estudiante para desempeñarse eficientemente en el ámbito comercial.",
@@ -12,6 +46,7 @@
     ],
     "sistemaEnsenanza": "El curso se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
     "perfilEgresado": "El egresado del curso de Asesor Comercial será capaz de realizar ventas efectivas, gestionar relaciones con clientes, analizar mercados y diseñar estrategias comerciales para incrementar las ventas.",
+    "precio": "$U 8000",
     "pdfNombre": "Asesor Comercial.pdf",
     "pdfUrl": "./documents/Asesor_Comercial_CIEP.pdf"
   },
@@ -28,6 +63,7 @@
     ],
     "sistemaEnsenanza": "El curso se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
     "perfilEgresado": "El egresado del curso de Marketing Digital será capaz de crear y gestionar campañas de marketing digital, analizar métricas de rendimiento, manejar redes sociales y utilizar herramientas de publicidad online para maximizar los resultados.",
+    "precio": "$U 8000",
     "pdfNombre": "Marketing Digital.pdf",
     "pdfUrl": "./documents/Marketing_Digital_CIEP.pdf"
   },
@@ -44,6 +80,7 @@
     ],
     "sistemaEnsenanza": "El curso se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible, permitiendo al estudiante insertarse en cada uno de los módulos individuales y completar la totalidad de los mismos para obtener la certificación final.",
     "perfilEgresado": "El egresado del curso de Secretariado Comercial será capaz de realizar tareas administrativas y comerciales, gestionar documentación, manejar herramientas ofimáticas, y asistir en la atención al cliente y la organización de la oficina.",
+    "precio": "$U 8000",
     "pdfNombre": "Secretariado Comercial.pdf",
     "pdfUrl": "./documents/Secretariado_Comercial_CIEP.pdf"
   }
