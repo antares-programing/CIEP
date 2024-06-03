@@ -749,7 +749,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                             <p class="info_habilidades">Involucrarse como mentor en un ente becario ofrece a los profesores numerosas oportunidades
                             para enriquecer su carrera profesional y académica. Esta colaboración no solo permite a los docentes acceder a valiosos recursos
                             y ampliar su red de contactos,
-                            sino que también les brinda la oportunidad de hacer un impacto significat</p>
+                            sino que también les brinda la oportunidad de hacer un impacto significate</p>
                             <ul>
                                 <li>Enriquecimiento del currículo académico</li>
                                 <li>Acceso a recursos y financiamiento para proyectos</li>
