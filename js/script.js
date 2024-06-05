@@ -38,46 +38,62 @@ async function showapplicationform(cursoname, categoria){
             <h2 class="curso_content_title">${cursoname}</h2>
         </div>
         <div class="left_img_container_becas">
-            <p class="infos left_content_p_becas">Porfavor complete el formulario de acontinuacion, para aplicar para el curso de ${cursoname}</p>
-            <p class="infos left_content_p_becas">Una vez completado el formulario, un representante de CIEP se pondra en contacto con usted.</p>    
+            <p class="infos left_content_p_becas">Por favor complete el formulario a continuación para aplicar para el curso de ${cursoname}.</p>
+            <p class="infos left_content_p_becas">Una vez completado el formulario, un representante de CIEP se pondrá en contacto con usted.</p>    
         </div>
         <div class="curso_content_container">
-            <h2 class="curso_content_title">Formulario de Postulacion para ${cursoname}</h2>
+            <h2 class="curso_content_title">Formulario de Postulación para ${cursoname}</h2>
         </div>
         <div class="curso_content_container">
-                            <div class="contact_form_container">
-                                <form id="contact-form">
-                                    <label for="name">Nombre Completo:</label>
-                                    <input type="text" id="name" name="name" required>
-                                    <br>
-                                    <label for="email">Correo Electrónico:</label>
-                                    <input type="email" id="email" name="email" required>
-                                    <br>
-                                    <label for="phone">Número de Teléfono:</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                    <br>
-                                    <label for="availability">Disponibilidad Horaria:</label>
-                                    <input type="text" id="availability" name="availability" required>
-                                    <br>
-                                    <label for="course">Curso al que quiere aplicar:</label>
-                                    <input type="text" id="course" name="course" value="${cursoname}" disabled required>
-                                    <br>
-                                    <button type="submit" id="send_email_BTN">Aplicar</button>
-                                </form>
-                            </div>
-                    </div>
-                <div class="curso_content_container">
-                    <h2 class="curso_content_title"> </h2>
-                </div>
+            <div class="contact_form_container">
+                <form id="contact-form">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <br>
+                    <label for="availability">Disponibilidad Horaria:</label>
+                    <input type="text" id="availability" name="availability" required>
+                    <br>
+                    <label for="course">Curso al que quiere aplicar:</label>
+                    <input type="text" id="course" name="course" value="${cursoname}" disabled required>
+                    <br>
+                    <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
+                    <br>
+                    <button type="submit" id="send_email_BTN">Aplicar</button>
+                </form>
+            </div>
+        </div>
+        <div class="curso_content_container">
+            <h2 class="curso_content_title"> </h2>
+        </div>
         <div class="custom-card-group-cursos" id="cursos-container"></div>
         `;
         fadein()
         gobacktocategory(categoria)
+
+        // Inserta el script de reCaptcha
+        const script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js';
+        document.body.appendChild(script);
+
         const contactForm = document.getElementById('contact-form');
         const SUBMITBTN =  document.getElementById('send_email_BTN');
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             SUBMITBTN.disabled = true;
+            const recaptchaResponse = grecaptcha.getResponse();
+
+            if (recaptchaResponse.length === 0) {
+                alert('Por favor complete el reCAPTCHA.');
+                SUBMITBTN.disabled = false;
+                return;
+            }
+
             const serviceID = 'service_zpo793f'; // Reemplaza con tu Service ID de EmailJS
             const templateID = 'template_yvmend4'; // Reemplaza con tu Template ID de EmailJS
             var templateParams = {
@@ -92,22 +108,24 @@ async function showapplicationform(cursoname, categoria){
                 availability: document.getElementById('availability').value,
                 goals: "null",
                 discount: "sin beca",
-                course: document.getElementById('course').value
+                course: document.getElementById('course').value,
+                'g-recaptcha-response': recaptchaResponse
             };
+
             emailjs.init('YwXhxnIo10hShizFM');
             emailjs.send(serviceID, templateID, templateParams)
                 .then((response) => {
                     console.log('Correo enviado con éxito!', response.status, response.text);
-                    alert('Se a postulado con exito!\n\nGracias por su interes en nuestros cursos\nA la brevedad un representante de CIEP se pondra en contacto con usted para los siguientes pasos.');
+                    alert('Se ha postulado con éxito!\n\nGracias por su interés en nuestros cursos.\nA la brevedad, un representante de CIEP se pondrá en contacto con usted para los siguientes pasos.');
                     document.getElementById('contact-form').reset();
                     SUBMITBTN.disabled = false;
                 }, (error) => {
                     console.log('Error al enviar el correo:', error);
-                    alert('Error al enviar el correo.\n porfavor contactenos via email a:\n\nCIEP@capacitaciones.com\n\nsi el error persiste.');
+                    alert('Error al enviar el correo. Por favor, contactenos via email a: CIEP@capacitaciones.com si el error persiste.');
+                    SUBMITBTN.disabled = false;
                 });
         });
     })
-    
 }
 
 function activebtn(btn){
@@ -238,8 +256,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             DINAMICCONTENT.innerHTML = `    
             <div id="inicio_content">
 
-            <div class="content_title_container">
-                <h2 class="titulos">Bienvenidos al Centro Académico CIEP.</h2>
+            <div class="curso_content_container">
+                <h2>Bienvenidos al Centro Académico CIEP.</h2>
             </div>
 
             <div class="left_img_container">
@@ -434,93 +452,92 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </div>
         `;
         const BECASBTN = document.getElementById("becas_BTN");
-        BECASBTN.addEventListener("click", async ()=>{
-            await fadeout();
-            DINAMICCONTENT.innerHTML = ``;
-            DINAMICCONTENT.innerHTML = ` 
-            <div class="curso_content_container">
-                <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
-                <h2 class="curso_content_title">Becas</h2>
+BECASBTN.addEventListener("click", async () => {
+    await fadeout();
+    DINAMICCONTENT.innerHTML = ``;
+    DINAMICCONTENT.innerHTML = `
+        <div class="curso_content_container">
+            <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+            <h2 class="curso_content_title">Becas</h2>
+        </div>
+        <div class="left_img_container_becas">
+            <div class="left_content_img_becas">
             </div>
-            <div class="left_img_container_becas">
-                <div class="left_content_img_becas">
-                </div>
-                <p class="infos left_content_p_becas">El Centro CIEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas becas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles son del 10%, 20%, y 30%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
-            </div>
-            <div class="curso_content_container">
-                <h2 class="curso_content_title">Formulario de Postulacion para Becas</h2>
-            </div>
-            <div class="curso_content_container">
-                            <div class="curso_content_p">
-                            
-                                <div class="contact_form_container">
-                                    <form id="contact-form">
-                                        <label for="name">Nombre Completo:</label>
-                                        <input type="text" id="name" name="name" required>
-                                        <br>
-                                        <label for="email">Correo Electrónico:</label>
-                                        <input type="email" id="email" name="email" required>
-                                        <br>
-                                        <label for="phone">Número de Teléfono:</label>
-                                        <input type="tel" id="phone" name="phone" required>
-                                        <br>
-                                        <label for="department">Departamento:</label>
-                                        <input type="text" id="department" name="department" required>
-                                        <br>
-                                        <label for="location">Localidad:</label>
-                                        <input type="text" id="location" name="location" required>
-                                        <br>
-                                        <span>
-                                            <label for="work_status">Situación Laboral:</label>
-                                            <br>
-                                            <input type="radio" id="unemployed" name="work_status" value="Desempleado" required>
-                                            <label for="unemployed">Desempleado</label>
-                                            <br>
-                                            <input type="radio" id="employed" name="work_status" value="Trabajador dependiente" required>
-                                            <label for="employed">Trabajador dependiente</label>
-                                            <br>
-                                            <input type="radio" id="independent" name="work_status" value="Trabajador independiente" required>
-                                            <label for="independent">Trabajador independiente</label>
-                                            <br>
-                                            <input type="radio" id="entrepreneur" name="work_status" value="Empresario" required>
-                                            <label for="entrepreneur">Empresario</label>
-                                        </span>
-                                        <br>
-                                        <label for="family">¿Cómo se compone su núcleo familiar? Detalle si es pareja o su parentesco, nombre, edad y actividad:</label>
-                                        <textarea id="family" name="family" required></textarea>
-                                        <br>
-                                        <span>
-                                            <label for="education_level">Nivel Educativo:</label>
-                                            <br>
-                                            <input type="radio" id="primary_incomplete" name="education_level" value="Primaria incompleta" required>
-                                            <label for="primary_incomplete">Primaria incompleta</label>
-                                            <br>
-                                            <input type="radio" id="primary_complete" name="education_level" value="Primaria completa" required>
-                                            <label for="primary_complete">Primaria completa</label>
-                                            <br>
-                                            <input type="radio" id="basic_cycle" name="education_level" value="Ciclo básico culminado" required>
-                                            <label for="basic_cycle">Ciclo básico culminado</label>
-                                            <br>
-                                            <input type="radio" id="high_school" name="education_level" value="Bachillerato culminado" required>
-                                            <label for="high_school">Bachillerato culminado</label>
-                                            <br>
-                                            <input type="radio" id="tertiary_incomplete" name="education_level" value="Terciario incompleto" required>
-                                            <label for="tertiary_incomplete">Terciario incompleto</label>
-                                            <br>
-                                            <input type="radio" id="tertiary_complete" name="education_level" value="Terciario culminado" required>
-                                            <label for="tertiary_complete">Terciario culminado</label>
-                                        </span>
-                                        <br>
-                                        <label for="availability">Disponibilidad Horaria:</label>
-                                        <input type="text" id="availability" name="availability" required>
-                                        <br>
-                                        <label for="goals">¿Cuáles son sus principales metas y objetivos? ¿Cómo se ve de aquí a 5 años? ¿Cómo se ve de aquí a 10 años? ¿Qué cosas le gustaría hacer o tener?:</label>
-                                        <textarea id="goals" name="goals" required></textarea>
-                                        <br>
-                                        <span>
-                                            <label for="discount">Descuento para el que quiere aplicar:</label>
-                                            <br>
-                                            <input type="radio" id="discount_10" name="discount" value="10%" required>
+            <p class="infos left_content_p_becas">El Centro CIEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas becas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles son del 10%, 20%, y 30%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
+        </div>
+        <div class="curso_content_container">
+            <h2 class="curso_content_title">Formulario de Postulación para Becas</h2>
+        </div>
+        <div class="curso_content_container">
+            <div class="curso_content_p">
+                <div class="contact_form_container">
+                    <form id="contact-form">
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                        <br>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        <label for="phone">Número de Teléfono:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <br>
+                        <label for="department">Departamento:</label>
+                        <input type="text" id="department" name="department" required>
+                        <br>
+                        <label for="location">Localidad:</label>
+                        <input type="text" id="location" name="location" required>
+                        <br>
+                        <span>
+                            <label for="work_status">Situación Laboral:</label>
+                            <br>
+                            <input type="radio" id="unemployed" name="work_status" value="Desempleado" required>
+                            <label for="unemployed">Desempleado</label>
+                            <br>
+                            <input type="radio" id="employed" name="work_status" value="Trabajador dependiente" required>
+                            <label for="employed">Trabajador dependiente</label>
+                            <br>
+                            <input type="radio" id="independent" name="work_status" value="Trabajador independiente" required>
+                            <label for="independent">Trabajador independiente</label>
+                            <br>
+                            <input type="radio" id="entrepreneur" name="work_status" value="Empresario" required>
+                            <label for="entrepreneur">Empresario</label>
+                        </span>
+                        <br>
+                        <label for="family">¿Cómo se compone su núcleo familiar? Detalle si es pareja o su parentesco, nombre, edad y actividad:</label>
+                        <textarea id="family" name="family" required></textarea>
+                        <br>
+                        <span>
+                            <label for="education_level">Nivel Educativo:</label>
+                            <br>
+                            <input type="radio" id="primary_incomplete" name="education_level" value="Primaria incompleta" required>
+                            <label for="primary_incomplete">Primaria incompleta</label>
+                            <br>
+                            <input type="radio" id="primary_complete" name="education_level" value="Primaria completa" required>
+                            <label for="primary_complete">Primaria completa</label>
+                            <br>
+                            <input type="radio" id="basic_cycle" name="education_level" value="Ciclo básico culminado" required>
+                            <label for="basic_cycle">Ciclo básico culminado</label>
+                            <br>
+                            <input type="radio" id="high_school" name="education_level" value="Bachillerato culminado" required>
+                            <label for="high_school">Bachillerato culminado</label>
+                            <br>
+                            <input type="radio" id="tertiary_incomplete" name="education_level" value="Terciario incompleto" required>
+                            <label for="tertiary_incomplete">Terciario incompleto</label>
+                            <br>
+                            <input type="radio" id="tertiary_complete" name="education_level" value="Terciario culminado" required>
+                            <label for="tertiary_complete">Terciario culminado</label>
+                        </span>
+                        <br>
+                        <label for="availability">Disponibilidad Horaria:</label>
+                        <input type="text" id="availability" name="availability" required>
+                        <br>
+                        <label for="goals">¿Cuáles son sus principales metas y objetivos? ¿Cómo se ve de aquí a 5 años? ¿Cómo se ve de aquí a 10 años? ¿Qué cosas le gustaría hacer o tener?:</label>
+                        <textarea id="goals" name="goals" required></textarea>
+                        <br>
+                        <span>
+                            <label for="discount">Descuento para el que quiere aplicar:</label>
+                            <br>
+                            <input type="radio" id="discount_10" name="discount" value="10%" required>
                                             <label for="discount_10">10%</label>
                                             <br>
                                             <input type="radio" id="discount_20" name="discount" value="20%" required>
@@ -532,6 +549,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                         <br>
                                         <label for="course">Curso al que quiere aplicar:</label>
                                         <input type="text" id="course" name="course" required>
+                                        <br>
+                                        <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
                                         <br>
                                         <button type="submit" id="send_email_BTN">Enviar</button>
                                     </form>
@@ -546,11 +565,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
             fadein();
             goback(CURSOSBTN);
             // ======================================= [Enviar correo formulario] ======================================
+            // Inserta el script de reCaptcha
+            const script = document.createElement('script');
+            script.src = 'https://www.google.com/recaptcha/api.js';
+            document.body.appendChild(script);
+
+            // ======================================= [Enviar correo formulario] ======================================
             const contactForm = document.getElementById('contact-form');
             const SUBMITBTN =  document.getElementById('send_email_BTN');
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 SUBMITBTN.disabled = true;
+
+                // Verificar el reCaptcha
+                const recaptchaResponse = grecaptcha.getResponse();
+
+                if (recaptchaResponse.length === 0) {
+                    alert('Por favor complete el reCAPTCHA.');
+                    SUBMITBTN.disabled = false;
+                    return;
+                }
+
+                // Envío del formulario
                 const serviceID = 'service_zpo793f'; // Reemplaza con tu Service ID de EmailJS
                 const templateID = 'template_yvmend4'; // Reemplaza con tu Template ID de EmailJS
                 var templateParams = {
@@ -559,14 +595,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     phone: document.getElementById('phone').value,
                     department: document.getElementById('department').value,
                     location: document.getElementById('location').value,
-                    work_status: document.querySelector('input[name="work_status"]:checked').value,
-                    family: document.getElementById('family').value,
-                    education_level: document.querySelector('input[name="education_level"]:checked').value,
-                    availability: document.getElementById('availability').value,
-                    goals: document.getElementById('goals').value,
-                    discount: document.querySelector('input[name="discount"]:checked').value,
-                    course: document.getElementById('course').value
+                    // Agrega el resto de tus campos de formulario aquí
+                    'g-recaptcha-response': recaptchaResponse // Agrega el token de reCaptcha
                 };
+
                 emailjs.init('YwXhxnIo10hShizFM');
                 emailjs.send(serviceID, templateID, templateParams)
                     .then((response) => {
@@ -577,8 +609,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     }, (error) => {
                         console.log('Error al enviar el correo:', error);
                         alert('Error al enviar el correo.');
+                        SUBMITBTN.disabled = false;
                     });
-                    
             });
             // ======================================= [Enviar correo formulario] ======================================
         })
@@ -811,78 +843,132 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 });
 });
-
-//boton de contacto, lo que muestra en el contenido dinamico al presionar el boton de contacto
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", async (event) => {
     Array.from(CONTACTOBTNS).forEach(button => {
-        button.addEventListener("click", async ()=>{
-    activebtn(button)
-    await fadeout();
-    DINAMICCONTENT.innerHTML = ``;
-    DINAMICCONTENT.innerHTML = `
-    <div class="curso_container">
-                    <div class="curso_content_container">
-                        <h2 class="curso_content_title">Contacto</h2>
-                    </div>
-                    <div class="curso_content_details">
-                        <div class="contact_container">
-                            <div class="contact_info_container">
-                                <ul>
-                                    <li><h4 class="curso_content_title">Contacto Empresa</h4>
-                                        <p>Si quieres capacitar a tu personal iksdfjfdsdfbhhsdf contactanos via email a ciep@coordinacion.com</p>
-                                    </li>
-                                    <li><h4 class="curso_content_title">Contacto Estudiante</h4>
-                                        <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a ciep@bedelia.com</p>
-                                    </li>
-                                    <li><h4 class="curso_content_title">Contacto Profesorado</h4>
-                                        <p>si quieres formar parte de nuestro equipo de profesores he impartir tus cursos en nuestra academia contactanos via email a ciep@institucion.com</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="contact_form_container_contacto">
-                                <form id="contact-form-contacto">
-                                    <label for="name">Nombre Completo:</label>
-                                    <input type="text" id="name" name="name" required>
-                                    <br>
-                                    <label for="email">Correo Electrónico:</label>
-                                    <input type="email" id="email" name="email" required>
-                                    <br>
-                                    <label for="family">Mensaje:</label>
-                                    <textarea id="message" name="message" required></textarea>
-                                    <br>
-                                    <button type="submit" id="send_email_BTN">Enviar</button>
-                                </form>
-                            </div>
+        button.addEventListener("click", async () => {
+            activebtn(button);
+            await fadeout();
+            DINAMICCONTENT.innerHTML = ``;
+            DINAMICCONTENT.innerHTML = `
+            <div class="curso_container">
+                <div class="curso_content_container">
+                    <h2 class="curso_content_title">Contacto</h2>
+                </div>
+                <div class="curso_content_details">
+                    <div class="contact_container">
+                        <div class="contact_info_container">
+                            <ul>
+                                <li><h4 class="curso_content_title">Contacto Empresa</h4>
+                                    <p>Si quieres capacitar a tu personal, contactanos via email a ciep@coordinacion.com</p>
+                                </li>
+                                <li><h4 class="curso_content_title">Contacto Estudiante</h4>
+                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a ciep@bedelia.com</p>
+                                </li>
+                                <li><h4 class="curso_content_title">Contacto Profesorado</h4>
+                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a ciep@institucion.com</p>
+                                </li>
+                                <div id="media_IMG_Container">
+                                    <img id="cellphone_BTN" class="media_BTN" src="images/Cellphone_icon.png" alt="">
+                                    <div id="cellphone_number_Container">
+                                        <p>099178945</p>
+                                    </div>
+                                    <img id="instagram_BTN" class="media_BTN" src="images/Instagram_icon.png" alt="">
+                                    <img id="facebook_BTN" class="media_BTN" src="images/Facebook_icon.png" alt="">
+                                    <img id="linkedin_BTN" class="media_BTN" src="images/Linkedin_icon.png" alt="">
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="contact_form_container_contacto">
+                            <form id="contact-form-contacto">
+                                <label for="name">Nombre Completo:</label>
+                                <input type="text" id="name" name="name" required>
+                                <br>
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                                <br>
+                                <label for="message">Mensaje:</label>
+                                <textarea id="message" name="message" required></textarea>
+                                <br>
+                                <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
+                                <br>
+                                <button type="submit" id="send_email_BTN">Enviar</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="little_div"></div>
                 </div>
-    `;
-    fadein()
-    const contactForm = document.getElementById('contact-form-contacto');
-    const SUBMITBTN =  document.getElementById('send_email_BTN');
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            SUBMITBTN.disabled = true;
-            const serviceID = 'service_zpo793f'; // Reemplaza con tu Service ID de EmailJS
-            const templateID = 'template_d4la3jq'; // Reemplaza con tu Template ID de EmailJS
-            var templateParams = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-            };
-            emailjs.init('YwXhxnIo10hShizFM');
-            emailjs.send(serviceID, templateID, templateParams)
-                .then((response) => {
-                    console.log('Correo enviado con éxito!', response.status, response.text);
-                    alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIEP se pondra en contacto con usted \npara los siguientes pasos.');
-                    document.getElementById('contact-form').reset();
+                <div class="little_div"></div>
+            </div>
+            `;
+
+            // Inserta nuevamente el script del reCaptcha
+            const script = document.createElement('script');
+            script.src = 'https://www.google.com/recaptcha/api.js';
+            document.body.appendChild(script);
+
+            const CELPHONEBTN = document.getElementById("cellphone_BTN");
+            const INSTAGRAMBTN = document.getElementById("instagram_BTN");
+            const FACEBOOKBTN = document.getElementById("facebook_BTN");
+            const LINKEDINBTN = document.getElementById("linkedin_BTN");
+
+            CELPHONEBTN.addEventListener("click", () => {
+                const cellphoneNumberContainer = document.getElementById("cellphone_number_Container");
+                cellphoneNumberContainer.classList.toggle("expanded");
+            });
+            INSTAGRAMBTN.addEventListener("click", () => {
+                window.open("https://www.instagram.com/institutociep/", "_blank"); 
+            }); 
+            FACEBOOKBTN.addEventListener("click", () => {
+                window.open("https://www.facebook.com/profile.php?id=61560180855472", "_blank"); 
+            });
+            LINKEDINBTN.addEventListener("click", () => {
+                window.open("https://www.linkedin.com/company/instituto-ciep/", "_blank"); 
+            });
+
+            fadein();
+
+            const contactForm = document.getElementById('contact-form-contacto');
+            const SUBMITBTN = document.getElementById('send_email_BTN');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                SUBMITBTN.disabled = true;
+
+                if (typeof grecaptcha !== 'undefined') {
+                    const recaptchaResponse = grecaptcha.getResponse();
+
+                    if (recaptchaResponse.length === 0) {
+                        alert('Por favor, completa el reCAPTCHA.');
+                        SUBMITBTN.disabled = false;
+                        return;
+                    }
+
+                    const serviceID = 'service_zpo793f'; // Reemplaza con tu Service ID de EmailJS
+                    const templateID = 'template_d4la3jq'; // Reemplaza con tu Template ID de EmailJS
+                    var templateParams = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        message: document.getElementById('message').value,
+                        'g-recaptcha-response': recaptchaResponse
+                    };
+
+                    emailjs.init('YwXhxnIo10hShizFM');
+                    emailjs.send(serviceID, templateID, templateParams)
+                        .then((response) => {
+                            console.log('Correo enviado con éxito!', response.status, response.text);
+                            alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIEP se pondrá en contacto con usted para los siguientes pasos.');
+                            document.getElementById('contact-form-contacto').reset();
+                            grecaptcha.reset();
+                            SUBMITBTN.disabled = false;
+                        }, (error) => {
+                            console.log('Error al enviar el correo:', error);
+                            alert('Error al enviar el correo.');
+                            SUBMITBTN.disabled = false;
+                        });
+                } else {
+                    alert('reCAPTCHA no está disponible. Por favor, intenta nuevamente más tarde.');
                     SUBMITBTN.disabled = false;
-                }, (error) => {
-                    console.log('Error al enviar el correo:', error);
-                    alert('Error al enviar el correo.');
-                });
+                }
+            });
         });
-})
     });
 });

@@ -493,8 +493,22 @@ body{
     overflow: hidden;
     transition: transform 0.2s, filter 0.2s;
     margin: 10px;
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space */
+    flex: 1 1 calc(33.333% - 20px); /* Tres tarjetas por fila con espacio */
     max-width: calc(33.333% - 20px);
+}
+
+@media (max-width: 900px) {
+    .custom-card-categoria {
+        flex-basis: calc(50% - 20px); /* Dos tarjetas por fila con espacio */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .custom-card-categoria {
+        flex-basis: calc(100% - 20px); /* Una tarjeta por fila con espacio */
+        max-width: calc(100% - 20px);
+    }
 }
 
 .custom-card-categoria:hover {
@@ -535,26 +549,58 @@ body{
     margin-bottom: 100px;
 }
 
-
 #becas_BTN {
     display: flex;
-    height: 12vw;
-    align-items:flex-start;
-    width: 100%; 
+    height: 200px;
+    align-items: flex-start;
     background-image: url("../images/Becas_BG.png");
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
     background-color: #ffffff;
-    position: relative; 
+    position: relative;
     transition: transform 0.2s, filter 0.2s;
 }
+
+@media (max-width: 1200px) {
+    #becas_BTN {
+        height: 170px; /* Ajusta la altura proporcionalmente al ancho de la ventana */
+        background-size: cover;
+        background-position: right;
+    }
+}
+
+@media (max-width: 900px) {
+    #becas_BTN {
+        height: 170px; /* Ajusta la altura proporcionalmente al ancho de la ventana */
+        background-size: cover;
+        background-position: right;
+    }
+}
+
+@media (max-width: 600px) {
+    #becas_BTN {
+        height: 170px; /* Ajusta la altura proporcionalmente al ancho de la ventana */
+        background-size: cover;
+        background-position: calc(50% - 100px) center;
+    }
+}
+
+@media (max-width: 400px) {
+    #becas_BTN {
+        height: 170px; /* Ajusta la altura proporcionalmente al ancho de la ventana */
+        background-size: cover;
+        background-position: calc(50% - 10px) center;
+    }
+}
+
+
 #becas_BTN:hover {
     transform: translateY(-10px);
 }
 #becas_BTN > h1{
     margin-left: 20px;
-    font-size: 7vw!important;
+    font-size: 7vh!important;
     top: 50%;
     color: #0d4f96;
     font-family: "Times New Roman", Times, serif;
@@ -752,7 +798,7 @@ body{
 
 }
 .curso_content_container:has(h2){
-    height: 70px;
+    height: auto;
     align-items: center;
     justify-content: space-evenly;
     display: flex;
@@ -761,7 +807,13 @@ body{
     padding: 0px;
 }
 .curso_content_container > h2{
-    font-size: 40px;
+    font-size: 3vw;
+}
+@media (max-width: 900px) {
+    .curso_content_container > h2{
+        font-size: 4vw;
+        padding: 20px;
+    }
 }
 .download_button_container{
     display: flex;
@@ -851,7 +903,39 @@ ul {
     width: 50%;
     padding: 5%;
 }
+#media_IMG_Container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    height: 70px;
+}
+.media_BTN{
+    height: 50px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+.media_BTN:hover{
+    height: 60px;
+}
+#cellphone_number_Container {
+    background: #ffffff;
+    border: #012b58 solid 2px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: -30px;
+    transition: width 0.5s ease-in-out;
+}
 
+#cellphone_number_Container.expanded {
+    width: 120px;
+}
 #contact-form-contacto{
     display: flex;
     justify-content: space-around;
