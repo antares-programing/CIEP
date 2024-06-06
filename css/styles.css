@@ -270,7 +270,8 @@ body{
 .left_content_p_becas{
     margin: 20px;
     position: relative;
-    width: 50%;
+    width: 100%;
+    padding: 10%;
 }
 @media (max-width: 1200px) {
     .left_img_container{
@@ -837,6 +838,23 @@ body{
     height: 50px;
     width: 40px;
     margin-top: 30px;
+}
+.postulaciones_IMG{
+    width: 90%;
+    align-self: center;
+}
+.postulaciones_container{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+@media (max-width: 1200px) {
+    .postulaciones_IMG{
+        width: 50%;
+    }
+    .postulaciones_container{
+        align-self: center;
+    }
 }
 
 
