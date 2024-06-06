@@ -1,8 +1,8 @@
 [
   {
-    "titulo": "Asesor Comercial [Intensivo]",
-    "descripcion": "La capacitación de Asesor Comercial ofrece formación en técnicas de ventas, atención al cliente, relaciones humanas, negociación y marketing digital. Abarcando venta directa, intangibles, organización, manejo de objeciones y cierres.",
-    "descripcion2": "El programa de Asesor Comercial del Centro Integral de Educación Profesional integra habilidades en ventas, comunicación, servicio al cliente, relaciones interpersonales, negociación y marketing digital, con contenido teórico y práctico. Se exploran la venta directa, productos intangibles, organización, manejo de objeciones y técnicas de cierre.",
+    "titulo": "Agente de ventas",
+    "descripcion": "La capacitación de Agente de ventasofrece formación en técnicas de ventas, atención al cliente, relaciones humanas, negociación y marketing digital. Abarcando venta directa, intangibles, organización, manejo de objeciones y cierres.",
+    "descripcion2": "El programa de Agente de ventas del Centro Integral de Educación Profesional integra habilidades en ventas, comunicación, servicio al cliente, relaciones interpersonales, negociación y marketing digital, con contenido teórico y práctico. Se exploran la venta directa, productos intangibles, organización, manejo de objeciones y técnicas de cierre.",
     "duracion": "64 horas",
     "relatedcategory": "marketing",
     "objetivos": [
@@ -13,15 +13,15 @@
       "El egresado del curso podrá desempeñarse tanto en un sistema de dependencia laboral, como para liderar su propio emprendimiento comercial."
     ],
     "sistemaEnsenanza": "La carrera se desarrolla a través de clases online en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-    "perfilEgresado": "El Asesor Comercial es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de ventas, marketing y comercialización. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión, así como tiene conocimientos suficientes para diseñar planes estratégicos, referidos a diversas temáticas que componen el quehacer de las ventas.",
+    "perfilEgresado": "El Agente de ventases una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de ventas, marketing y comercialización. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión, así como tiene conocimientos suficientes para diseñar planes estratégicos, referidos a diversas temáticas que componen el quehacer de las ventas.",
     "precio": "Gratuito",
-    "pdfNombre": "Asesor Comercial Intensivo.pdf",
-    "pdfUrl": "./documents/Asesor Comercial CEIP.pdf"
+    "pdfNombre": "Agente de ventas.pdf",
+    "pdfUrl": "./documents/Agente de ventas CEIP.pdf"
   },
   {
-    "titulo": "Asesor Comercial [Profundización]",
-    "descripcion": "La capacitación de Asesor Comercial ofrece formación en técnicas de ventas, comunicación, atención al cliente, relaciones públicas, negociación, PNL y marketing digital. Incluye teoría, casos prácticos y workshops.",
-    "descripcion2": "La capacitación de Asesor Comercial procura brindar al estudiante una formación que combina las principales y más efectivas técnicas de ventas, la comunicación, atención al cliente, relaciones humanas y públicas, principios de negociación, de programación neuro-lingüística y de marketing digital. Incluye un marco teórico conceptual, casos prácticos y workshops.",
+    "titulo": "Ejecutivo en ventas",
+    "descripcion": "La capacitación de Ejecutivo en ventas ofrece formación en técnicas de ventas, comunicación, atención al cliente, relaciones públicas, negociación, PNL y marketing digital. Incluye teoría, casos prácticos y workshops.",
+    "descripcion2": "La capacitación de AEjecutivo en ventas procura brindar al estudiante una formación que combina las principales y más efectivas técnicas de ventas, la comunicación, atención al cliente, relaciones humanas y públicas, principios de negociación, de programación neuro-lingüística y de marketing digital. Incluye un marco teórico conceptual, casos prácticos y workshops.",
     "duracion": "28 horas",
     "relatedcategory": "comercial",
     "objetivos": [
@@ -30,10 +30,10 @@
       "Conocer las principales estrategias de negociación dentro del proceso de comunicación para influir en el comportamiento de los demás y alcanzar acuerdos favorables."
     ],
     "sistemaEnsenanza": "La carrera se desarrolla a través de clases online en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-    "perfilEgresado": "El egresado del curso de Asesor Comercial estará capacitado tanto en conocimientos teóricos como en habilidades prácticas para desempeñarse de manera exitosa en diversos ámbitos relacionados con las ventas y la atención al cliente. Estará preparado para trabajar en diferentes áreas y sectores empresariales, manejar procesos de ventas, desarrollar estrategias comerciales, y atender personalizadamente a los clientes. Además, conocerá herramientas y tecnologías utilizadas en el ámbito comercial, incluyendo medios digitales y plataformas de marketing digital.",
+    "perfilEgresado": "El egresado del curso de Ejecutivo en ventas estará capacitado tanto en conocimientos teóricos como en habilidades prácticas para desempeñarse de manera exitosa en diversos ámbitos relacionados con las ventas y la atención al cliente. Estará preparado para trabajar en diferentes áreas y sectores empresariales, manejar procesos de ventas, desarrollar estrategias comerciales, y atender personalizadamente a los clientes. Además, conocerá herramientas y tecnologías utilizadas en el ámbito comercial, incluyendo medios digitales y plataformas de marketing digital.",
     "precio": "Gratuito",
-    "pdfNombre": "Asesor Comercial Profundización.pdf",
-    "pdfUrl": "./documents/Asesor Comercial Profundización CEIP.pdf"
+    "pdfNombre": "Ejecutivo en ventas.pdf",
+    "pdfUrl": "./documents/Ejecutivo en ventas CEIP.pdf"
   },
   {
     "titulo": "Asesor Comercial",
