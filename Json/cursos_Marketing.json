@@ -51,7 +51,7 @@
     "perfilEgresado": "El Asesor Comercial es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de ventas, marketing y comercialización. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión, así como tiene conocimientos suficientes para diseñar planes estratégicos, referidos a diversas temáticas que componen el quehacer de las ventas.",
     "precio": "$U 8000",
     "pdfNombre": "Asesor Comercial.pdf",
-    "pdfUrl": "./documents/Asesor_Comercial_CIEP.pdf"
+    "pdfUrl": "./documents/Asesor Comercial CIEP.pdf"
   },
   {
     "titulo": "Marketing Digital",
@@ -70,7 +70,7 @@
     "perfilEgresado": "El Analista en Marketing es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de asistencia y asesoramiento de empresas en lo relativo a la planificación, organización, ejecución y control del departamento o área comercial (comunicación, ventas, publicidad, etc.). Puede desarrollar su tarea a nivel empresarial, gerencial o de consultoría. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión, así como tiene conocimientos suficientes para diseñar planes estratégicos, referidos a diversas temáticas que componen el quehacer de esta disciplina.",
     "precio": "$U 8000",
     "pdfNombre": "Marketing Digital.pdf",
-    "pdfUrl": "./documents/Marketing_Digital_CIEP.pdf"
+    "pdfUrl": "./documents/Analista en Marketing CIEP.pdf"
   },
   {
     "titulo": "Secretariado Comercial",
@@ -89,6 +89,6 @@
     "perfilEgresado": "El alumno egresado de la formación en Secretariado Ejecutivo será capaz de incorporar una visión profesional de la venta desde un enfoque centrado en el cliente y aplicar técnicas prácticas para lograr un proceso de venta exitoso. Podrá identificar y aplicar funciones de planificación, organización, dirección, coordinación y control para tomar decisiones eficientes y eficaces, interactuando adecuadamente en su entorno laboral. Además, reconocerá las formas de comunicación interna y externa de la organización, desarrollará capacidades de gestión administrativa en todos sus aspectos, incluyendo la captación, manejo, trámite y seguimiento de la información pertinente. El egresado también identificará la cultura organizacional y se integrará a ella de manera proactiva, y será capaz de organizar cualquier tipo de evento, tanto empresarial como personal.",
     "precio": "$U 8000",
     "pdfNombre": "Secretariado Comercial.pdf",
-    "pdfUrl": "./documents/Secretariado_Comercial_CIEP.pdf"
+    "pdfUrl": "./documents/Secretariado Comercial CIEP.pdf"
   }
   ]

@@ -1,40 +1,38 @@
 [
     {
         "titulo": "Diseño Web",
-        "descripcion": "El curso de Diseño Web en el CIEP está diseñado para proporcionar a los estudiantes las habilidades necesarias para crear sitios web atractivos y funcionales. Abarca desde los fundamentos del diseño hasta técnicas avanzadas de desarrollo web.",
-        "descripcion2": "A lo largo del curso, los participantes aprenderán a utilizar herramientas y tecnologías modernas, como HTML5, CSS3, JavaScript y frameworks populares, para construir y mantener sitios web responsivos y de alto rendimiento.",
+        "descripcion": "El curso de Técnico en Diseño Web y Gestión de contenidos pretende desarrollar habilidades tanto prácticas como analísticas en el mundo del diseño y los contenidos en Internet",
+        "descripcion2": "El curso capacitará al alumno para lograr desarrollar portales y sitios Webs en el cual podrá alojar archivos y publicarlos, pudiendo de esta manera planificar y ejecutar acciones de producción de sitios Webs tales como: Blogs, sitios institucionales o corporativos, porfolios, sitios Webs administrables, sitios optimizados para dispositivos móviles.",
         "duracion": "128 horas",
         "relatedcategory": "diseno",
         "objetivos": [
-        "Dominar los principios básicos y avanzados del diseño web.",
-        "Aprender a crear interfaces de usuario intuitivas y atractivas.",
-        "Integrar tecnologías modernas y frameworks en proyectos web.",
-        "Crear sitios web responsivos que funcionen en múltiples dispositivos.",
-        "Desarrollar habilidades en HTML, CSS y JavaScript."
+        "Brindar a los participantes las herramientas para la gestión eficiente de la comunicación con clientes actuales o potenciales de una marca o empresa a través de la elaboración de contenido gráfico de calidad.",
+        "Promover la creatividad y brindar fundamentos teóricos para que el estudiante aplique esta disciplina en cualquier ámbito, ya sea profesional, en calidad de empleado o independiente, o también como hobby."
         ],
         "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-        "perfilEgresado": "Al finalizar el curso, los egresados estarán capacitados para diseñar y desarrollar sitios web profesionales. Podrán trabajar como diseñadores web, desarrolladores front-end o consultores independientes, con un portafolio sólido que demuestre sus competencias y creatividad en el ámbito digital.",
+        "perfilEgresado": "El Diseñador Web es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de asistencia y asesoramiento de empresas en lo relativo al ámbito digital, diseñando sitios que aumenten el posicionamiento, visibilidad y ventas. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión.",
         "precio": "$U 8000",
-        "pdfNombre": "Aux adm Contable.pdf",
-        "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
+        "pdfNombre": "Diseño Web CIEP.pdf",
+        "pdfUrl": "./documents/Diseño Web CEIP.pdf"
     },
     {
       "titulo": "Diseño Grafico",
-      "descripcion": "El curso de Diseño Gráfico en el CIEP está orientado a formar profesionales creativos capaces de comunicar visualmente de manera efectiva a través de diversos medios. Incluye desde los principios del diseño hasta el uso avanzado de software especializado.",
+      "descripcion": "El curso de Técnico en Diseño Gráfico está diseñado para brindarte las habilidades y conocimientos necesarios para destacarte en la industria.",
+      "descripcion2": "A través de este curso, aprenderás a utilizar herramientas y tecnologías de vanguardia y desarrollarás tus habilidades creativas para producir diseños atractivos e impactantes.<br>Durante el curso, trabajaremos juntos en una variedad de proyectos prácticos que te ayudarán a aplicar los conocimientos teóricos y las técnicas aprendidas durante las sesiones. También trabajaremos con diferentes plataformas y herramientas, incluyendo software de edición de imágenes y diseño vectorial.",
       "duracion": "155 horas",
-      "descripcion2": "Los estudiantes explorarán conceptos de tipografía, teoría del color, composición y branding, utilizando herramientas como Adobe Photoshop, Illustrator e InDesign para crear proyectos gráficos impactantes.",
       "relatedcategory": "diseno",
       "objetivos": [
-        "Comprender los principios y teorías del diseño gráfico.",
-        "Dominar el uso de software de diseño profesional.",
-        "Desarrollar habilidades en la creación de logotipos, carteles y otros materiales gráficos.",
-        "Aplicar técnicas de branding y comunicación visual efectiva.",
-        "Preparar proyectos gráficos para impresión y medios digitales."
-        ],
+        "Adquirir habilidades técnicas en el uso de herramientas de diseño gráfico: el curso tiene como objetivo enseñar a los estudiantes a utilizar las herramientas y tecnologías necesarias para producir diseños gráficos de calidad profesional, incluyendo software de edición de imágenes, diseño vectorial y herramientas de diseño web.",
+        "Desarrollar habilidades creativas y estéticas: los estudiantes aprenderán a aplicar principios estéticos y creativos para crear diseños atractivos y efectivos. También se explorará el proceso creativo del diseño gráfico, desde la idea hasta el producto final.",
+        "Fomentar habilidades de colaboración y presentación: el curso buscará fomentar habilidades de colaboración y presentación para que los estudiantes puedan trabajar con clientes y presentar sus diseños de manera efectiva.",
+        "Entender las tendencias y necesidades del mercado: los estudiantes aprenderán a identificar las tendencias y necesidades actuales del mercado de diseño gráfico, para que puedan crear diseños que cumplan con las necesidades y expectativas del cliente.",
+        "Crear un portafolio de diseño: el curso proporcionará a los estudiantes la oportunidad de crear un portafolio de diseño gráfico, que demostrará sus habilidades y talento a posibles empleadores o clientes."
+      ],
       "sistemaEnsenanza": "La carrera se desarrolla a través de clases virtuales en vivo en formato modular y horario flexible que permite al estudiante insertarse en cada uno de los módulos individuales, debiendo completar la totalidad de los mismos para obtener la certificación final.",
-      "perfilEgresado": "Los egresados del curso de Diseño Gráfico estarán preparados para trabajar en agencias de publicidad, estudios de diseño, editoriales y departamentos de marketing. Serán capaces de crear soluciones gráficas innovadoras y profesionales, adaptándose a las necesidades del mercado y destacándose por su creatividad y precisión técnica.",
+      "perfilEgresado": "El egresado del curso de Técnico en Diseño Gráfico estará preparado para trabajar en la industria del diseño en roles como diseñador gráfico, diseñador web, animador, productor gráfico, asistente de arte, entre otros.<br><br>Conocimientos técnicos y creativos en el uso de herramientas de diseño gráfico, como programas de edición de imágenes, diseño vectorial, animación y diseño web.<br>Habilidades para la conceptualización y creación de diseños que cumplan con los objetivos del cliente o de la marca, y que sean atractivos visualmente y efectivos en la comunicación del mensaje.<br>Capacidad para trabajar en equipo, comunicar ideas y recibir críticas constructivas para mejorar su trabajo.<br>Habilidad para investigar, analizar y sintetizar información y tendencias en el mercado del diseño gráfico, para mantenerse actualizado y a la vanguardia.<br>Conocimientos básicos en principios de marketing y publicidad para comprender la relación entre el diseño gráfico y la estrategia comercial.<br>Competencias éticas y profesionales en el trato con clientes, proveedores y compañeros de trabajo, y en el cumplimiento de plazos y acuerdos.",
       "precio": "$U 8000",
-      "pdfNombre": "Aux adm Contable.pdf",
-      "pdfUrl": "./documents/Aux adm contable CEIP.pdf"
+      "pdfNombre": "Diseño Grafico.pdf",
+      "pdfUrl": "./documents/Diseño Grafico CEIP.pdf"
     }
   ]
+  
