@@ -37,18 +37,18 @@ async function showapplicationform(cursoname, categoria){
             <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
             <h2 class="curso_content_title">${cursoname}</h2>
         </div>
-        <div class="left_img_container_becas">  
+        <div class="left_img_container_postulaciones">  
             <div class="postulaciones_container">
                 <img class="postulaciones_IMG" src="images/Postulacion1IMG.png" alt="">
-                <p class="infos left_content_p_becas">¡Muchas gracias por interesarte en nuestros cursos!<br>Has dado tu primer paso en un nuevo camino de aprendizaje</p> 
+                <p class="left_content_p_postulaciones">¡Muchas gracias por interesarte en nuestros cursos!<br>Has dado tu primer paso en un nuevo camino de aprendizaje</p> 
             </div>
             <div class="postulaciones_container">
                 <img class="postulaciones_IMG" src="images/Postulacion2IMG.png" alt="">
-                <p class="infos left_content_p_becas">Por favor completa el formulario a continuación para aplicar para el curso de ${cursoname}.</p>
+                <p class="left_content_p_postulaciones">Por favor completa el formulario a continuación para aplicar para el curso de ${cursoname}.</p>
             </div>
             <div class="postulaciones_container">
                 <img class="postulaciones_IMG" src="images/Postulacion3IMG.png" alt="">
-                <p class="infos left_content_p_becas">¡Una vez completado el formulario un representante de CIEP se pondrá en contacto contigo!</p>  
+                <p class="left_content_p_postulaciones">¡Una vez completado el formulario un representante de CIEP se pondrá en contacto contigo!</p>  
             </div>  
         </div>
         <div class="curso_content_container">
