@@ -459,7 +459,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </div>
             <div id="becas_container">
                 <div id="becas_BTN">
-                    <h1>Becas</h1>
+                    <h1>Becas de apoyo</h1>
+                    <img src="./images/Becas_titleBG.png" id="becas_title_img" alt="becasTitleBG">
+                    <h1 id="becas_title_whitebg">Becas de apoyo</h1>
                 </div>
             </div>
             <div class="little_div">
@@ -488,6 +490,7 @@ BECASBTN.addEventListener("click", async () => {
                 <form id="contact-form">
                     <label for="course">Curso al que quiere aplicar:</label>
                     <select id="course" name="course" required>
+                        <option value="" disabled selected>--Seleccione uno--</option>
                         <option value="Agente de ventas">Agente de ventas</option>
                         <option value="Marketing Digital">Marketing Digital</option>
                         <option value="Asesor comercial">Asesor comercial</option>
@@ -518,6 +521,7 @@ BECASBTN.addEventListener("click", async () => {
                     <br>
                     <label for="availability">Disponibilidad Horaria:</label>
                     <select id="availability" name="availability" required>
+                        <option value="" disabled selected>--Seleccione uno--</option>
                         <option value="Matutino">Matutino</option>
                         <option value="Vespertino">Vespertino</option>
                         <option value="Nocturno">Nocturno</option>

@@ -271,7 +271,6 @@ body{
     margin: 20px;
     position: relative;
     width: 100%;
-    padding: 10%;
 }
 .left_content_p_postulaciones{
     width: 90%;
@@ -314,9 +313,7 @@ body{
         width: 90%;
     }
     .left_content_img_becas{
-        width: 100%;
-        height: 250px;
-        background-position: right;
+        display: none;
     }
 }
 
@@ -573,16 +570,19 @@ body{
 }
 
 #becas_BTN {
+    overflow: hidden;
     display: flex;
     height: 200px;
-    align-items: flex-start;
-    background-image: url("../images/Becas_BG.png");
-    background-size: contain;
+    justify-content: center;
+    background-image: url("/images/Becas_BG.png");
+    background-size: cover;
+    opacity: 1;
+    background-position: center; /* Flechas a los lados */
     background-repeat: no-repeat;
-    background-position: left;
-    background-color: #ffffff;
     position: relative;
     transition: transform 0.2s, filter 0.2s;
+    align-items: center;
+
 }
 
 @media (max-width: 1200px) {
@@ -607,6 +607,7 @@ body{
         background-size: cover;
         background-position: calc(50% - 100px) center;
     }
+
 }
 
 @media (max-width: 400px) {
@@ -621,22 +622,66 @@ body{
 #becas_BTN:hover {
     transform: translateY(-10px);
 }
-#becas_BTN > h1{
+#becas_title_whitebg {
+    position: absolute;
     margin-left: 20px;
-    font-size: 7vh!important;
-    top: 50%;
-    color: #0d4f96;
+    font-size: 6vw;
+    color: #0d4f9600;
+    background: #ffffff;
+    border-radius: 25px;
     font-family: "Times New Roman", Times, serif;
-    text-decoration: underline solid 0.3vw #0d4f96;
     letter-spacing: 0px;
     word-spacing: 0.6px;
     font-weight: normal;
     font-style: normal;
     font-variant: small-caps;
     text-transform: none;
-    text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+    justify-self: center;
+    -webkit-box-shadow: 10px 10px 125px 85px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 10px 125px 85px rgba(255,255,255,1);
+    box-shadow: 10px 10px 125px 85px rgba(255,255,255,1);
+    z-index: 0!important;
 }
 
+#becas_BTN > h1 {
+    margin-left: 20px;
+    font-size: 6vw;
+    color: #0d4f96;
+    border-radius: 25px;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: underline solid 0.4vw #0d4f96;
+    letter-spacing: 0px;
+    word-spacing: 0.6px;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    z-index: 2;
+}
+
+#becas_title_img {
+    position: absolute;
+    align-self: center;
+    height: 100%;
+    z-index: 1;
+}
+@media (max-width: 600px) {
+    #becas_BTN > h1{
+        font-size: 8vw!important;
+        text-decoration:none;
+    }
+}
+@media (max-width: 900px) {
+    #becas_BTN > h1{
+        font-size: 9vw!important;
+    }
+}
+@media (max-width: 450px) {
+    #becas_BTN > h1{
+        font-size: 10vw!important;
+        text-decoration:none;
+    }
+}
 #contact-form{
     display: flex;
     justify-content: space-around;
