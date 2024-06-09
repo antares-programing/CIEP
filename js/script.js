@@ -67,7 +67,11 @@ async function showapplicationform(cursoname, categoria){
                     <input type="tel" id="phone" name="phone" required>
                     <br>
                     <label for="availability">Disponibilidad Horaria:</label>
-                    <input type="text" id="availability" name="availability" required>
+                    <select id="availability" name="availability" required>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                        <option value="Nocturno">Nocturno</option>
+                    </select>
                     <br>
                     <label for="course">Curso al que quiere aplicar:</label>
                     <input type="text" id="course" name="course" value="${cursoname}" disabled required>
@@ -111,15 +115,15 @@ async function showapplicationform(cursoname, categoria){
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 department: "null",
-                location: "null",
                 work_status:"null",
                 family: "null",
-                education_level: "null",
+                ed_level: "null",
                 availability: document.getElementById('availability').value,
                 goals: "null",
-                discount: "sin beca",
                 course: document.getElementById('course').value,
-                'g-recaptcha-response': recaptchaResponse
+                course_interest: "null",
+                birthdate: "null",
+                'g-recaptcha-response': recaptchaResponse // Agrega el token de reCaptcha
             };
 
             emailjs.init('YwXhxnIo10hShizFM');
@@ -455,7 +459,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </div>
             <div id="becas_container">
                 <div id="becas_BTN">
-                    <h1>Becas</h1>
+                    <h1>Becas de apoyo</h1>
+                    <img src="./images/Becas_titleBG.png" id="becas_title_img" alt="becasTitleBG">
+                    <h1 id="becas_title_whitebg">Becas de apoyo</h1>
                 </div>
             </div>
             <div class="little_div">
@@ -466,112 +472,127 @@ BECASBTN.addEventListener("click", async () => {
     await fadeout();
     DINAMICCONTENT.innerHTML = ``;
     DINAMICCONTENT.innerHTML = `
-        <div class="curso_content_container">
-            <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
-            <h2 class="curso_content_title">Becas</h2>
+    <div class="curso_content_container">
+        <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
+        <h2 class="curso_content_title">Becas</h2>
+    </div>
+    <div class="left_img_container_becas">
+        <div class="left_content_img_becas">
         </div>
-        <div class="left_img_container_becas">
-            <div class="left_content_img_becas">
+        <p class="infos left_content_p_becas">CIEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles van de un 20% a un 60%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
+    </div>
+    <div class="curso_content_container">
+        <h2 class="curso_content_title">Formulario de Postulación para Becas</h2>
+    </div>
+    <div class="curso_content_container">
+        <div class="curso_content_p">
+            <div class="contact_form_container">
+                <form id="contact-form">
+                    <label for="course">Curso al que quiere aplicar:</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>--Seleccione uno--</option>
+                        <option value="Agente de ventas">Agente de ventas</option>
+                        <option value="Marketing Digital">Marketing Digital</option>
+                        <option value="Asesor comercial">Asesor comercial</option>
+                        <option value="Asistente Administrativo">Asistente Administrativo</option>
+                        <option value="Aux administrativo esp contable">Aux administrativo esp contable</option>
+                        <option value="Aux administrativo esp RRHH">Aux administrativo esp RRHH</option>
+                        <option value="Aux administrativo">Aux administrativo</option>
+                        <option value="Diseño grafico">Diseño grafico</option>
+                        <option value="Diseño web">Diseño web</option>
+                        <option value="Ejecutivo de ventas">Ejecutivo de ventas</option>
+                        <option value="Secretariado comercial">Secretariado comercial</option>
+                    </select>
+                    <br>
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="birthdate">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <br>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <br>
+                    <label for="department">Departamento:</label>
+                    <input type="text" id="department" name="department" required>
+                    <br>
+                    <label for="availability">Disponibilidad Horaria:</label>
+                    <select id="availability" name="availability" required>
+                        <option value="" disabled selected>--Seleccione uno--</option>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                        <option value="Nocturno">Nocturno</option>
+                    </select>
+                    <br>
+                    <span>
+                        <label for="work_status">Situación Laboral:</label>
+                        <br>
+                        <input type="radio" id="unemployed" name="work_status" value="Desempleado" required>
+                        <label for="unemployed">Desempleado</label>
+                        <br>
+                        <input type="radio" id="employed" name="work_status" value="Trabajador dependiente" required>
+                        <label for="employed">Trabajador dependiente</label>
+                        <br>
+                        <input type="radio" id="independent" name="work_status" value="Trabajador independiente" required>
+                        <label for="independent">Trabajador independiente</label>
+                    </span>
+                    <br>
+                    <span>
+                        <label for="ed_level">Nivel Educativo:</label>
+                        <br>
+                        <input type="radio" id="primary_incomplete" name="ed_level" value="Primaria incompleta" required>
+                        <label for="primary_incomplete">Primaria incompleta</label>
+                        <br>
+                        <input type="radio" id="primary_complete" name="ed_level" value="Primaria completa" required>
+                        <label for="primary_complete">Primaria completa</label>
+                        <br>
+                        <input type="radio" id="basic_cycle" name="ed_level" value="Ciclo básico culminado" required>
+                        <label for="basic_cycle">Ciclo básico culminado</label>
+                        <br>
+                        <input type="radio" id="high_school" name="ed_level" value="Bachillerato culminado" required>
+                        <label for="high_school">Bachillerato culminado</label>
+                        <br>
+                        <input type="radio" id="tertiary_incomplete" name="ed_level" value="Terciario incompleto" required>
+                        <label for="tertiary_incomplete">Terciario incompleto</label>
+                        <br>
+                        <input type="radio" id="tertiary_complete" name="ed_level" value="Terciario culminado" required>
+                        <label for="tertiary_complete">Terciario culminado</label>
+                    </span>
+                    <br>
+                    <label for="goals">¿Cuáles son sus principales metas y objetivos? ¿Cómo se ve de aquí a 5 años? ¿Cómo se ve de aquí a 10 años? ¿Qué cosas le gustaría hacer o tener?:</label>
+                    <textarea id="goals" name="goals" required></textarea>
+                    <br>
+                    <span>
+                        <label for="course_interest">¿Cuál es tu principal interés sobre el curso?</label>
+                        <br>
+                        <input type="radio" id="get_job" name="course_interest" value="conseguir trabajo" required>
+                        <label for="get_job">Conseguir trabajo</label>
+                        <br>
+                        <input type="radio" id="change_job" name="course_interest" value="cambiar el trabajo actual" required>
+                        <label for="change_job">Cambiar el trabajo actual</label>
+                        <br>
+                        <input type="radio" id="start_project" name="course_interest" value="emprender mi propio proyecto" required>
+                        <label for="start_project">Emprender mi propio proyecto</label>
+                        <br>
+                        <input type="radio" id="course_content" name="course_interest" value="el contenido del curso" required>
+                        <label for="course_content">El contenido del curso</label>
+                    </span>
+                    <br>
+                    <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
+                    <br>
+                    <button type="submit" id="send_email_BTN">Enviar</button>
+                </form>
             </div>
-            <p class="infos left_content_p_becas">El Centro CIEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas becas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles son del 10%, 20%, y 30%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
         </div>
-        <div class="curso_content_container">
-            <h2 class="curso_content_title">Formulario de Postulación para Becas</h2>
-        </div>
-        <div class="curso_content_container">
-            <div class="curso_content_p">
-                <div class="contact_form_container">
-                    <form id="contact-form">
-                        <label for="name">Nombre Completo:</label>
-                        <input type="text" id="name" name="name" required>
-                        <br>
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                        <br>
-                        <label for="phone">Número de Teléfono:</label>
-                        <input type="tel" id="phone" name="phone" required>
-                        <br>
-                        <label for="department">Departamento:</label>
-                        <input type="text" id="department" name="department" required>
-                        <br>
-                        <label for="location">Localidad:</label>
-                        <input type="text" id="location" name="location" required>
-                        <br>
-                        <span>
-                            <label for="work_status">Situación Laboral:</label>
-                            <br>
-                            <input type="radio" id="unemployed" name="work_status" value="Desempleado" required>
-                            <label for="unemployed">Desempleado</label>
-                            <br>
-                            <input type="radio" id="employed" name="work_status" value="Trabajador dependiente" required>
-                            <label for="employed">Trabajador dependiente</label>
-                            <br>
-                            <input type="radio" id="independent" name="work_status" value="Trabajador independiente" required>
-                            <label for="independent">Trabajador independiente</label>
-                            <br>
-                            <input type="radio" id="entrepreneur" name="work_status" value="Empresario" required>
-                            <label for="entrepreneur">Empresario</label>
-                        </span>
-                        <br>
-                        <label for="family">¿Cómo se compone su núcleo familiar? Detalle si es pareja o su parentesco, nombre, edad y actividad:</label>
-                        <textarea id="family" name="family" required></textarea>
-                        <br>
-                        <span>
-                            <label for="education_level">Nivel Educativo:</label>
-                            <br>
-                            <input type="radio" id="primary_incomplete" name="education_level" value="Primaria incompleta" required>
-                            <label for="primary_incomplete">Primaria incompleta</label>
-                            <br>
-                            <input type="radio" id="primary_complete" name="education_level" value="Primaria completa" required>
-                            <label for="primary_complete">Primaria completa</label>
-                            <br>
-                            <input type="radio" id="basic_cycle" name="education_level" value="Ciclo básico culminado" required>
-                            <label for="basic_cycle">Ciclo básico culminado</label>
-                            <br>
-                            <input type="radio" id="high_school" name="education_level" value="Bachillerato culminado" required>
-                            <label for="high_school">Bachillerato culminado</label>
-                            <br>
-                            <input type="radio" id="tertiary_incomplete" name="education_level" value="Terciario incompleto" required>
-                            <label for="tertiary_incomplete">Terciario incompleto</label>
-                            <br>
-                            <input type="radio" id="tertiary_complete" name="education_level" value="Terciario culminado" required>
-                            <label for="tertiary_complete">Terciario culminado</label>
-                        </span>
-                        <br>
-                        <label for="availability">Disponibilidad Horaria:</label>
-                        <input type="text" id="availability" name="availability" required>
-                        <br>
-                        <label for="goals">¿Cuáles son sus principales metas y objetivos? ¿Cómo se ve de aquí a 5 años? ¿Cómo se ve de aquí a 10 años? ¿Qué cosas le gustaría hacer o tener?:</label>
-                        <textarea id="goals" name="goals" required></textarea>
-                        <br>
-                        <span>
-                            <label for="discount">Descuento para el que quiere aplicar:</label>
-                            <br>
-                            <input type="radio" id="discount_10" name="discount" value="10%" required>
-                                            <label for="discount_10">10%</label>
-                                            <br>
-                                            <input type="radio" id="discount_20" name="discount" value="20%" required>
-                                            <label for="discount_20">20%</label>
-                                            <br>
-                                            <input type="radio" id="discount_30" name="discount" value="30%" required>
-                                            <label for="discount_30">30%</label>                                        
-                                        </span>
-                                        <br>
-                                        <label for="course">Curso al que quiere aplicar:</label>
-                                        <input type="text" id="course" name="course" required>
-                                        <br>
-                                        <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
-                                        <br>
-                                        <button type="submit" id="send_email_BTN">Enviar</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="curso_content_container">
-                        <h2 class="curso_content_title"> </h2>
-                    </div>
-            <div class="custom-card-group-cursos" id="cursos-container"></div>
-            `;
+    </div>
+    <div class="curso_content_container">
+        <h2 class="curso_content_title"></h2>
+    </div>
+    <div class="custom-card-group-cursos" id="cursos-container"></div>
+`;
             fadein();
             goback(CURSOSBTN);
             // ======================================= [Enviar correo formulario] ======================================
@@ -597,15 +618,20 @@ BECASBTN.addEventListener("click", async () => {
                 }
 
                 // Envío del formulario
-                const serviceID = 'service_zpo793f'; // Reemplaza con tu Service ID de EmailJS
-                const templateID = 'template_yvmend4'; // Reemplaza con tu Template ID de EmailJS
+                const serviceID = 'service_zpo793f'; // ID de EmailJS
+                const templateID = 'template_yvmend4'; // ID de EmailJS
                 var templateParams = {
                     name: document.getElementById('name').value,
                     email: document.getElementById('email').value,
                     phone: document.getElementById('phone').value,
                     department: document.getElementById('department').value,
-                    location: document.getElementById('location').value,
-                    // Agrega el resto de tus campos de formulario aquí
+                    work_status: document.querySelector('input[name="work_status"]:checked').value,
+                    ed_level: document.querySelector('input[name="ed_level"]:checked').value,
+                    availability: document.getElementById('availability').value,
+                    goals: document.getElementById('goals').value,
+                    course: document.getElementById('course').value,
+                    course_interest: document.querySelector('input[name="course_interest"]:checked').value,
+                    birthdate: document.getElementById('birthdate').value,
                     'g-recaptcha-response': recaptchaResponse // Agrega el token de reCaptcha
                 };
 
