@@ -14,7 +14,7 @@
       "perfilEgresado": "El curso de Auxiliar Administrativo capacita a los estudiantes en funciones esenciales como planificación, organización, dirección, coordinación y control. También abarca habilidades de comunicación, gestión administrativa y comprensión de la cultura organizacional. En resumen, prepara a los alumnos para ser parte fundamental de equipos administrativos, contribuyendo al éxito y eficiencia de la organización.",
       "precio": "$U 26.000",
       "pdfNombre": "Auxiliar Administrativo.pdf",
-      "pdfUrl": "./documents/Auxiliar Administrativo CEIP.pdf"
+      "pdfUrl": "documents/Aux administrativo CEIP.pdf"
     },
     {
       "titulo": "Asistente Administrativo",
@@ -31,7 +31,7 @@
       "perfilEgresado": "El egresado del curso de Asistente Administrativo será capaz de realizar funciones básicas de apoyo en oficinas, manejar documentación, organizar archivos, gestionar correspondencia y asistir en tareas administrativas generales.",
       "precio": "$U 20.000",
       "pdfNombre": "Asistente Administrativo.pdf",
-      "pdfUrl": "./documents/Asistente_Administrativo_CIEP.pdf"
+      "pdfUrl": "documents/Asistente Administrativo CEIP.pdf"
     },
     {
       "titulo": "Aux Administrativo \n[Esp Contable]",
@@ -48,7 +48,7 @@
       "perfilEgresado": "El alumno egresado de la carrera Auxiliar en administración contable será capaz de identificar y aplicar las funciones de planificación, organización, dirección, coordinación y control, a efectos de tomar decisiones eficientes y eficaces interactuando en el medio en que se desenvuelva. Reconocer las formas de comunicación interna y externa de la organización. Adquisición y desarrollo de capacidades de gestión administrativa en todos sus aspectos (captación, manejo, trámite y seguimiento de la información pertinente). Identificar la cultura organizacional e incorporación a ella en forma proactiva. Identificar y aplicar técnicas contables adecuadas para procesar y registrar la información pertinente en cualquier tipo de organización. Manejar con eficacia y eficiencia programas informáticos de contabilidad. Analizar y tomar decisiones sobre la base de la información contable elaborada.",
       "precio": "$U 32.000",
       "pdfNombre": "Especializacion Contable.pdf",
-      "pdfUrl": "./documents/Especializacion_Contable_CIEP.pdf"
+      "pdfUrl": "documents/Aux administrativo [Esp contable] CEIP.pdf"
     },
     {
       "titulo": "Aux Administrativo \n[Esp RRHH]",
@@ -70,6 +70,6 @@
       "perfilEgresado": "El egresado del curso de Analista de Recursos Humanos estará preparado para comprender y aplicar conceptos esenciales de la administración de recursos humanos en una organización. Identificará las funciones y responsabilidades de un departamento de recursos humanos y diseñará políticas y procedimientos para la gestión del personal. Además, se especializará en la gestión del talento humano, incluyendo selección, contratación y desarrollo. Tendrá conocimientos sobre motivación, liderazgo, trabajo en equipo, gestión del desempeño y cambio organizacional. Estará familiarizado con las leyes laborales y las técnicas de seguridad e higiene laboral, así como el uso de herramientas ofimáticas para informes administrativos.",
       "precio": "$U 43.000",
       "pdfNombre": "Especializacion RRHH.pdf",
-      "pdfUrl": "./documents/Especializacion_RRHH_CIEP.pdf"
+      "pdfUrl": "documents/Aux administrativo [Esp RRHH] CEIP.pdf"
   }
   ]

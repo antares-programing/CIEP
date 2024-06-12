@@ -14,7 +14,7 @@
     "perfilEgresado": "El egresado del curso de Agente de ventas está capacitado tanto en conocimientos teóricos como en habilidades prácticas, para desempeñarse de manera exitosa en diversos ámbitos relacionados con las ventas y la atención al cliente.",
     "precio": "Gratuito",
     "pdfNombre": "Agente de ventas.pdf",
-    "pdfUrl": "./documents/Agente de ventas CEIP.pdf"
+    "pdfUrl": "documents/Agente de ventas.pdf"
   },
   {
     "titulo": "Ejecutivo en ventas",
@@ -33,7 +33,7 @@
     "perfilEgresado": "El egresado estará capacitado tanto en conocimientos teóricos como en habilidades prácticas para desempeñarse de manera exitosa en diversos ámbitos relacionados con las ventas y la atención al cliente. Estará preparado para trabajar en diferentes áreas y sectores empresariales, manejar procesos de ventas, desarrollar estrategias comerciales, y atender personalizadamente a los clientes. Además, conocerá herramientas y tecnologías utilizadas en el ámbito comercial, incluyendo medios digitales y plataformas de marketing digital.",
     "precio": "Gratuito",
     "pdfNombre": "Ejecutivo en ventas.pdf",
-    "pdfUrl": "./documents/Ejecutivo en ventas CEIP.pdf"
+    "pdfUrl": "documents/Ejecutivo en ventas.pdf"
   },
   {
     "titulo": "Asesor Comercial",
@@ -52,7 +52,7 @@
     "perfilEgresado": "El Asesor Comercial es una persona capacitada, teórica y prácticamente para ejercer la profesión en los diferentes ámbitos. Trabaja en las áreas de ventas, marketing y comercialización. Es capaz de desarrollar su labor en forma comprometida moralmente a través de la aplicación del conocimiento de esta profesión, así como tiene conocimientos suficientes para diseñar planes estratégicos, referidos a diversas temáticas que componen el quehacer de las ventas.",
     "precio": "$U 24.000",
     "pdfNombre": "Asesor Comercial.pdf",
-    "pdfUrl": "./documents/Asesor Comercial CIEP.pdf"
+    "pdfUrl": "documents/Asesor Comercial CEIP.pdf"
   },
   {
     "titulo": "Marketing Digital",
@@ -72,7 +72,7 @@
     "perfilEgresado": "El egresado sera un profesional capacitado teórica y prácticamente para trabajar en planificación, organización, ejecución y control del área comercial de empresas. Podra desempeñarse en roles empresariales, gerenciales o de consultoría, diseñando planes estratégicos y aplicando conocimientos para diversas áreas de comunicación, ventas y publicidad, de manera comprometida y ética.",
     "precio": "$U 18.000",
     "pdfNombre": "Marketing Digital.pdf",
-    "pdfUrl": "./documents/Analista en Marketing CIEP.pdf"
+    "pdfUrl": "documents/Marketing Digital CIEP.pdf"
   },
   {
     "titulo": "Secretariado Ejecutivo",
@@ -91,6 +91,6 @@
     "perfilEgresado": "El alumno egresado de la formación en Secretariado Ejecutivo será capaz de incorporar una visión profesional de la venta desde un enfoque centrado en el cliente y aplicar técnicas prácticas para lograr un proceso de venta exitoso. Podrá identificar y aplicar funciones de planificación, organización, dirección, coordinación y control para tomar decisiones eficientes y eficaces, interactuando adecuadamente en su entorno laboral. Además, reconocerá las formas de comunicación interna y externa de la organización, desarrollará capacidades de gestión administrativa en todos sus aspectos, incluyendo la captación, manejo, trámite y seguimiento de la información pertinente. El egresado también identificará la cultura organizacional y se integrará a ella de manera proactiva, y será capaz de organizar cualquier tipo de evento, tanto empresarial como personal.",
     "precio": "$U 44.000",
     "pdfNombre": "Secretariado Ejecutivo.pdf",
-    "pdfUrl": "./documents/Secretariado Ejecutivo CIEP.pdf"
+    "pdfUrl": "documents/Secretariado Ejecutivo CIEP.pdf"
   }
   ]
