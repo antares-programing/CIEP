@@ -76,6 +76,11 @@ async function showapplicationform(cursoname, categoria){
                     <label for="course">Curso al que quiere aplicar:</label>
                     <input type="text" id="course" name="course" value="${cursoname}" disabled required>
                     <br>
+                    <div>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">He leído y acepto los <a href="#" id="termsLink">términos y condiciones</a></label>
+                    </div>
+                    <br>
                     <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
                     <br>
                     <button type="submit" id="send_email_BTN">Aplicar</button>
@@ -86,7 +91,85 @@ async function showapplicationform(cursoname, categoria){
             <h2 class="curso_content_title"> </h2>
         </div>
         <div class="custom-card-group-cursos" id="cursos-container"></div>
+            <div id="termsOverlay"></div>
+
+    <!-- Modal for the terms and conditions -->
+    <div id="termsModal">
+        <h2>Términos y Condiciones</h2>
+        <p>
+            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            <br><br>
+            <strong>1. Información que Recopilamos</strong>
+            <br>
+            Recopilamos los siguientes datos personales:
+            <ul>
+                <li>Nombre completo</li>
+                <li>Correo electrónico</li>
+                <li>Número de teléfono</li>
+            </ul>
+            <br>
+            <strong>2. Finalidad de la Recopilación de Datos</strong>
+            <br>
+            Usamos la información recopilada para los siguientes fines:
+            <ul>
+                <li>Ponernos en contacto contigo para proporcionarte información sobre becas estudiantiles.</li>
+                <li>Enviarte información relevante sobre nuestros cursos y programas educativos.</li>
+                <li>Mejorar nuestros servicios y personalizar tu experiencia con nosotros.</li>
+            </ul>
+            <br>
+            <strong>3. Retención de Datos</strong>
+            <br>
+            Conservaremos tus datos personales durante el tiempo que sea necesario para cumplir con los fines descritos en estos términos y condiciones, a menos que la ley exija o permita un período de retención más largo.
+            <br><br>
+            <strong>4. Compartición de Datos</strong>
+            <br>
+            No compartimos tus datos personales con terceros, excepto cuando sea necesario para cumplir con las obligaciones legales o con tu consentimiento explícito.
+            <br><br>
+            <strong>5. Seguridad de los Datos</strong>
+            <br>
+            Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger tus datos personales contra el acceso no autorizado, la divulgación, alteración o destrucción.
+            <br><br>
+            <strong>6. Derechos de los Usuarios</strong>
+            <br>
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>.
+            <br><br>
+            <strong>7. Contacto</strong>
+            <br>
+            Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
+            <br>
+            Centro Integral de Educación Profesional (CIEP)
+            <br>
+            Correo electrónico: <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>
+            <br>
+            Teléfono: 096565289
+        </p>
+        <button class="CIEP_GenericBTN" id="closeModal">Cerrar</button>
+    </div>
         `;
+            // ======================================= [mostrar terminos y condiciones] ======================================
+            const termsLink = document.getElementById('termsLink');
+            const termsModal = document.getElementById('termsModal');
+            const termsOverlay = document.getElementById('termsOverlay');
+            const closeModal = document.getElementById('closeModal');
+
+            // Mostrar modal
+            termsLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                termsModal.style.display = 'block';
+                termsOverlay.style.display = 'block';
+            });
+
+            // Cerrar modal
+            closeModal.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                termsOverlay.style.display = 'none';
+            });
+
+            // Cerrar modal al hacer clic en el overlay
+            termsOverlay.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                termsOverlay.style.display = 'none';
+            });
         fadein()
         gobacktocategory(categoria)
 
@@ -425,6 +508,11 @@ async function mostrarCursos(categoria) {
                             <img src="./images/PDF_file_icon.png" class="pdf_img" alt="">
                             <a href="${curso.pdfUrl}" download="${curso.pdfNombre}" class="download_button">${curso.pdfNombre}</a>
                         </div>
+                        <div class="pdf_container_title">
+                                <p class="disclaimer">
+                                 Nota: La documentación y el programa están sujetos a posibles cambios efectuados a discreción por el docente. <br>Por favor, revise regularmente para estar al tanto de cualquier actualización.
+                                </p>
+                        </div>
                     </div>
                     
                     <div class="little_div"></div>
@@ -581,6 +669,11 @@ BECASBTN.addEventListener("click", async () => {
                         <label for="course_content">El contenido del curso</label>
                     </span>
                     <br>
+                    <div>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">He leído y acepto los <a href="#" id="termsLink">términos y condiciones</a></label>
+                    </div>
+                    <br>
                     <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
                     <br>
                     <button type="submit" id="send_email_BTN">Enviar</button>
@@ -592,7 +685,89 @@ BECASBTN.addEventListener("click", async () => {
         <h2 class="curso_content_title"></h2>
     </div>
     <div class="custom-card-group-cursos" id="cursos-container"></div>
-`;
+    <div id="termsOverlay"></div>
+
+    <!-- Modal for the terms and conditions -->
+    <div id="termsModal">
+        <h2>Términos y Condiciones</h2>
+        <p>
+            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            <br><br>
+            <strong>1. Información que Recopilamos</strong>
+            <br>
+            Recopilamos los siguientes datos personales:
+            <ul>
+                <li>Nombre completo</li>
+                <li>Correo electrónico</li>
+                <li>Número de teléfono</li>
+                <li>Fecha de nacimiento</li>
+                <li>Nivel Educativo</li>
+                <li>Departamento</li>
+            </ul>
+            <br>
+            <strong>2. Finalidad de la Recopilación de Datos</strong>
+            <br>
+            Usamos la información recopilada para los siguientes fines:
+            <ul>
+                <li>Ponernos en contacto contigo para proporcionarte información sobre becas estudiantiles.</li>
+                <li>Enviarte información relevante sobre nuestros cursos y programas educativos.</li>
+                <li>Mejorar nuestros servicios y personalizar tu experiencia con nosotros.</li>
+            </ul>
+            <br>
+            <strong>3. Retención de Datos</strong>
+            <br>
+            Conservaremos tus datos personales durante el tiempo que sea necesario para cumplir con los fines descritos en estos términos y condiciones, a menos que la ley exija o permita un período de retención más largo.
+            <br><br>
+            <strong>4. Compartición de Datos</strong>
+            <br>
+            No compartimos tus datos personales con terceros, excepto cuando sea necesario para cumplir con las obligaciones legales o con tu consentimiento explícito.
+            <br><br>
+            <strong>5. Seguridad de los Datos</strong>
+            <br>
+            Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger tus datos personales contra el acceso no autorizado, la divulgación, alteración o destrucción.
+            <br><br>
+            <strong>6. Derechos de los Usuarios</strong>
+            <br>
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>.
+            <br><br>
+            <strong>7. Contacto</strong>
+            <br>
+            Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
+            <br>
+            Centro Integral de Educación Profesional (CIEP)
+            <br>
+            Correo electrónico: <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>
+            <br>
+            Teléfono: 096565289
+        </p>
+        <button class="CIEP_GenericBTN" id="closeModal">Cerrar</button>
+    </div>
+`; 
+            // ======================================= [mostrar terminos y condiciones] ======================================
+            const termsLink = document.getElementById('termsLink');
+            const termsModal = document.getElementById('termsModal');
+            const termsOverlay = document.getElementById('termsOverlay');
+            const closeModal = document.getElementById('closeModal');
+
+            // Mostrar modal
+            termsLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                termsModal.style.display = 'block';
+                termsOverlay.style.display = 'block';
+            });
+
+            // Cerrar modal
+            closeModal.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                termsOverlay.style.display = 'none';
+            });
+
+            // Cerrar modal al hacer clic en el overlay
+            termsOverlay.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                termsOverlay.style.display = 'none';
+            });
+
             fadein();
             goback(CURSOSBTN);
             // ======================================= [Enviar correo formulario] ======================================
@@ -906,7 +1081,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                                 <div id="media_IMG_Container">
                                     <img id="cellphone_BTN" class="media_BTN" src="images/Cellphone_icon.png" alt="">
                                     <div id="cellphone_number_Container">
-                                        <p>099178945</p>
+                                        <p>096565289</p>
                                     </div>
                                     <img id="instagram_BTN" class="media_BTN" src="images/Instagram_icon.png" alt="">
                                     <img id="facebook_BTN" class="media_BTN" src="images/Facebook_icon.png" alt="">
@@ -925,6 +1100,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                                 <label for="message">Mensaje:</label>
                                 <textarea id="message" name="message" required></textarea>
                                 <br>
+                                <div>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">He leído y acepto los <a href="#" id="termsLink">términos y condiciones</a></label>
+                                </div>
+                                <br>
                                 <div class="g-recaptcha" data-sitekey="6Ldg6PEpAAAAAEUIsSi59w0Zb1HNtz619siwvFHy"></div>
                                 <br>
                                 <button type="submit" id="send_email_BTN">Enviar</button>
@@ -934,7 +1114,84 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                 </div>
                 <div class="little_div"></div>
             </div>
+                <div id="termsOverlay"></div>
+
+    <!-- Modal for the terms and conditions -->
+    <div id="termsModal">
+        <h2>Términos y Condiciones</h2>
+        <p>
+            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            <br><br>
+            <strong>1. Información que Recopilamos</strong>
+            <br>
+            Recopilamos los siguientes datos personales:
+            <ul>
+                <li>Nombre completo</li>
+                <li>Correo electrónico</li>
+            </ul>
+            <br>
+            <strong>2. Finalidad de la Recopilación de Datos</strong>
+            <br>
+            Usamos la información recopilada para los siguientes fines:
+            <ul>
+                <li>Ponernos en contacto contigo para proporcionarte información sobre becas estudiantiles.</li>
+                <li>Enviarte información relevante sobre nuestros cursos y programas educativos.</li>
+                <li>Mejorar nuestros servicios y personalizar tu experiencia con nosotros.</li>
+            </ul>
+            <br>
+            <strong>3. Retención de Datos</strong>
+            <br>
+            Conservaremos tus datos personales durante el tiempo que sea necesario para cumplir con los fines descritos en estos términos y condiciones, a menos que la ley exija o permita un período de retención más largo.
+            <br><br>
+            <strong>4. Compartición de Datos</strong>
+            <br>
+            No compartimos tus datos personales con terceros, excepto cuando sea necesario para cumplir con las obligaciones legales o con tu consentimiento explícito.
+            <br><br>
+            <strong>5. Seguridad de los Datos</strong>
+            <br>
+            Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger tus datos personales contra el acceso no autorizado, la divulgación, alteración o destrucción.
+            <br><br>
+            <strong>6. Derechos de los Usuarios</strong>
+            <br>
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>.
+            <br><br>
+            <strong>7. Contacto</strong>
+            <br>
+            Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
+            <br>
+            Centro Integral de Educación Profesional (CIEP)
+            <br>
+            Correo electrónico: <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>
+            <br>
+            Teléfono: 096565289
+        </p>
+        <button class="CIEP_GenericBTN" id="closeModal">Cerrar</button>
+    </div>
             `;
+            // ======================================= [mostrar terminos y condiciones] ======================================
+            const termsLink = document.getElementById('termsLink');
+            const termsModal = document.getElementById('termsModal');
+            const termsOverlay = document.getElementById('termsOverlay');
+            const closeModal = document.getElementById('closeModal');
+
+            // Mostrar modal
+            termsLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                termsModal.style.display = 'block';
+                termsOverlay.style.display = 'block';
+            });
+
+            // Cerrar modal
+            closeModal.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                termsOverlay.style.display = 'none';
+            });
+
+            // Cerrar modal al hacer clic en el overlay
+            termsOverlay.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                termsOverlay.style.display = 'none';
+            });
 
             // Inserta nuevamente el script del reCaptcha
             const script = document.createElement('script');
