@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 async function cargarDatosCursos(categoria) {
     try {
-        const response = await fetch(`Json/cursos_${categoria}.json`);
+        const response = await fetch(`./Json/cursos_${categoria}.json`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -825,7 +825,7 @@ BECASBTN.addEventListener("click", async () => {
             });
             // ======================================= [Enviar correo formulario] ======================================
         })
-        fetch('Json/categorias.json')
+        fetch('./Json/categorias.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('No se pudo cargar el archivo JSON de las categorías');
