@@ -2,12 +2,12 @@ const INICIOBTN = document.getElementById("Inicio_BTN");
 
 const CURSOSBTN = document.getElementById("Cursos_BTN");
 const SERVICIOSBTN = document.getElementById("Servicios_BTN");
-const COLABORADORESBTN = document.getElementById("Colaboradores_BTN");
+
 const CONTACTOBTN = document.getElementsByClassName("Contacto_BTN");
 const INICIOBTNS = document.getElementsByClassName("Inicio_BTN");
 const CURSOSBTNS = document.getElementsByClassName("Cursos_BTN");
 const SERVICIOSBTNS = document.getElementsByClassName("Servicios_BTN");
-const COLABORADORESBTNS = document.getElementsByClassName("Colaboradores_BTN");
+
 const CONTACTOBTNS = document.getElementsByClassName("Contacto_BTN");
 
 const MENUBTNS = document.getElementsByClassName("menu_BTN");
@@ -131,7 +131,7 @@ async function showapplicationform(cursoname, categoria){
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
@@ -139,7 +139,7 @@ async function showapplicationform(cursoname, categoria){
             <br>
             Centro Integral de Educación Profesional (CIEP)
             <br>
-            Correo electrónico: <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>
+            Correo electrónico: <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 async function cargarDatosCursos(categoria) {
     try {
-        const response = await fetch(`../Json/cursos_${categoria}.json`);
+        const response = await fetch(`./Json/cursos_${categoria}.json`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -825,7 +825,7 @@ BECASBTN.addEventListener("click", async () => {
             });
             // ======================================= [Enviar correo formulario] ======================================
         })
-        fetch('../Json/categorias.json')
+        fetch('./Json/categorias.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('No se pudo cargar el archivo JSON de las categorías');
@@ -1033,27 +1033,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //boton de colaboradores, lo que muestra en el contenido dinamico al presionar el boton de colaboradores
-document.addEventListener("DOMContentLoaded", (event) => {
-    Array.from(COLABORADORESBTNS).forEach(button => {
-        button.addEventListener("click", async()=>{
-    activebtn(button)
-    await fadeout();
-    DINAMICCONTENT.innerHTML = ``;
-    DINAMICCONTENT.innerHTML = `
-    <h2 class="asociados_titulo">Nuestros Asociados</h2>
-    <p class="asociados_infos">Trabajamos en colaboración con diversas instituciones y organizaciones para enriquecer la experiencia educativa de nuestros estudiantes.</p>
-    <div class="asociados_lista">
-    <ul>
-        <li>Asociación de Padres de Familia</li>
-        <li>Universidad Nacional</li>
-        <li>Organización de Profesionales</li>
-    </ul>
-    </div>
-`;
-    fadein()
-})
-});
-});
+
 document.addEventListener("DOMContentLoaded", async (event) => {
     Array.from(CONTACTOBTNS).forEach(button => {
         button.addEventListener("click", async () => {
@@ -1070,13 +1050,13 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                         <div class="contact_info_container">
                             <ul>
                                 <li><h4 class="curso_content_title">Contacto Empresa</h4>
-                                    <p>Si quieres capacitar a tu personal, contactanos via email a contacto@portalciep.com.uy</p>
+                                    <p>Si quieres capacitar a tu personal, contactanos via email a Contacto@portalciep.com.uy</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Estudiante</h4>
-                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a contacto@portalciep.com.uy</p>
+                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a Bedelia@portalciep.com.uy</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Profesorado</h4>
-                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a contacto@portalciep.com.uy</p>
+                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a Contacto@portalciep.com.uy</p>
                                 </li>
                                 <div id="media_IMG_Container">
                                     <img id="cellphone_BTN" class="media_BTN" src="images/Cellphone_icon.png" alt="">
@@ -1153,7 +1133,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
