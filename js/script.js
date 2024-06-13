@@ -736,7 +736,7 @@ BECASBTN.addEventListener("click", async () => {
             <br>
             Centro Integral de Educación Profesional (CIEP)
             <br>
-            Correo electrónico: <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>
+            Correo electrónico: <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -1070,13 +1070,13 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                         <div class="contact_info_container">
                             <ul>
                                 <li><h4 class="curso_content_title">Contacto Empresa</h4>
-                                    <p>Si quieres capacitar a tu personal, contactanos via email a ciep@coordinacion.com</p>
+                                    <p>Si quieres capacitar a tu personal, contactanos via email a contacto@portalciep.com.uy</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Estudiante</h4>
-                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a ciep@bedelia.com</p>
+                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a contacto@portalciep.com.uy</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Profesorado</h4>
-                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a ciep@institucion.com</p>
+                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a contacto@portalciep.com.uy</p>
                                 </li>
                                 <div id="media_IMG_Container">
                                     <img id="cellphone_BTN" class="media_BTN" src="images/Cellphone_icon.png" alt="">
@@ -1161,7 +1161,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <br>
             Centro Integral de Educación Profesional (CIEP)
             <br>
-            Correo electrónico: <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>
+            Correo electrónico: <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>
             <br>
             Teléfono: 096565289
         </p>
