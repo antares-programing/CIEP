@@ -3,13 +3,13 @@
       "id": "administracion",
       "nombre": "Administración",
       "imagen": "images/Administracion.jpg",
-      "descripcion": "Realiza tareas administrativas básicas como archivar documentos, contestar llamadas telefónicas, manejar correos electrónicos, mantener registros de información y realizar actividades de entrada de datos."
+      "descripcion": "La Administración ofrece una rápida inserción laboral y nuestros cursos brindan una formación integral que incluye los conocimientos y herramientas necesarias para un eficaz desempeño en todos los departamentos de una empresa o entidad financiera que requieran de trabajo administrativo-contable.<br>Los cursos dentro de esta categoría preparan a los estudiantes para realizar tareas administrativas básicas como archivar documentos, contestar llamadas telefónicas, manejar correos electrónicos, mantener registros de información y realizar actividades de entrada de datos."
     },
     {
       "id": "marketing",
       "nombre": "Marketing y Ventas",
       "imagen": "images/Marketing.jpg",
-      "descripcion": "El marketing busca entender, comunicar y satisfacer las necesidades del cliente para construir relaciones y lograr objetivos comerciales."
+      "descripcion": "El marketing busca entender, comunicar y satisfacer las necesidades del cliente para construir relaciones y lograr objetivos comerciales. Esto se logra mediante la investigación de mercado, el análisis del comportamiento del consumidor y la implementación de estrategias efectivas de promoción y venta. Nuestros cursos de marketing enseñan estas habilidades, permitiendo a los estudiantes atraer y fidelizar clientes, asegurando así un crecimiento sostenible y una ventaja competitiva en el mercado."
     },
     {
       "id": "diseno",

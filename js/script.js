@@ -380,9 +380,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <img src="./images/Vision_icon.png" class="MVV_img" alt="Curso 2">
                         <div class="MVV-body">
                             <p class="MVV_title">vision</p>
-                            <p class="MVV_content" id="vision_content">Nuestro objetivo es ser el primer instituto en abarcar tanto a adultos como a adolescentes en su crecimiento profesional y personal, poniendo un fuerte énfasis en el desarrollo de habilidades blandas y la capacitación empresarial. <br> Fomentamos el emprendimiento y la búsqueda constante de la felicidad y la autorrealización.
-
-                            Aspiramos a ser una referencia nacional en la formación y capacitación del talento humano, ofreciendo una educación integral y de alto nivel en todas las áreas clave de las organizaciones. <br> Brindamos carreras cortas, cursos y talleres, tanto presenciales como a distancia, utilizando tecnología de punta para llegar a todos los rincones del país. Gracias a nuestras alianzas con las principales empresas públicas y privadas, garantizamos que nuestros egresados se incorporen con éxito al mercado laboral.</p>
+                            <p class="MVV_content" id="vision_content">Somos un centro educativo referente en lo que respecta a desarrollo profesional y humano buscamos ser referentes gracias a nuestra metodología y contribuir en el desarrollo social y el paso a paso de nuestra comunidad, simultáneamente establecernos como un Instituto bien considerado en el mercado laboral, con el propósito de convertirnos en un referente positivo para la empleabilidad de nuestros egresados.</p>
                         </div>
                     </div>
 
@@ -391,14 +389,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <div class="MVV-body">
                             <p class="MVV_title">Valores</p>
                             <ul class="MVV_content" id="valores_content">
-                                <li>TRABAJO EN EQUIPO</li>
-                                <li>CONFIANZA</li>
-                                <li>COMPROMISO</li>
-                                <li>SERIEDAD</li>
-                                <li>HONESTIDAD</li>
-                                <li>PERSEVERANCIA</li>
-                                <li>RESPETO</li>
-                                <li>IGUALDAD</li>
+                                <li>Pasión: Como la fuerza motivadora que impulsa el logro de metas y aspiraciones.</li>
+                                <li>Lealtad: Como el compromiso y la coherencia en nuestras decisiones basadas en principios fundamentales.</li>
+                                <li>Transparencia: Como la confianza generada por el aprendizaje continuo, la estabilidad y el crecimiento personal y profesional.</li>
                             </ul>
                         </div>
                     </div>
@@ -407,11 +400,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </div>
 
             <div class="left_img_container">
-                <p class="infos left_content_p">En CIEP, enseñamos a través de líderes y académicos que transmiten conocimientos de manera inspiradora. Entendemos que los docentes de hoy deben ser más que simples instructores; deben ser guías y mentores capaces de conectar con los estudiantes no solo en el ámbito académico, sino también en el emocional. Esto permite inspirar un aprendizaje enriquecido con experiencias y retroalimentación constante.
+                
+                <div class="content_obj_valag">
+                <p class="MVV_title">Objetivos</p>
+                <ul>
+                    <li>Brindar  una educación actualizada que fomente el máximo desarrollo de las competencias laborales específicas del estudiante para facilitar su ingreso efectivo al mercado laboral formal.</li>
+                    <li>Estimular el interés del estudiante en la formación continua y la actualización conforme a las demandas del mercado laboral.</li>
+                    <li>Fortalecer las habilidades interpersonales del estudiante para mejorar su competitividad en el mercado laboral, aumentando así su empleabilidad de manera significativa.</li>
+                </ul>
+                </div>
 
-                Nuestro equipo está compuesto por profesionales con una amplia trayectoria, quienes reconocen la singularidad de cada individuo. Nuestro desafío es educar sin imponer moldes, abrazando la diversidad y facilitando un proceso de aprendizaje personalizado para cada alumno. De este modo, les brindamos la oportunidad de construir su propio camino hacia el perfil de egresado que el mercado laboral actual demanda.</p>    
+                <div class="img_obj_valag">
+                </div>
+
+                <div class="content_obj_valag">
+                <p class="MVV_title">Nuestro Valor Agregado</p>
+                <p class="infos obj_valag_content_p">
+                Nuestra principal diferencia es que nuestros cursos incluyen un módulo de Competencias Transversales, diseñado para desarrollar habilidades blandas como manejo de emociones, iniciativa, trabajo en equipo y comunicación efectiva. Este enfoque promueve el crecimiento integral de cada individuo, integrando capacidades humanas y profesionales.
+                <br>Además, contamos con un sistema de Gestión de Situaciones Emergentes en todos los procesos educativos. Un equipo especializado colabora con los estudiantes para identificar y resolver conflictos en su vida, personalidad o entorno, asegurando la continuidad y efectividad del proceso educativo.
+                </p>
+                </div>
+                    
             
-                <img class="left_content_img" src="./images/right_img.png" alt="">
             </div>
 
             <div class="little_div">
