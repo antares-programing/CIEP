@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 async function cargarDatosCursos(categoria) {
     try {
-        const response = await fetch(`./Json/cursos_${categoria}.json`);
+        const response = await fetch(`../Json/cursos_${categoria}.json`);
         const data = await response.json();
         return data;
     } catch (error) {
