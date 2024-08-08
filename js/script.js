@@ -48,7 +48,7 @@ async function showapplicationform(cursoname, categoria){
             </div>
             <div class="postulaciones_container">
                 <img class="postulaciones_IMG" src="images/Postulacion3IMG.png" alt="">
-                <p class="left_content_p_postulaciones">¡Una vez completado el formulario un representante de CIEP se pondrá en contacto contigo!</p>  
+                <p class="left_content_p_postulaciones">¡Una vez completado el formulario un representante de CIDEP se pondrá en contacto contigo!</p>  
             </div>  
         </div>
         <div class="curso_content_container">
@@ -97,7 +97,7 @@ async function showapplicationform(cursoname, categoria){
     <div id="termsModal">
         <h2>Términos y Condiciones</h2>
         <p>
-            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIDEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
             <br><br>
             <strong>1. Información que Recopilamos</strong>
             <br>
@@ -131,15 +131,15 @@ async function showapplicationform(cursoname, categoria){
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalcidep.com.uy">contacto@portalcidep.com.uy</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
             Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
             <br>
-            Centro Integral de Educación Profesional (CIEP)
+            Centro Integral de Educación Profesional (CIDEP)
             <br>
-            Correo electrónico: <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>
+            Correo electrónico: <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -213,12 +213,12 @@ async function showapplicationform(cursoname, categoria){
             emailjs.send(serviceID, templateID, templateParams)
                 .then((response) => {
                     console.log('Correo enviado con éxito!', response.status, response.text);
-                    alert('Se ha postulado con éxito!\n\nGracias por su interés en nuestros cursos.\nA la brevedad, un representante de CIEP se pondrá en contacto con usted para los siguientes pasos.');
+                    alert('Se ha postulado con éxito!\n\nGracias por su interés en nuestros cursos.\nA la brevedad, un representante de CIDEP se pondrá en contacto con usted para los siguientes pasos.');
                     document.getElementById('contact-form').reset();
                     SUBMITBTN.disabled = false;
                 }, (error) => {
                     console.log('Error al enviar el correo:', error);
-                    alert('Error al enviar el correo. Por favor, contactenos via email a: CIEP@capacitaciones.com si el error persiste.');
+                    alert('Error al enviar el correo. Por favor, contactenos via email a: CIDEP@capacitaciones.com si el error persiste.');
                     SUBMITBTN.disabled = false;
                 });
         });
@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             <div id="inicio_content">
 
             <div class="curso_content_container">
-                <h2>Bienvenidos al Centro Académico CIEP.</h2>
+                <h2>Bienvenidos al Centro Académico CIDEP.</h2>
             </div>
 
             <div class="left_img_container">
@@ -577,7 +577,7 @@ BECASBTN.addEventListener("click", async () => {
     <div class="left_img_container_becas">
         <div class="left_content_img_becas">
         </div>
-        <p class="infos left_content_p_becas">CIEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles van de un 20% a un 60%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
+        <p class="infos left_content_p_becas">CIDEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles van de un 20% a un 60%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIDEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
     </div>
     <div class="curso_content_container">
         <h2 class="curso_content_title">Formulario de Postulación para Becas</h2>
@@ -701,7 +701,7 @@ BECASBTN.addEventListener("click", async () => {
     <div id="termsModal">
         <h2>Términos y Condiciones</h2>
         <p>
-            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIDEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
             <br><br>
             <strong>1. Información que Recopilamos</strong>
             <br>
@@ -738,15 +738,15 @@ BECASBTN.addEventListener("click", async () => {
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@ciep.edu.uy">contacto@ciep.edu.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
             Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
             <br>
-            Centro Integral de Educación Profesional (CIEP)
+            Centro Integral de Educación Profesional (CIDEP)
             <br>
-            Correo electrónico: <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>
+            Correo electrónico: <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -824,7 +824,7 @@ BECASBTN.addEventListener("click", async () => {
                 emailjs.send(serviceID, templateID, templateParams)
                     .then((response) => {
                         console.log('Correo enviado con éxito!', response.status, response.text);
-                        alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIEP se pondra en contacto con usted \npara los siguientes pasos.');
+                        alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIDEP se pondra en contacto con usted \npara los siguientes pasos.');
                         document.getElementById('contact-form').reset();
                         SUBMITBTN.disabled = false;
                     }, (error) => {
@@ -1060,13 +1060,13 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                         <div class="contact_info_container">
                             <ul>
                                 <li><h4 class="curso_content_title">Contacto Empresa</h4>
-                                    <p>Si quieres capacitar a tu personal, contactanos via email a Contacto@portalciep.com.uy</p>
+                                    <p>Si quieres capacitar a tu personal, contactanos via email a Contacto@cidep.uy</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Estudiante</h4>
-                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a Bedelia@portalciep.com.uy</p>
+                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a Bedelia@cidep.uy</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Profesorado</h4>
-                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a Contacto@portalciep.com.uy</p>
+                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a Contacto@cidep.uy</p>
                                 </li>
                                 <div id="media_IMG_Container">
                                     <img id="cellphone_BTN" class="media_BTN" src="images/Cellphone_icon.png" alt="">
@@ -1110,7 +1110,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     <div id="termsModal">
         <h2>Términos y Condiciones</h2>
         <p>
-            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIDEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
             <br><br>
             <strong>1. Información que Recopilamos</strong>
             <br>
@@ -1143,15 +1143,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalcidep.com.uy">contacto@portalcidep.com.uy</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
             Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
             <br>
-            Centro Integral de Educación Profesional (CIEP)
+            Centro Integral de Educación Profesional (CIDEP)
             <br>
-            Correo electrónico: <a href="mailto:contacto@portalciep.com.uy">contacto@portalciep.com.uy</a>
+            Correo electrónico: <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -1238,7 +1238,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                     emailjs.send(serviceID, templateID, templateParams)
                         .then((response) => {
                             console.log('Correo enviado con éxito!', response.status, response.text);
-                            alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIEP se pondrá en contacto con usted para los siguientes pasos.');
+                            alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIDEP se pondrá en contacto con usted para los siguientes pasos.');
                             document.getElementById('contact-form-contacto').reset();
                             grecaptcha.reset();
                             SUBMITBTN.disabled = false;
