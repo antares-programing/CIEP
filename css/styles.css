@@ -126,6 +126,15 @@ body{
     background-size: cover;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+.img_obj_valag_services{
+    position: relative;
+    height: 400px;
+    width: 30%;
+    background-image: url("../images/Services_img_dv.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
 .content_obj_valag{
     height: 400px;
     width: 30%;
@@ -343,6 +352,13 @@ body{
         padding: 5%;
     }
     .img_obj_valag{
+        position: relative;
+        height: 400px;
+        width: 100%;
+        clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+
+    }
+    .img_obj_valag_services{
         position: relative;
         height: 400px;
         width: 100%;
