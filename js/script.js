@@ -36,6 +36,7 @@ async function showapplicationform(cursoname, categoria){
         <div class="curso_content_container">
             <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
             <h2 class="curso_content_title">${cursoname}</h2>
+            <h2 class="curso_content_title"></h2>
         </div>
         <div class="left_img_container_postulaciones">  
             <div class="postulaciones_container">
@@ -48,7 +49,7 @@ async function showapplicationform(cursoname, categoria){
             </div>
             <div class="postulaciones_container">
                 <img class="postulaciones_IMG" src="images/Postulacion3IMG.png" alt="">
-                <p class="left_content_p_postulaciones">¡Una vez completado el formulario un representante de CIDEP se pondrá en contacto contigo!</p>  
+                <p class="left_content_p_postulaciones">¡Una vez completado el formulario un representante de SIGUE se pondrá en contacto contigo!</p>  
             </div>  
         </div>
         <div class="curso_content_container">
@@ -97,7 +98,7 @@ async function showapplicationform(cursoname, categoria){
     <div id="termsModal">
         <h2>Términos y Condiciones</h2>
         <p>
-            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIDEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            Estos términos y condiciones explican cómo el equipo de SIGUE recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
             <br><br>
             <strong>1. Información que Recopilamos</strong>
             <br>
@@ -131,15 +132,15 @@ async function showapplicationform(cursoname, categoria){
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalcidep.com.uy">contacto@portalcidep.com.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:somosigue@gmail.com">somosigue@gmail.com</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
             Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
             <br>
-            Centro Integral de Educación Profesional (CIDEP)
+            Soluciones Integrales de Gestion y Unificacion Empresarial (SIGUE)
             <br>
-            Correo electrónico: <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>
+            Correo electrónico: <a href="mailto:somosigue@gmail.com">somosigue@gmail.com</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -213,12 +214,12 @@ async function showapplicationform(cursoname, categoria){
             emailjs.send(serviceID, templateID, templateParams)
                 .then((response) => {
                     console.log('Correo enviado con éxito!', response.status, response.text);
-                    alert('Se ha postulado con éxito!\n\nGracias por su interés en nuestros cursos.\nA la brevedad, un representante de CIDEP se pondrá en contacto con usted para los siguientes pasos.');
+                    alert('Se ha postulado con éxito!\n\nGracias por su interés en nuestros cursos.\nA la brevedad, un representante de SIGUE se pondrá en contacto con usted para los siguientes pasos.');
                     document.getElementById('contact-form').reset();
                     SUBMITBTN.disabled = false;
                 }, (error) => {
                     console.log('Error al enviar el correo:', error);
-                    alert('Error al enviar el correo. Por favor, contactenos via email a: CIDEP@capacitaciones.com si el error persiste.');
+                    alert('Error al enviar el correo. Por favor, contactenos via email a: somosigue@gmail.com si el error persiste.');
                     SUBMITBTN.disabled = false;
                 });
         });
@@ -354,13 +355,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             <div id="inicio_content">
 
             <div class="curso_content_container">
-                <h2>Bienvenidos al Centro Académico CIDEP.</h2>
+                <h2>Bienvenidos a SIGUE.</h2>
             </div>
 
             <div class="left_img_container">
                 <div class="left_content_img">
                 </div>
-                <p class="infos left_content_p">Somos una institución comprometida con la excelencia educativa y el desarrollo integral de nuestros estudiantes. Creemos firmemente en la importancia de proporcionar una educación de calidad que no solo transmita conocimientos académicos, sino que también fomente habilidades críticas, creatividad y valores éticos. Nuestro enfoque se centra en el estudiante, promoviendo un ambiente de aprendizaje inclusivo y estimulante que permite a cada individuo alcanzar su máximo potencial. Además, nos esforzamos por desarrollar en nuestros alumnos una conciencia global y un compromiso social, preparándolos para enfrentar los desafíos del mundo moderno con responsabilidad y proactividad.</p>    
+                <p class="infos left_content_p">En SIGUE (Soluciones Integrales de Gestión y Unificación Empresarial), sabemos que el éxito es un camino continuo, y estamos aquí para ayudarte a seguir avanzando. Ya sea expandiendo tu mercado, optimizando tus procesos o fortaleciendo tu marca, en SIGUE trabajamos contigo para que tu empresa siga creciendo, siga mejorando y siga ganando. Con un enfoque integral, cubrimos cada etapa para que tu negocio alcance su máximo potencial sin complicaciones.</p>    
             </div>
             
             <div id="MVV_container">
@@ -370,9 +371,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <img src="images/Mision_icon.png" class="MVV_img" alt="Curso 1">
                         <div class="MVV-body">
                             <p class="MVV_title">Misión</p>
-                            <p class="MVV_content" id="mision_content">Nuestro compromiso es democratizar el conocimiento a través de programas de Responsabilidad Social Empresarial, permitiendo que toda la población activa acceda a nuestro Plan Permanente de Becas y a una amplia gama de recursos en línea, disponibles de forma gratuita o a bajo costo. Este enfoque busca cubrir las necesidades educativas no atendidas, proporcionando oportunidades de aprendizaje a quienes más lo necesitan.
-
-                            Además, nos dedicamos a concientizar sobre la importancia de estar capacitado en el mundo actual. Promovemos la capacitación abierta a la comunidad para dotar a nuestros estudiantes de las herramientas necesarias para alcanzar sus metas y objetivos, así como para enfrentar los complejos desafíos de la vida moderna en todos sus ámbitos.</p>
+                            <p class="MVV_content" id="mision_content">En SIGUE, nuestra misión es acompañar a las empresas en su camino hacia el crecimiento sostenible y la excelencia operativa. Proveemos soluciones integrales que abarcan desde la estrategia hasta la ejecución, optimizando cada área clave para maximizar su potencial y consolidar su posición en el mercado. Nos dedicamos a potenciar el éxito de nuestros clientes mediante innovación, educación y eficiencia, con el compromiso de transformar cada desafío en una oportunidad de avance.</p>
                         </div>
                     </div>
 
@@ -380,7 +379,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <img src="./images/Vision_icon.png" class="MVV_img" alt="Curso 2">
                         <div class="MVV-body">
                             <p class="MVV_title">vision</p>
-                            <p class="MVV_content" id="vision_content">Somos un centro educativo referente en lo que respecta a desarrollo profesional y humano buscamos ser referentes gracias a nuestra metodología y contribuir en el desarrollo social y el paso a paso de nuestra comunidad, simultáneamente establecernos como un Instituto bien considerado en el mercado laboral, con el propósito de convertirnos en un referente positivo para la empleabilidad de nuestros egresados.</p>
+                            <p class="MVV_content" id="vision_content">Ser la empresa líder en soluciones integrales de gestión empresarial en el mercado, reconocida por nuestra capacidad de impulsar el crecimiento y la evolución constante de nuestros clientes. Aspiramos a convertirnos en un socio estratégico de referencia para las empresas que buscan mejorar su competitividad y sostenibilidad, guiándolas hacia un futuro más sólido y exitoso.</p>
                         </div>
                     </div>
 
@@ -389,9 +388,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <div class="MVV-body">
                             <p class="MVV_title">Valores</p>
                             <ul class="MVV_content" id="valores_content">
-                                <li>Pasión: Como la fuerza motivadora que impulsa el logro de metas y aspiraciones.</li>
-                                <li>Lealtad: Como el compromiso y la coherencia en nuestras decisiones basadas en principios fundamentales.</li>
-                                <li>Transparencia: Como la confianza generada por el aprendizaje continuo, la estabilidad y el crecimiento personal y profesional.</li>
+                                <li>Excelencia: Nos esforzamos por superar expectativas, ofreciendo soluciones de alta calidad que impulsen el éxito de nuestros clientes.</li>
+                                <li>Innovación: Desarrollamos estrategias creativas y adaptadas al mercado, manteniéndonos a la vanguardia para responder a las necesidades de cada cliente.</li>
+                                <li>Compromiso: Acompañamos a nuestros clientes en cada paso, dedicándonos plenamente a su crecimiento y éxito sostenido.</li>
+                                <li>Transparencia: Fomentamos relaciones basadas en la honestidad y la comunicación abierta, construyendo confianza a largo plazo.</li>
+                                <li>Orientación al cliente: Ponemos siempre al cliente en el centro de nuestras decisiones, garantizando soluciones que respondan a sus objetivos y necesidades.</li>
                             </ul>
                         </div>
                     </div>
@@ -404,9 +405,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 <div class="content_obj_valag">
                 <p class="MVV_title">Objetivos</p>
                 <ul>
-                    <li>Brindar  una educación actualizada que fomente el máximo desarrollo de las competencias laborales específicas del estudiante para facilitar su ingreso efectivo al mercado laboral formal.</li>
-                    <li>Estimular el interés del estudiante en la formación continua y la actualización conforme a las demandas del mercado laboral.</li>
-                    <li>Fortalecer las habilidades interpersonales del estudiante para mejorar su competitividad en el mercado laboral, aumentando así su empleabilidad de manera significativa.</li>
+                    <li>Posicionamiento de marca: Convertirnos en una referencia en el sector de consultoría empresarial, siendo reconocidos por nuestros servicios personalizados y de alto impacto.</li>
+                    <li>Optimización continua: Desarrollar e implementar nuevas herramientas y procesos de automatización que permitan a nuestros clientes aumentar su eficiencia operativa y mejorar la relación con sus clientes.</li>
+                    <li>Innovación en branding y marketing: Producir campañas y contenidos innovadores que fortalezcan la identidad y la posición de marca de nuestros clientes, aumentando su reconocimiento y alcance en un 30% anual.</li>
                 </ul>
                 </div>
 
@@ -416,8 +417,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 <div class="content_obj_valag">
                 <p class="MVV_title">Nuestro Valor Agregado</p>
                 <p class="infos obj_valag_content_p">
-                Nuestra principal diferencia es que nuestros cursos incluyen un módulo de Competencias Transversales, diseñado para desarrollar habilidades blandas como manejo de emociones, iniciativa, trabajo en equipo y comunicación efectiva. Este enfoque promueve el crecimiento integral de cada individuo, integrando capacidades humanas y profesionales.
-                <br>Además, contamos con un sistema de Gestión de Situaciones Emergentes en todos los procesos educativos. Un equipo especializado colabora con los estudiantes para identificar y resolver conflictos en su vida, personalidad o entorno, asegurando la continuidad y efectividad del proceso educativo.
+                En SIGUE, nuestro valor agregado se basa en brindar soluciones integrales y personalizadas que impulsan el crecimiento de las empresas, no solo optimizando procesos, sino también fortaleciendo la identidad de marca y las competencias del equipo. A través de nuestro sistema de Seguimiento y Soporte Continuo, acompañamos a nuestros clientes para detectar y superar desafíos en tiempo real, asegurando que cada estrategia y proyecto cumpla sus objetivos de forma efectiva y sostenible.
                 </p>
                 </div>
                     
@@ -457,6 +457,7 @@ async function mostrarCursos(categoria) {
         <div class="curso_content_container">
             <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
             <h2 class="curso_content_title">Cursos</h2>
+            <h2 class="curso_content_title"> </h2>
         </div>
         <div class="custom-card-group-cursos" id="cursos-container"></div>
     `;
@@ -491,7 +492,7 @@ async function mostrarCursos(categoria) {
                         <h2 class="curso_content_title">${curso.titulo}</h2>
                         <input type="button" class="CIEP_GenericBTN" id="application_BTN" value="Aplicar al curso">
                     </div>
-                    <div class="curso_content_container">
+                    <div class="curso_content_details">
                         <div class="curso_content_p">
                             <p>${curso.descripcion2}</p>
                         </div>
@@ -549,22 +550,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
         await fadeout();
         DINAMICCONTENT.innerHTML = ``;
         DINAMICCONTENT.innerHTML = `
-            <div class="curso_content_container">
-                <h2 class="curso_content_title">Categorias</h2>
+    <div class="curso_content_container">
+        <h2 class="curso_content_title">Categorias</h2>
+    </div>
+    <div class="custom-card-group-categoria" id="categorias-container">
+        <!-- Aquí se agregarán las tarjetas de categoría -->
+    </div>
+    <div id="becas_container">
+        <div id="becas_BTN">
+            <div id="becas_title_bg_container">  <!-- Contenedor para el fondo negro -->
+                <h1 id="becas_title_whitebg">Becas de apoyo</h1> <!-- Texto que cambia de color -->
+                <img src="./images/Becas_titleBG.png" id="becas_title_img" alt="becasTitleBG"> <!-- Logo -->
             </div>
-            <div class="custom-card-group-categoria" id="categorias-container">
-                <!-- Aquí se agregarán las tarjetas de categoría -->
-            </div>
-            <div id="becas_container">
-                <div id="becas_BTN">
-                    <h1>Becas de apoyo</h1>
-                    <img src="./images/Becas_titleBG.png" id="becas_title_img" alt="becasTitleBG">
-                    <h1 id="becas_title_whitebg">Becas de apoyo</h1>
-                </div>
-            </div>
-            <div class="little_div">
-            </div>
-        `;
+        </div>
+    </div>
+    <div class="little_div">
+    </div>
+`;
         const BECASBTN = document.getElementById("becas_BTN");
 BECASBTN.addEventListener("click", async () => {
     await fadeout();
@@ -573,16 +575,17 @@ BECASBTN.addEventListener("click", async () => {
     <div class="curso_content_container">
         <img src="./images/Back_BTN.png" id="goback_BTN" alt="gobackBTN">
         <h2 class="curso_content_title">Becas</h2>
+        <h2 class="curso_content_title"> </h2>
     </div>
     <div class="left_img_container_becas">
         <div class="left_content_img_becas">
         </div>
-        <p class="infos left_content_p_becas">CIDEP ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles van de un 20% a un 60%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El Centro CIDEP se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
+        <p class="infos left_content_p_becas">SIGUE ofrece becas a estudiantes que necesitan apoyo financiero para continuar su educación. Estas están diseñadas para ayudar a aquellos que demuestran un compromiso académico y tienen una situación económica que justifica la asistencia. Los descuentos disponibles van de un 20% a un 60%, dependiendo de la necesidad del alumno y su desempeño académico. Para aplicar, los estudiantes deben completar un formulario detallando su situación financiera y los objetivos educativos. Las solicitudes son revisadas por un comité que evalúa cada caso individualmente. Estas becas permiten a los alumnos concentrarse en sus estudios sin la preocupación constante de los costos. El equipo de SIGUE se compromete a brindar oportunidades educativas a todos, independientemente de su situación económica.</p>    
     </div>
     <div class="curso_content_container">
         <h2 class="curso_content_title">Formulario de Postulación para Becas</h2>
     </div>
-    <div class="curso_content_container">
+    <div class="curso_content_details">
         <div class="curso_content_p">
             <div class="contact_form_container">
                 <form id="contact-form">
@@ -701,7 +704,7 @@ BECASBTN.addEventListener("click", async () => {
     <div id="termsModal">
         <h2>Términos y Condiciones</h2>
         <p>
-            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIDEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            Estos términos y condiciones explican cómo el equipo de SIGUE recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
             <br><br>
             <strong>1. Información que Recopilamos</strong>
             <br>
@@ -738,15 +741,15 @@ BECASBTN.addEventListener("click", async () => {
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:somosigue@gmail.com">somosigue@gmail.com</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
             Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
             <br>
-            Centro Integral de Educación Profesional (CIDEP)
+            Soluciones Integrales de Gestion y Unificacion Empresarial (SIGUE)
             <br>
-            Correo electrónico: <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>
+            Correo electrónico: <a href="mailto:somosigue@gmail.com">somosigue@gmail.com</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -824,7 +827,7 @@ BECASBTN.addEventListener("click", async () => {
                 emailjs.send(serviceID, templateID, templateParams)
                     .then((response) => {
                         console.log('Correo enviado con éxito!', response.status, response.text);
-                        alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIDEP se pondra en contacto con usted \npara los siguientes pasos.');
+                        alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de SIGUE se pondra en contacto con usted \npara los siguientes pasos.');
                         document.getElementById('contact-form').reset();
                         SUBMITBTN.disabled = false;
                     }, (error) => {
@@ -1060,13 +1063,13 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                         <div class="contact_info_container">
                             <ul>
                                 <li><h4 class="curso_content_title">Contacto Empresa</h4>
-                                    <p>Si quieres capacitar a tu personal, contactanos via email a Contacto@cidep.uy</p>
+                                    <p>Si quieres capacitar a tu personal, contactanos via email a somosigue@gmail.com</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Estudiante</h4>
-                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a Bedelia@cidep.uy</p>
+                                    <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a somosigue@gmail.com</p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Profesorado</h4>
-                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a Contacto@cidep.uy</p>
+                                    <p>Si quieres formar parte de nuestro equipo de profesores e impartir tus cursos en nuestra academia, contactanos via email a somosigue@gmail.com</p>
                                 </li>
                                 <div id="media_IMG_Container">
                                     <img id="cellphone_BTN" class="media_BTN" src="images/Cellphone_icon.png" alt="">
@@ -1110,7 +1113,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     <div id="termsModal">
         <h2>Términos y Condiciones</h2>
         <p>
-            Estos términos y condiciones explican cómo el Centro Integral de Educación Profesional (CIDEP) recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
+            Estos términos y condiciones explican cómo el equipo de SIGUE recopila, usa y protege la información personal que nos proporcionas a través de nuestros formularios de contacto.
             <br><br>
             <strong>1. Información que Recopilamos</strong>
             <br>
@@ -1143,15 +1146,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <br><br>
             <strong>6. Derechos de los Usuarios</strong>
             <br>
-            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:contacto@portalcidep.com.uy">contacto@portalcidep.com.uy</a>.
+            Tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales. Para ejercer estos derechos, puedes ponerte en contacto con nosotros a través del correo electrónico <a href="mailto:somosigue@gmail.com">somosigue@gmail.com</a>.
             <br><br>
             <strong>7. Contacto</strong>
             <br>
             Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad o el manejo de tus datos personales, por favor contáctanos a:
             <br>
-            Centro Integral de Educación Profesional (CIDEP)
+            Soluciones Integrales de Gestion y Unificacion Empresarial (SIGUE)
             <br>
-            Correo electrónico: <a href="mailto:contacto@cidep.uy">contacto@cidep.uy</a>
+            Correo electrónico: <a href="mailto:somosigue@gmail.com">somosigue@gmail.com</a>
             <br>
             Teléfono: 096565289
         </p>
@@ -1238,7 +1241,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                     emailjs.send(serviceID, templateID, templateParams)
                         .then((response) => {
                             console.log('Correo enviado con éxito!', response.status, response.text);
-                            alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de CIDEP se pondrá en contacto con usted para los siguientes pasos.');
+                            alert('Correo enviado con éxito!\n\nGracias por ponerse en contacto con nosotros.\nMuy pronto un agente de SIGUE se pondrá en contacto con usted para los siguientes pasos.');
                             document.getElementById('contact-form-contacto').reset();
                             grecaptcha.reset();
                             SUBMITBTN.disabled = false;

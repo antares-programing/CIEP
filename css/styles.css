@@ -25,20 +25,21 @@ body{
 #ciep_logo{
     position: relative;
     margin-top: 5px;
-    width: 220px;
+    width: 290px;
     height: 100px; 
 }
 .CIEP_GenericBTN{
     height: 40px;
-    background-color: #394683;
-    color: white;
-    border: none;
+    background-color: #202020;
+    color: rgb(243, 243, 243);
+    border: solid 1px white;
     border-radius: 4px;
     cursor: pointer;
     margin: 10px;
 }
 .CIEP_GenericBTN:hover {
-    background-color: #21284b;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 .ciep_BTN_active{
     font-size: 20px;
@@ -283,6 +284,7 @@ body{
     background-image: url("../images/Welcome_img.jpeg");
     background-size: cover;
     background-position: center;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .left_content_img_becas{
     position: relative;
@@ -312,9 +314,7 @@ body{
     padding-bottom: 10%;
     padding-top: 5%;
     bottom: 0px;
-    background: #7E92A7;
-    border-left: 20px double white;
-    border-right: 20px double white;
+    background: #5e5e5e;
     color: white;
     margin-bottom: 0!important;    
 }
@@ -327,6 +327,9 @@ body{
     background: #ffffff00;
 }
 @media (max-width: 1200px) {
+    .left_content_img{
+        clip-path: none;
+    }
     .left_img_container{
         flex-direction: column;
     }
@@ -574,7 +577,7 @@ body{
 .custom-card-title {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #000000;
 }
 
 .custom-card-text {
@@ -642,7 +645,7 @@ body{
 .custom-card-title-categoria {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #000000;
 }
 
 .custom-card-text-categoria {
@@ -716,49 +719,65 @@ body{
 #becas_BTN:hover {
     transform: translateY(-10px);
 }
-#becas_title_whitebg {
-    position: absolute;
-    margin-left: 20px;
-    font-size: 6vw;
-    color: #0d4f9600;
-    background: #ffffff;
+#becas_title_bg_container {
+    position: relative; /* Asegura que el fondo se quede dentro de este contenedor */
+    z-index: 1; /* Fondo negro debajo del logo pero encima del logo */
+    display: inline-block; /* Hace que se ajuste al tamaño del texto */
+    background: #000000; /* Fondo negro */
     border-radius: 25px;
+    padding: 10px 40px; /* Espaciado del texto dentro del fondo */
+    -webkit-box-shadow: 0px 0px 124px 45px rgb(255, 255, 255);
+-moz-box-shadow: 0px 0px 124px 45px rgb(255, 255, 255);
+box-shadow: 0px 0px 124px 45px rgb(255, 255, 255);
+}
+
+/* Estilo para el texto */
+#becas_title_whitebg {
+    color: white; /* Blanco por defecto */
     font-family: "Times New Roman", Times, serif;
+    font-size: 6vw;
     letter-spacing: 0px;
     word-spacing: 0.6px;
     font-weight: normal;
     font-style: normal;
     font-variant: small-caps;
     text-transform: none;
-    justify-self: center;
-    -webkit-box-shadow: 10px 10px 125px 85px rgba(255,255,255,1);
-    -moz-box-shadow: 10px 10px 125px 85px rgba(255,255,255,1);
-    box-shadow: 10px 10px 125px 85px rgba(255,255,255,1);
-    z-index: 0!important;
+    z-index: 3; /* Texto encima del logo y el fondo */
+    position: relative; /* Necesario para el z-index */
+    mix-blend-mode: difference; /* Cambia el color del texto a negro sobre fondos blancos */
 }
 
+/* Estilo para el logo */
+#becas_title_img {
+    position: absolute;  /* Hace que el logo esté fuera del flujo normal del documento */
+    top: 50%; /* Centra verticalmente el logo */
+    left: 50%; /* Centra horizontalmente el logo */
+    transform: translate(-50%, -50%); /* Asegura que el logo esté perfectamente centrado */
+    z-index: 2; /* Logo entre el texto y el fondo negro */
+    height: 140%; /* Aumenta el tamaño del logo para que sobresalga del contenedor */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+/* Estilos para el texto principal del contenedor */
 #becas_BTN > h1 {
     margin-left: 20px;
     font-size: 6vw;
-    color: #0d4f96;
+    color: #ffffff; /* Blanco */
+    padding-left: 40px;
+    padding-right: 20px;
     border-radius: 25px;
     font-family: "Times New Roman", Times, serif;
-    text-decoration: underline solid 0.4vw #0d4f96;
+    text-decoration: underline solid 0.4vw #ffffff;
     letter-spacing: 0px;
     word-spacing: 0.6px;
     font-weight: normal;
     font-style: normal;
     font-variant: small-caps;
     text-transform: none;
-    z-index: 2;
+    z-index: 4;
+    mix-blend-mode: difference; /* Cambia el color del texto a negro cuando pasa sobre la imagen blanca */
 }
 
-#becas_title_img {
-    position: absolute;
-    align-self: center;
-    height: 100%;
-    z-index: 1;
-}
 @media (max-width: 600px) {
     #becas_BTN > h1{
         font-size: 8vw!important;
@@ -790,10 +809,10 @@ body{
     linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 44px) calc(100% - 0px) no-repeat,
     linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 60px) calc(100% - 44px) no-repeat,
     linear-gradient(90deg, rgba(26,26,26,0) 0%, #464646 12%, #313131 88%, rgba(253,253,253,0) 100%);
-    border-top: #6B84A8 10px solid;
+    border-top: #5a5a5a 10px solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom: #6B84A8 10px solid;
+    border-bottom: #5a5a5a 10px solid;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -814,7 +833,7 @@ body{
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #4c8baf;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -823,7 +842,9 @@ body{
 }
 
 #contact-form button:hover {
-    background-color: #394683;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: solid 2px black;
 }
 #contact-form button:disabled {
     background-color: #727272;
@@ -857,8 +878,8 @@ body{
     right: 0px; /* Ajusta según sea necesario */
     align-self: flex-end;
     font-size: 1.2em;
-    color: #012b58; /* Puedes ajustar el estilo según sea necesario */
-    background: #9AC8F3;
+    color: #ffffff; /* Puedes ajustar el estilo según sea necesario */
+    background: #494949;
     width: 100%;
     text-align: right;
     padding-right: 10px;
@@ -870,7 +891,7 @@ body{
     right: 0px; /* Ajusta según sea necesario */
     align-self: center;
     font-size: 1.2em;
-    color: #6286ad; /* Puedes ajustar el estilo según sea necesario */
+    color: #000000; /* Puedes ajustar el estilo según sea necesario */
     width: 100%;
     text-align: center;
     margin: 0!important;
@@ -909,7 +930,7 @@ body{
     font-size: 30px;
     margin: 5px;
     margin-bottom: 30px;
-    color: #012b58;
+    color: #ffffff;
     overflow: hidden; /* Evita que el texto sobrepase el contenedor */
     display: inline-block; /* Permite calcular el ancho del texto */
     text-align: center; /* Centra el texto en el contenedor, opcional */
@@ -948,16 +969,19 @@ body{
     padding: 20px;
 }
 .curso_content_container{
-    background: #ffffffbe;
+    background: #000000be;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 10px;
     padding: 20px;
 }
-.curso_content_title{
-    color: #002752;
+.curso_content_title h2{
+    color: #000000;
     flex: 1;
-
+}
+.curso_content_title h4{
+    color: #ffffff;
+    flex: 1;
 }
 .curso_content_container:has(h2){
     height: auto;
@@ -967,6 +991,7 @@ body{
     flex-direction: row;
     text-align: center;
     padding: 0px;
+    color: #ffffff;
 }
 .curso_content_container > h2{
     font-size: 3vw;
@@ -1149,10 +1174,10 @@ ul {
     linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 44px) calc(100% - 0px) no-repeat,
     linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 60px) calc(100% - 44px) no-repeat,
     linear-gradient(90deg, rgba(26,26,26,0) 0%, #464646 12%, #313131 88%, rgba(253,253,253,0) 100%);
-    border-top: #6B84A8 10px solid;
+    border-top: #000000 10px solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom: #6B84A8 10px solid;
+    border-bottom: #000000 10px solid;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 100%;
