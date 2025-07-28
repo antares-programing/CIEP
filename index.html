@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/Favicon.png" type="image/x-icon">
     <title>SIGUE</title>
 </head>
-<body>
+<body class="font-sans min-h-screen">
     <!-- =========== [Header] =========== -->
-    <div id="header">
-        <img id="ciep_logo" src="./images/LogoWeb.png" alt="">
-    </div>
+    <header id="header" class="flex justify-center items-center py-4 bg-cover bg-center">
+        <img id="ciep_logo" class="w-72" src="./images/LogoWeb.png" alt="">
+    </header>
     <!-- =========== [Contenido de la página] =========== -->
-    <div id="dinamic_content_container">
+    <div id="dinamic_content_container" class="relative w-full flex justify-center mt-40">
         <img id="shadow_left" src="./images/Left_Body_Shadow.png" alt="">
 
-        <div id="floating_body">
+        <div id="floating_body" class="bg-white rounded-t-lg shadow-lg w-4/5 h-[85%] fixed top-[15%] mx-auto overflow-hidden">
             <div id="burguer_menu_container">
                 <div id="img_bm_container">
                     <img id="img_bm" src="images\burguer_menu_IMG.png" alt="bmimg">
@@ -38,7 +39,7 @@
                 </div>
             </div>
             
-            <div id="dinamic_content">
+            <div id="dinamic_content" class="h-full overflow-y-auto">
                 
             </div>
         </div>
