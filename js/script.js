@@ -1063,7 +1063,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                         <div class="contact_info_container">
                             <ul>
                                 <li><h4 class="curso_content_title">Contacto Empresa</h4>
-                                    <p>Si quieres capacitar a tu personal, contactanos via email a somosigue@gmail.com</p>
+                                    <p>Si quieres capacitar a tu personal, completa nuestro
+                                        <a href="contacto_empresas.html" class="text-blue-600 underline">formulario aquí</a>.
+                                    </p>
                                 </li>
                                 <li><h4 class="curso_content_title">Contacto Estudiante</h4>
                                     <p>Si tienes algun problema para postularte a las becas o estas teniendo problemas durante tu curso, contactanos via email a somosigue@gmail.com</p>
