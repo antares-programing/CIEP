@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/Favicon.png" type="image/x-icon">
+    <title>Contacto Empresas</title>
+</head>
+<body class="min-h-screen flex flex-col items-center bg-gray-100">
+    <header class="py-6">
+        <img src="./images/LogoWeb.png" alt="CIEP logo" class="w-60">
+    </header>
+    <main class="w-full max-w-xl bg-white shadow-md rounded-md p-6">
+        <h1 class="text-2xl font-semibold mb-4 text-center">Contacto para Empresas</h1>
+        <form>
+            <div class="mb-4">
+                <label for="company" class="block text-sm font-medium mb-1">Empresa</label>
+                <input type="text" id="company" class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
+                <input type="text" id="name" class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium mb-1">Correo</label>
+                <input type="email" id="email" class="w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium mb-1">Mensaje</label>
+                <textarea id="message" rows="4" class="w-full border border-gray-300 rounded-md p-2"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-slate-900 text-white rounded-md py-2">Enviar</button>
+        </form>
+    </main>
+    <div class="h-20"></div>
+</body>
+</html>
